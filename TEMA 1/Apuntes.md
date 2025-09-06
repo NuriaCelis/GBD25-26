@@ -2,19 +2,13 @@
 1. [UNIDAD 1. SISTEMAS DE INFORMACIÓN](#unidad-1-sistemas-de-información)
    1. [📂 1.- FICHEROS](#-1--ficheros)
       1. [📝 1.1.- Tipos de ficheros y formatos](#-11--tipos-de-ficheros-y-formatos)
-   2. [🏋️‍♂️ Ejercicios sobre ficheros](#️️-ejercicios-sobre-ficheros)
-   3. [🗄️ 2.- BASES DE DATOS](#️-2--bases-de-datos)
+   2. [🗄️ 2.- BASES DE DATOS](#️-2--bases-de-datos)
       1. [🏷️ 2.1.- Tipos de bases de datos](#️-21--tipos-de-bases-de-datos)
-   4. [🏋️‍♂️ Ejercicios sobre bases de datos](#️️-ejercicios-sobre-bases-de-datos)
-      1. [1️⃣ Comparativa de sistemas](#1️⃣-comparativa-de-sistemas)
-      2. [2️⃣ Tipos de datos en bases de datos](#2️⃣-tipos-de-datos-en-bases-de-datos)
-   5. [🗄️ 3.- BASES DE DATOS RELACIONALES](#️-3--bases-de-datos-relacionales)
+   3. [🗄️ 3.- BASES DE DATOS RELACIONALES](#️-3--bases-de-datos-relacionales)
       1. [📝 3.1.- Conceptos](#-31--conceptos)
       2. [📌 3.2.- Otros conceptos más específicos de las bases de datos](#-32--otros-conceptos-más-específicos-de-las-bases-de-datos)
       3. [🖥️ 3.3.- Sistemas Gestores de Bases de Datos (SGBD)](#️-33--sistemas-gestores-de-bases-de-datos-sgbd)
-      4. [⚙️ Servicios que proporciona un SGBD](#️-servicios-que-proporciona-un-sgbd)
-      5. [🏷️ 3.4.- Tipos de SGBD](#️-34--tipos-de-sgbd)
-   6. [📝 HOJAS DE EJERCICIOS](#-hojas-de-ejercicios)
+      4. [🏷️ 3.4.- Tipos de SGBD](#️-34--tipos-de-sgbd)
 
 
 
@@ -23,8 +17,6 @@
 Un ordenador almacena muchos tipos de información. Toda esta información se guarda en los **dispositivos de almacenamiento** del ordenador. Para organizarla, se utilizan **ficheros** o **archivos**.  
 
 Los ficheros son estructuras de información creadas por los sistemas operativos para almacenar datos. Cada fichero tiene un **nombre** y una **extensión**, que indica su **formato**.
-
----
 
 ### 📝 1.1.- Tipos de ficheros y formatos
 
@@ -51,7 +43,7 @@ Indica el **uso del fichero**:
 
 ![Clasificación de ficheros](img/clasificacion2.jpg)
 
-## 🏋️‍♂️ Ejercicios sobre ficheros
+#### 🏋️‍♂️ Ejercicios sobre ficheros
 
 **Realiza los siguientes ejercicios:**
 
@@ -60,7 +52,6 @@ Indica el **uso del fichero**:
 - Ábrelo con el **Bloc de notas**.  
 - ❓ Pregunta: ¿Por qué no se ve bien el contenido del fichero?
 
----
 
 #### 2️⃣ Tabla de códigos ASCII
 - 📝 **Tabla ASCII**: Es un conjunto estandarizado de códigos numéricos que representan caracteres que una computadora puede entender.
@@ -83,7 +74,6 @@ Caracteres extendidos (128–255, en ASCII extendido): Permiten letras acentuada
 
 - Conéctate a **Internet** y busca una **tabla de códigos ASCII de 8 bits**.  
 
----
 
 #### 3️⃣ Identificación de ficheros
 - Observa la siguiente **captura de una carpeta en Windows**.  
@@ -111,7 +101,6 @@ Anteriormente, se utilizaban **ficheros tradicionales** (como los vistos en el a
 > ⚠️ En un sistema de ficheros tradicional, la información está dispersa en varios archivos y requiere programas adicionales para recuperarla y agruparla.  
 > ✅ Las bases de datos solucionan gran parte de estos inconvenientes.
 
----
 
 ### 🏷️ 2.1.- Tipos de bases de datos
 
@@ -206,19 +195,18 @@ En este modelo, la información está **repartida en distintas localizaciones** 
 <img src="img/clasificacion1.png" alt="Clasificación de las bases de datos" width="400">
 
 
-## 🏋️‍♂️ Ejercicios sobre bases de datos
+#### 🏋️‍♂️ Ejercicios sobre bases de datos
 
 **Realiza los siguientes ejercicios:**
 
-### 1️⃣ Comparativa de sistemas
+#### 1️⃣ Comparativa de sistemas
 - 🌐 Busca en **Internet** las **ventajas y desventajas** de:  
   - **Sistema de ficheros tradicional**  
   - **Sistema de bases de datos**  
 - ❓ Reflexiona sobre **cuándo es mejor usar uno u otro**.
 
----
 
-### 2️⃣ Tipos de datos en bases de datos
+#### 2️⃣ Tipos de datos en bases de datos
 - Busca en **Internet** un **esquema o imagen** que te ayude a **identificar cada tipo de dato** de las bases de datos que hemos visto.  
 - Puedes guardar la imagen para usarla como **apunte visual**.
 
@@ -302,9 +290,8 @@ Veremos conceptos básicos sobre **bases de datos en general** y **bases de dato
 
 Un **Sistema Gestor de Bases de Datos (SGBD)** es una aplicación que permite a los usuarios **definir, crear y mantener una base de datos**, proporcionando **acceso controlado** a la misma.
 
----
 
-### ⚙️ Servicios que proporciona un SGBD
+#### ⚙️ Servicios que proporciona un SGBD
 
 - **📐 DDL – Data Description Language:**  
   - Permite la **definición de la base de datos** mediante el lenguaje de definición de datos.  
@@ -323,7 +310,6 @@ Un **Sistema Gestor de Bases de Datos (SGBD)** es una aplicación que permite a 
 
 > 💡 La principal herramienta de un SGBD es la **interfaz de usuario**, normalmente mediante **SQL (Structure Query Language)**, un lenguaje estandarizado que permite interactuar con el servidor de manera uniforme.
 
----
 
 ### 🏷️ 3.4.- Tipos de SGBD
 
@@ -338,7 +324,7 @@ Los SGBD se pueden clasificar según el tipo de BD que gestionan (jerárquicas, 
   - Ejemplos: **ORACLE**, **DB2**.  
   - Para aprendizaje se pueden usar versiones **gratuitas educativas**, limitadas pero útiles para entender la filosofía de ORACLE.
 
-## 📝 HOJAS DE EJERCICIOS
+#### 📝 HOJAS DE EJERCICIOS
 
 - 💻 **Hoja de ejercicios 1**  
 - 💻 **Hoja de ejercicios 2**  
@@ -347,5 +333,3 @@ Los SGBD se pueden clasificar según el tipo de BD que gestionan (jerárquicas, 
 - 💻 **Hoja de ejercicios 5**
 
 
-
-[def]: #unidad-1-sistemas-de-información
