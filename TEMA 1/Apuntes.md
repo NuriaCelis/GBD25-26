@@ -169,13 +169,12 @@ A lo largo de la historia, las bases de datos han utilizado distintos **modelos*
 <img src="img/clasificacion.jpg" alt="Clasificación de las bases de datos" width="400">
 
 
-## 🌍 Clasificación de las bases de datos según su ubicación
+#### 🌍 Clasificación de las bases de datos según su ubicación
 
 Otro modo de clasificar las bases de datos es **según dónde se encuentren ubicadas**. Veamos las más importantes:
 
----
 
-### 💻 Bases de datos locales
+##### 1. 💻 Bases de datos locales
 
 En este caso, la **base de datos y el usuario están en el mismo ordenador**.
 
@@ -183,9 +182,7 @@ En este caso, la **base de datos y el usuario están en el mismo ordenador**.
 * Funciona bien en modo local siempre que no tenga que almacenar **grandes volúmenes de información**.
 * Otros ejemplos: **SQLite** (muy usado en móviles y aplicaciones de escritorio), **dBase** (uno de los primeros sistemas personales).
 
----
-
-### 🖥️ Bases de datos centralizadas
+##### 2. 🖥️ Bases de datos centralizadas
 
 En los **sistemas centralizados**, toda la base de datos está en un **único servidor**, al que acceden todos los usuarios.
 
@@ -194,18 +191,13 @@ En los **sistemas centralizados**, toda la base de datos está en un **único se
 * 👉 Es el **sistema más utilizado en empresas actualmente**.
 * Ejemplos comerciales: **Oracle Database**, **Microsoft SQL Server**, **IBM Db2**, **MySQL Enterprise**.
 
----
-
-### 🌐 Bases de datos distribuidas
+##### 3. 🌐 Bases de datos distribuidas
 
 En este modelo, la información está **repartida en distintas localizaciones** que se encuentran conectadas mediante una **red** y gestionadas por un **sistema de bases de datos distribuidas**.
 
 * Estas localizaciones suelen estar en **lugares geográficos distintos**.
 * El sistema gestor se encarga de que los usuarios perciban los datos como si estuvieran en una única base.
 * Ejemplos comerciales: **Google Spanner**, **Amazon Aurora**, **Microsoft Cosmos DB**, **CockroachDB**, **Cassandra (DataStax Enterprise)**.
-
----
-
 
 
 ![Clasificación de las bases de datos](img/Bases.png)
