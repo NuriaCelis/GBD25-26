@@ -3,9 +3,6 @@
    1. [📂 1.- FICHEROS](#-1--ficheros)
       1. [📝 1.1.- Tipos de ficheros y formatos](#-11--tipos-de-ficheros-y-formatos)
    2. [🏋️‍♂️ Ejercicios sobre ficheros](#️️-ejercicios-sobre-ficheros)
-      1. [1️⃣ Abrir un fichero](#1️⃣-abrir-un-fichero)
-      2. [2️⃣ Tabla de códigos ASCII](#2️⃣-tabla-de-códigos-ascii)
-      3. [3️⃣ Identificación de ficheros](#3️⃣-identificación-de-ficheros)
    3. [🗄️ 2.- BASES DE DATOS](#️-2--bases-de-datos)
       1. [🏷️ 2.1.- Tipos de bases de datos](#️-21--tipos-de-bases-de-datos)
    4. [🏋️‍♂️ Ejercicios sobre bases de datos](#️️-ejercicios-sobre-bases-de-datos)
@@ -18,6 +15,7 @@
       4. [⚙️ Servicios que proporciona un SGBD](#️-servicios-que-proporciona-un-sgbd)
       5. [🏷️ 3.4.- Tipos de SGBD](#️-34--tipos-de-sgbd)
    6. [📝 HOJAS DE EJERCICIOS](#-hojas-de-ejercicios)
+
 
 
 ## 📂 1.- FICHEROS
@@ -57,14 +55,14 @@ Indica el **uso del fichero**:
 
 **Realiza los siguientes ejercicios:**
 
-### 1️⃣ Abrir un fichero
+#### 1️⃣ Abrir un fichero
 - Busca en tu ordenador un fichero con extensión **`.docx`**.  
 - Ábrelo con el **Bloc de notas**.  
 - ❓ Pregunta: ¿Por qué no se ve bien el contenido del fichero?
 
 ---
 
-### 2️⃣ Tabla de códigos ASCII
+#### 2️⃣ Tabla de códigos ASCII
 - 📝 **Tabla ASCII**: Es un conjunto estandarizado de códigos numéricos que representan caracteres que una computadora puede entender.
 
 📦 Contenido de la tabla ASCII:
@@ -87,7 +85,7 @@ Caracteres extendidos (128–255, en ASCII extendido): Permiten letras acentuada
 
 ---
 
-### 3️⃣ Identificación de ficheros
+#### 3️⃣ Identificación de ficheros
 - Observa la siguiente **captura de una carpeta en Windows**.  
 - ❓ Indica **el tipo de cada fichero** y **qué contiene**.
 
