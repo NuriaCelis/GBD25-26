@@ -12,35 +12,38 @@
     - [3.4.- Tipos de SGBD](#34--tipos-de-sgbd)
   - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
 
-## 1.- FICHEROS
+## 📂 1.- FICHEROS
 
-Un ordenador almacena muchos tipos de información. Toda esta información está almacenada en los dispositivos de almacenamiento del ordenador. Para poder organizar toda la información, se utilizan ficheros o archivos. 
+Un ordenador almacena muchos tipos de información. Toda esta información se guarda en los **dispositivos de almacenamiento** del ordenador. Para organizarla, se utilizan **ficheros** o **archivos**.  
 
-Los ficheros son estructuras de información que crean los sistemas operativos de los ordenadores para almacenar datos. Suelen tener un nombre y una extensión, que determina el formato de la información que contiene.
+Los ficheros son estructuras de información creadas por los sistemas operativos para almacenar datos. Cada fichero tiene un **nombre** y una **extensión**, que indica su **formato**.
 
-### 1.1.- Tipos de ficheros y formatos
+---
 
-El formato y tipo de fichero determina la forma de interpretar la información que contiene. Un fichero es una ristra de bits (ceros y unos), de forma que es necesaria su interpretación para dar sentido a la información que almacena. 
+### 📝 1.1.- Tipos de ficheros y formatos
 
-Tradicionalmente, los ficheros se han clasificado de muchas formas. Vemos una clasificación de los ficheros en función de varias categorías.
+El **formato** y **tipo de fichero** determinan cómo se interpreta la información que contiene. Un fichero es una **ristra de bits** (ceros y unos), por lo que es necesaria su interpretación para dar sentido a los datos.
 
-1. **Según el contenido:** 
-   - _Ficheros de texto_: el contenido del fichero lo traduce el sistema operativo a caracteres alfabéticos y números que entiende el ser humano.
-   - _Ficheros binarios_: el contenido del fichero no se traduce directamente. Son una serie de bits que almacenan sonido, video, imágenes, etc...
+#### 📄 1️⃣ Según el contenido
+- **📝 Ficheros de texto**: caracteres alfabéticos y números que entiende el ser humano.  
+- **💾 Ficheros binarios**: bits que almacenan sonido, vídeo, imágenes, etc. No se leen directamente como texto.
 
-2. **Según la organización:** Dicta la forma en la que se acceden los datos.
-   - _Ficheros con organización secuencial_: Los datos estan dispuestos siguiendo una secuencia ordenada, es decir, los datos estan unos detrás de otros. Para acceder a un dato concreto, se han de recorrer todos los datos anteriores. 
-   - _Ficheros de organización directa_: permiten acceder a un dato en concreto sin necesidad de acceder a los anteriores. 
-   - _Ficheros de organización indexada_: acceden a los datos consultando un índice, es decir, una estructura de datos que permite acceder a la información rápidamente, simulando la forma en que el índice de un libro facilitaq el acceso a los contenidos. 
+#### 🗂️ 2️⃣ Según la organización
+Indica la forma de **acceso a los datos**:
+- **➡️ Secuencial**: los datos están uno detrás de otro; para acceder a un dato concreto, se recorren los anteriores.  
+- **🎯 Directa**: permite acceder directamente a un dato sin necesidad de leer los anteriores.  
+- **📌 Indexada**: acceso mediante un índice, facilitando la búsqueda rápida, como el índice de un libro.
 
-Existen variantes de las anteriores que mezclan las mejores características de cada una de ellas.
+> ⚠️ Existen variantes que combinan varias organizaciones para optimizar el acceso a los datos.
 
-3. **Según la utilidad:** indica el uso que se va a hacer de el fichero. 
-   - _Ficheros maestros_: Si va a contener datos fundamentales para la organización. Por ejemplo, un fichero con los datos de los alumnos de un instituto.
-   - _Ficheros de movimientos_: Se almacenan las variaciones de los ficheros maestros.
-   - _Ficheros históricos_: Almacenan los datos que ya no son necesarios para su proceso diario.
+#### ⚙️ 3️⃣ Según la utilidad
+Indica el **uso del fichero**:
+- **🏫 Maestros**: contienen datos fundamentales para la organización. Ejemplo: datos de alumnos de un instituto.  
+- **🔄 Movimientos**: almacenan cambios o actualizaciones de los ficheros maestros.  
+- **📚 Históricos**: guardan datos antiguos que ya no se usan en procesos diarios.
 
-![Clasificación de ficheros](img/Ficheros.png)
+
+![Clasificación de ficheros](img/clasificacion 2.jpg)
 
 **Realiza los siguientes ejercicios:**
 
