@@ -222,7 +222,6 @@ En este modelo, la información está **repartida en distintas localizaciones** 
 En este curso trabajaremos con **bases de datos relacionales**.  
 Veremos conceptos básicos sobre **bases de datos en general** y **bases de datos relacionales** en particular.
 
----
 
 ### 📝 3.1.- Conceptos
 
@@ -248,65 +247,96 @@ Veremos conceptos básicos sobre **bases de datos en general** y **bases de dato
 
 ![Tabla](img/Tabla.png)
 
-### 3.2.- Otros conceptos más específicos de las bases de datos
+### 📌 3.2.- Otros conceptos más específicos de las bases de datos
 
-**Entidades:** Una entidad es todo aquello de lo cual interesa guardar datos, por ejemplo:
-- Guardar datos de una persona, de un producto, de un animal...
-- Imaginad que queremos almacenar datos de la entidad Persona, cuyos atributos pueden ser: DNI, nombre, apellidos, dirección, teléfono...
+- **🏛️ Entidades:** Todo aquello de lo cual interesa **guardar datos**.  
+  Ejemplos:  
+  - Persona  
+  - Producto  
+  - Animal  
 
-**Claves primarias y claves foráneas o ajenas. Relaciones:** Cada entidad tiene una clave primaria o campo clave o llave que identifica unívocamente al conjunto de datos. Cuando en una entidad figura la clave primaria de otra entidad, ésta se denomina clave foránea o clave ajena. Las entidades se relacionan entre sí a través de las claves foráneas.
+  > Ejemplo práctico:  
+  > Si queremos almacenar datos de la entidad **Persona**, sus atributos pueden ser:  
+  > - DNI  
+  > - Nombre  
+  > - Apellidos  
+  > - Dirección  
+  > - Teléfono
+
+- **🔑 Claves primarias y foráneas (ajenas). Relaciones:**  
+  - Cada entidad tiene una **clave primaria** (campo clave o llave) que **identifica unívocamente** cada registro.  
+  - Cuando una entidad incluye la **clave primaria de otra entidad**, se denomina **clave foránea** o **clave ajena**.  
+  - Las entidades se **relacionan** entre sí a través de estas **claves foráneas**, creando vínculos entre los datos.
+
 
 ![Relacion](img/Relacion.png)
 
-- En este gráfico tenemos dos entidades: Clientes y Vehículos. 
-- La clave primaria de Clientes es: CodCliente
-- La clave primaria de Vehículos es: Matricula
-- La clave foránea de Vehículos es CodCliente. Los Clientes se relacionan con Vehículos a través del CodCliente que figura en ambas tablas.
+- **📊 Ejemplo de entidades y claves:**  
+  - En este gráfico tenemos dos entidades: **Clientes** y **Vehículos**.  
+  - La **clave primaria** de Clientes es: `CodCliente`  
+  - La **clave primaria** de Vehículos es: `Matricula`  
+  - La **clave foránea** de Vehículos es: `CodCliente`.  
+    - Los Clientes se relacionan con Vehículos a través del `CodCliente` que figura en ambas tablas.
 
-**Restricción de integridad referencial:** Esta restricción significa que el valor de un campo que es clave ajena siempre deben estar relacionadas con un valor correcto de la clave primaria en la tabla principal. La integridad referencial garantiza que la relación entre dos tablas permanezca sincronizada durante las operaciones de actualización y eliminación. 
+- **🔗 Restricción de integridad referencial:**  
+  - Esta restricción garantiza que un **campo clave ajena** siempre esté relacionado con un valor válido de la **clave primaria** de la tabla principal.  
+  - Mantiene la relación entre dos tablas **sincronizada** durante operaciones de actualización y eliminación.  
+  - Ejemplo: no podemos tener un Vehículo cuyo código de cliente **no exista** previamente en la tabla de Clientes.
 
-- En el ejemplo anterior, no podemos tener un Vehículo cuyo codigo de cliente no exista previamente en la tabla de Clientes.
+- **🗂️ Metadatos:**  
+  - Son **datos sobre los datos** presentes en la base de datos.  
+  - Ejemplos:  
+    - Qué tipo de datos se van a almacenar (texto, números, fechas…)  
+    - Qué nombre se le da a cada dato (nombre, apellidos, fecha, precio, edad…)  
+    - Cómo están agrupados los datos  
+    - Cómo se relacionan entre sí
 
-**Metadatos:** Metadatos son datos acerca de los datos presentes en la base de datos. Por ejemplo:
 
-- qué tipo de datos se van a almacenar (si son texto o números o fechas …)
-- qué nombre se le da a cada dato (nombre, apellidos, fecha, precio, edad,…)
-- cómo están agrupados los datos
-- cómo se relacionan,….
+### 🖥️ 3.3.- Sistemas Gestores de Bases de Datos (SGBD)
 
-### 3.3.- Sistemas Gestores de Bases de Datos
+Un **Sistema Gestor de Bases de Datos (SGBD)** es una aplicación que permite a los usuarios **definir, crear y mantener una base de datos**, proporcionando **acceso controlado** a la misma.
 
-Un sistema gestor de bases de datos (SGBD) es una aplicación que permite a los usuarios definir, crear y mantener una base de datos, y proporciona acceso controlado a la misma.
+---
 
-En general, un SGBD proporciona los siguientes servicios:
+### ⚙️ Servicios que proporciona un SGBD
 
-- **(DDL – Data Description Language)**: Permite la definición de la base de datos mediante el lenguaje de definición de datos. Este lenguaje permite especificar la estructura y el tipo de los datos, así como las restricciones sobre los datos. Todo esto se almacenará en la base de datos.
-- **(DML - Data Manipulation Language)**: Permite la inserción, actualización, eliminación y consulta de datos mediante el lenguaje de manejo o manipulación de datos.
-- **(DCL - Data Control Language)**: Proporciona un acceso controlado a la base de datos mediante:
-    - Un sistema de seguridad, de modo que los usuarios no autorizados no puedan acceder a la base de datos, mediante el lenguaje de control de datos.
-    - Un sistema de integridad que mantiene la integridad y la consistencia de los datos;
-    - Un sistema de control de concurrencia que permite el acceso compartido a la base de datos;
-    - Un sistema de control de recuperación que restablece la base de datos después de que se produzca un fallo del hardware o del software;
-    - Un diccionario de datos o catálogo accesible por el usuario que contiene la descripción de los datos de la base de datos.
+- **📐 DDL – Data Description Language:**  
+  - Permite la **definición de la base de datos** mediante el lenguaje de definición de datos.  
+  - Especifica la **estructura**, el **tipo de datos** y las **restricciones** que se almacenan en la BD.
 
-La principal herramienta de un SGBD es la interfaz de programación con el usuario. Esta interfaz consiste en un lenguaje muy sencillo mediante el cual el usuario interactua con el servidor. Este lenguaje comúnmente se denomina SQL, Structure Query Language, está estandarizado, es decir, todas las BD que soporten SQL deben tener la misma sintaxis a la hora de aplicar el lenguaje.
+- **📝 DML – Data Manipulation Language:**  
+  - Permite **insertar, actualizar, eliminar y consultar** datos mediante el lenguaje de manipulación de datos.
 
-### 3.4.- Tipos de SGBD
+- **🔒 DCL – Data Control Language:**  
+  Proporciona **acceso controlado** mediante:  
+  - Sistema de **seguridad**, evitando que usuarios no autorizados accedan a la BD.  
+  - Sistema de **integridad**, manteniendo la consistencia de los datos.  
+  - Sistema de **control de concurrencia**, permitiendo el acceso compartido.  
+  - Sistema de **recuperación**, restableciendo la BD tras fallos de hardware o software.  
+  - **Diccionario de datos** o catálogo accesible al usuario que describe los datos de la BD.
 
-Los SGBD se pueden clasificar según las BD que gestionan (jerárquicas, relacionales, orientadas a objetos,…), pero como actualmente la mayoría de los SGBD integran múltiples filosofías, los clasificaremos según su capacidad y potencia del propio gestor, resultado los siguientes SGBD:
+> 💡 La principal herramienta de un SGBD es la **interfaz de usuario**, normalmente mediante **SQL (Structure Query Language)**, un lenguaje estandarizado que permite interactuar con el servidor de manera uniforme.
 
-- _SGBD ofimáticos_: manipulas BD pequeñas orientadas a almacenar datos domésticos o de pequeñas empresas. Ejemplos típicos son Microsoft ACCESS y LibreOffice Base.
-- _SGBD corporativos_: tienen la capacidad de gestionar BD enormes, de medianas o grandes empresas con una carga de datos y transacciones que requieren de un servidor de gran capacidad. Un ejemplo típico de BD corporativas es ORACLE, actualmente junto de DB2 el servidor de BD más potente del mercado (también el más caro). Nosotros para nuestro aprendizaje utilizamos una versión gratuita con fines educativos, que aunque bastante limitada, nos sirve para introducirnos en la filosofía de ORACLE.
+---
 
-## HOJAS DE EJERCICIOS
+### 🏷️ 3.4.- Tipos de SGBD
 
-💻 Hoja de ejercicios 1.
+Los SGBD se pueden clasificar según el tipo de BD que gestionan (jerárquicas, relacionales, orientadas a objetos…), pero actualmente se suele clasificar según **capacidad y potencia**:
 
-💻 Hoja de ejercicios 2.
+- **🖇️ SGBD ofimáticos:**  
+  - Manejan **BD pequeñas**, para datos domésticos o de pequeñas empresas.  
+  - Ejemplos: Microsoft **ACCESS**, LibreOffice **Base**.
 
-💻 Hoja de ejercicios 3.
+- **🏢 SGBD corporativos:**  
+  - Gestionan **BD grandes**, para medianas o grandes empresas con alto volumen de datos y transacciones.  
+  - Ejemplos: **ORACLE**, **DB2**.  
+  - Para aprendizaje se pueden usar versiones **gratuitas educativas**, limitadas pero útiles para entender la filosofía de ORACLE.
 
-💻 Hoja de ejercicios 4.
+## 📝 HOJAS DE EJERCICIOS
 
-💻 Hoja de ejercicios 5.
+- 💻 **Hoja de ejercicios 1**  
+- 💻 **Hoja de ejercicios 2**  
+- 💻 **Hoja de ejercicios 3**  
+- 💻 **Hoja de ejercicios 4**  
+- 💻 **Hoja de ejercicios 5**
 
