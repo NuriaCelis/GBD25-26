@@ -200,28 +200,51 @@ En este modelo, la información está **repartida en distintas localizaciones** 
 <img src="img/clasificacion1.png" alt="Clasificación de las bases de datos" width="400">
 
 
+## 🏋️‍♂️ Ejercicios sobre bases de datos
+
 **Realiza los siguientes ejercicios:**
 
-1. Busca por Internet las ventajas y desventajas de utilizar un sistema de ficheros tradicional frente a un sistemas de bases de datos para almacenar información.
-2. Busca por Internet un esquema o imagen que te ayude a identificar cada uno de los tipos de datos de las bases de datos que hemos visto.
+### 1️⃣ Comparativa de sistemas
+- 🌐 Busca en **Internet** las **ventajas y desventajas** de:  
+  - **Sistema de ficheros tradicional**  
+  - **Sistema de bases de datos**  
+- ❓ Reflexiona sobre **cuándo es mejor usar uno u otro**.
 
-## 3.- BASES DE DATOS RELACIONALES
+---
 
-Como ya hemos comentado, en este curso vamos a trabajar con las bases de datos relacionales. Veremos una serie de conceptos básicos sobre las bases de datos en general, y de las bases de datos relacionales en particular.
+### 2️⃣ Tipos de datos en bases de datos
+- Busca en **Internet** un **esquema o imagen** que te ayude a **identificar cada tipo de dato** de las bases de datos que hemos visto.  
+- Puedes guardar la imagen para usarla como **apunte visual**.
 
-### 3.1.- Conceptos
 
-**Datos:** son hechos conocidos que pueden registrarse y que tienen un significado implícito. Pueden constituir datos los nombres, números telefónicos y direcciones de personas que conocemos.
+## 🗄️ 3.- BASES DE DATOS RELACIONALES
 
-**Tipo de Dato:** El tipo de dato indica la naturaleza del campo. Así, se puede tener datos numéricos, que son aquellos con los que se pueden realizar cálculos aritméticos (sumas, restas, multiplicaciones…), los datos alfanuméricos, que son los que contienen caracteres alfabéticos y números…
+En este curso trabajaremos con **bases de datos relacionales**.  
+Veremos conceptos básicos sobre **bases de datos en general** y **bases de datos relacionales** en particular.
 
-**Tabla:** Es un conjunto de filas y columnas bajo un mismo nombre que representa el conjunto de valores almacenados para una serie de datos. Por ejemplo,la información de todos los clientes de una BD se almacenarán en una tabla llamada CLIENTES.
+---
 
-**Campo:** Cada una de las columnas de una tabla. Identifica una familia de datos. Por ejemplo, el campo fechaNacimiento representa las fechas de nacimiento de todos los clientes que contiene una tabla CLIENTES.
+### 📝 3.1.- Conceptos
 
-**Campo clave:** Es un campo especial que identifica de forma única a cada registro. Por ejemplo, el NIF es único para cada persona, por tanto puede ser su campo clave. Existen distivos tipos de campos clave que veremos más adelante.
+- **📊 Datos:** hechos conocidos que pueden registrarse y tienen un **significado**.  
+  Ejemplo: nombres, números de teléfono y direcciones de personas.
 
-**Registro:** Corresponde a cada una de las filas de la tabla. También se llaman tuplas. Por ejemplo en la siguiente tabla CLIENTES, observamos dos registros, que corresponden a la información sobre los clientes Juan García y Fernándo Martínez.
+- **🔢 Tipo de dato:** indica la **naturaleza del campo**.  
+  - Datos **numéricos**: se pueden usar para cálculos aritméticos (sumas, restas…).  
+  - Datos **alfanuméricos**: contienen caracteres alfabéticos y números.
+
+- **📋 Tabla:** conjunto de **filas y columnas** bajo un mismo nombre, que almacena valores para una serie de datos.  
+  Ejemplo: la información de todos los clientes de una BD se guarda en la tabla `CLIENTES`.
+
+- **🏷️ Campo:** cada una de las **columnas** de una tabla. Identifica una **familia de datos**.  
+  Ejemplo: `fechaNacimiento` representa las fechas de nacimiento de todos los clientes.
+
+- **🔑 Campo clave:** campo especial que **identifica de forma única** cada registro.  
+  Ejemplo: el `NIF` es único para cada persona, por lo que puede ser su campo clave.  
+  > ⚠️ Existen distintos tipos de campos clave que se verán más adelante.
+
+- **📌 Registro (o tupla):** cada **fila** de la tabla. Contiene todos los valores de un conjunto de campos para un elemento.  
+  Ejemplo: en la tabla `CLIENTES`, un registro puede contener la información de Juan García o Fernando Martínez.
 
 ![Tabla](img/Tabla.png)
 
