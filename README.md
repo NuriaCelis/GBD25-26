@@ -12,7 +12,9 @@ IES Miguel Herrero.
 💾 **1. UNIDAD 1. SISTEMAS DE INFORMACIÓN.**
 
   [Apuntes de la Unidad 1.](TEMA 1/Apuntes.md)
+
   
+  <!-- Este es un comentario y no se mostrará en la vista previa Markdown 
 
 🎥 **2. UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.**
   
@@ -40,4 +42,4 @@ IES Miguel Herrero.
 
 📻 **8. UNIDAD 8. PROGRAMACIÓN DE BASES DE DATOS.**
 
-  [Apuntes de la Unidad 8.](Tema8/Apuntes.md)
+  [Apuntes de la Unidad 8.](Tema8/Apuntes.md) -->
