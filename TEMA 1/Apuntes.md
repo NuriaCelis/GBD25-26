@@ -111,12 +111,9 @@ Anteriormente, se utilizaban **ficheros tradicionales** (como los vistos en el a
 
 A lo largo de la historia, las bases de datos han utilizado distintos **modelos** según su evolución tecnológica:
 
+#### 📚 Evolución histórica de las bases de datos
 
----
-
-# 📚 Evolución histórica de las bases de datos
-
-### 1. 📂 **Primeros sistemas (años 60-70)**
+##### 1. 📂 **Primeros sistemas (años 60-70)**
 
 * 🌳 **Bases de datos jerárquicas**
 
@@ -127,33 +124,26 @@ A lo largo de la historia, las bases de datos han utilizado distintos **modelos*
   * Nodos con múltiples relaciones.
   * Basadas en CODASYL.
 
----
-
-### 2. 📊 **Bases de datos relacionales (años 70-80)**
+##### 2. 📊 **Bases de datos relacionales (años 70-80)**
 
 * Organizadas en **tablas** con filas y columnas.
 * Uso de **SQL**.
 * Ejemplos: Oracle, MySQL, PostgreSQL, SQL Server.
 
----
-
-### 3. 🧩 **Bases de datos orientadas a objetos (años 80-90)**
+##### 3. 🧩 **Bases de datos orientadas a objetos (años 80-90)**
 
 * Datos almacenados como **objetos** con atributos y métodos.
 * Útiles en aplicaciones multimedia o CAD.
 * Ejemplo: ObjectDB.
 
----
-
-### 4. 🌐 **Bases de datos distribuidas (años 90-2000)**
+##### 4. 🌐 **Bases de datos distribuidas (años 90-2000)**
 
 * Datos repartidos en distintos nodos físicos.
 * Permiten acceso como si fueran una sola base.
 * Ejemplo: Oracle Distributed, replicación en MySQL.
 
----
 
-### 5. ⚡ **Bases de datos NoSQL (2000 en adelante)**
+##### 5. ⚡ **Bases de datos NoSQL (2000 en adelante)**
 
 * Diseñadas para **Big Data** y datos no estructurados.
 * Principales tipos:
@@ -163,16 +153,13 @@ A lo largo de la historia, las bases de datos han utilizado distintos **modelos*
   * 📊 Columnas → Cassandra, HBase.
   * 🕸️ Grafos → Neo4j, OrientDB.
 
----
 
-### 6. ☁️ **Bases de datos en la nube (2010 en adelante)**
+##### 6. ☁️ **Bases de datos en la nube (2010 en adelante)**
 
 * Escalables y con pago por uso.
 * Ejemplos: Amazon RDS, Google BigQuery, Azure SQL Database.
 
----
-
-### 7. 🤖 **Bases de datos modernas y emergentes**
+##### 7. 🤖 **Bases de datos modernas y emergentes**
 
 * 🆕 **NewSQL** → Google Spanner, VoltDB.
 * ⚡ **En memoria** → SAP HANA.
@@ -181,9 +168,6 @@ A lo largo de la historia, las bases de datos han utilizado distintos **modelos*
 
 <img src="img/clasificacion.jpg" alt="Clasificación de las bases de datos" width="400">
 
-![Clasificación de las bases de datos](img/clasificacion.jpg)
-
----
 
 ## 🌍 Clasificación de las bases de datos según su ubicación
 
