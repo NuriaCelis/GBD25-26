@@ -85,20 +85,32 @@ Caracteres extendidos (128–255, en ASCII extendido): Permiten letras acentuada
 
 ![Lista de ficheros](img/Lista.png)
 
-## 2.- BASES DE DATOS
+## 🗄️ 2.- BASES DE DATOS
 
-Una **Base de datos**  es un conjunto de datos estructurados que pertenecen a un mismo contexto y, en cuanto a su función, se utiliza para administrar de forma electrónica grandes cantidades de información.
+Una **Base de datos (BD)** es un conjunto de **datos estructurados** que pertenecen a un mismo contexto.  
+💻 **Función:** administrar de forma electrónica grandes cantidades de información.
 
-Anteriormente a las bases de datos, se utilizaban ficheros tradicionales, como los que hemos visto en el apartado anterior. Veamos según su definición cuales son sus diferencias.
+Anteriormente, se utilizaban **ficheros tradicionales** (como los vistos en el apartado anterior). Veamos las diferencias según su definición:
 
-- Los _ficheros tradicionales_ almacenan los datos en archivos individuales, exclusivos de cada aplicación en particular. Los datos de un fichero no están relacionados con datos de otros ficheros. Son unidades independientes. En este sistema, los datos pueden ser redundantes y la actualización de los datos es más lenta.
-- Las _bases de datos_ tienen el almacenamiento de datos formalmente definido, controlado centralmente para intentar servir a múltiples y diferentes aplicaciones. La base de datos es una fuente de datos que son compartidos por numerosos usuarios para diversas aplicaciones.
+- 📝 **Ficheros tradicionales:**  
+  - Almacenan los datos en archivos individuales, exclusivos de cada aplicación.  
+  - Los datos de un fichero no están relacionados con otros ficheros; son **unidades independientes**.  
+  - Pueden existir **datos redundantes** y la actualización es más lenta.
 
-Así, en un sistema de ficheros tradicional, la información está dispersa en varios ficheros de datos y existe un cierto número de programas que los recuperan y agrupan. Aunque los sistemas de ficheros o archivos supusieron un gran avance sobre los sistemas manuales, tienen inconvenientes bastante importantes que se solventaron, en gran medida, con la aparición de los sistemas de bases de datos.
+- 🗄️ **Bases de datos:**  
+  - El almacenamiento de datos está **formalmente definido** y controlado **centralmente**.  
+  - Permite **servir a múltiples aplicaciones**.  
+  - Los datos son **compartidos** por varios usuarios para diversas aplicaciones.
 
-### 2.1.- Tipos de bases de datos
+> ⚠️ En un sistema de ficheros tradicional, la información está dispersa en varios archivos y requiere programas adicionales para recuperarla y agruparla.  
+> ✅ Las bases de datos solucionan gran parte de estos inconvenientes.
 
-Coincidiendo con la evolución histórica de las bases de datos éstas han utilizado distintos modelos:
+---
+
+### 🏷️ 2.1.- Tipos de bases de datos
+
+A lo largo de la historia, las bases de datos han utilizado distintos **modelos** según su evolución tecnológica:
+
 
 ---
 
