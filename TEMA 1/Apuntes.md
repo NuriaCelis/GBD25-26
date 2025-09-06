@@ -43,7 +43,7 @@ Indica el **uso del fichero**:
 - **Históricos**: guardan datos antiguos que ya no se usan en procesos diarios.
 
 
-![Clasificación de ficheros](img/clasificacion2.jpg)
+
 
 **Realiza los siguientes ejercicios:**
 
