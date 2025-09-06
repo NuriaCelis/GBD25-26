@@ -25,22 +25,22 @@ Los ficheros son estructuras de información creadas por los sistemas operativos
 El **formato** y **tipo de fichero** determinan cómo se interpreta la información que contiene. Un fichero es una **ristra de bits** (ceros y unos), por lo que es necesaria su interpretación para dar sentido a los datos.
 
 #### 📄 1️⃣ Según el contenido
-- **📝 Ficheros de texto**: caracteres alfabéticos y números que entiende el ser humano.  
-- **💾 Ficheros binarios**: bits que almacenan sonido, vídeo, imágenes, etc. No se leen directamente como texto.
+- **Ficheros de texto**: caracteres alfabéticos y números que entiende el ser humano.  
+- **Ficheros binarios**: bits que almacenan sonido, vídeo, imágenes, etc. No se leen directamente como texto.
 
 #### 🗂️ 2️⃣ Según la organización
 Indica la forma de **acceso a los datos**:
-- **➡️ Secuencial**: los datos están uno detrás de otro; para acceder a un dato concreto, se recorren los anteriores.  
-- **🎯 Directa**: permite acceder directamente a un dato sin necesidad de leer los anteriores.  
-- **📌 Indexada**: acceso mediante un índice, facilitando la búsqueda rápida, como el índice de un libro.
+- **Secuencial**: los datos están uno detrás de otro; para acceder a un dato concreto, se recorren los anteriores.  
+- **Directa**: permite acceder directamente a un dato sin necesidad de leer los anteriores.  
+- **Indexada**: acceso mediante un índice, facilitando la búsqueda rápida, como el índice de un libro.
 
 > ⚠️ Existen variantes que combinan varias organizaciones para optimizar el acceso a los datos.
 
 #### ⚙️ 3️⃣ Según la utilidad
 Indica el **uso del fichero**:
-- **🏫 Maestros**: contienen datos fundamentales para la organización. Ejemplo: datos de alumnos de un instituto.  
-- **🔄 Movimientos**: almacenan cambios o actualizaciones de los ficheros maestros.  
-- **📚 Históricos**: guardan datos antiguos que ya no se usan en procesos diarios.
+- **Maestros**: contienen datos fundamentales para la organización. Ejemplo: datos de alumnos de un instituto.  
+- **Movimientos**: almacenan cambios o actualizaciones de los ficheros maestros.  
+- **Históricos**: guardan datos antiguos que ya no se usan en procesos diarios.
 
 
 ![Clasificación de ficheros](img/clasificacion2.jpg)
