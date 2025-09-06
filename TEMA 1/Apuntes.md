@@ -67,17 +67,116 @@ Así, en un sistema de ficheros tradicional, la información está dispersa en v
 
 Coincidiendo con la evolución histórica de las bases de datos éstas han utilizado distintos modelos:
 
-- Jerárquicos: La estructura jerárquica fue usada en las primeras bases de datos, donde las relaciones entre los distintos datos almacenados forman una estructura de árbol.
-- En red: La estructura en red contiene relaciones más complejas que las jerárquicas. Adminte relaciones de cada registro con varios que se pueden seguir por distintos caminos.
-- Relacionales: La estructura relacional es la más extendida y es la que vamos a estudiar nosotros. Almacena los datos en filas o registros y columnas o campos. EStas tablas estarán relacionadas entre sí por claves comunes.
-- Multidimensionales: La estructura multidimensional se parece a la del modelo relacional, pero en vez de las dos dimensiones fila-columna, tiene N dimensiones. Ofrece el aspecto de una hoja de cálculo.
-- De objetos: la estructura orientada a objetos está diseñada siguiendo el paradigma de los lenguajes orientados a objetos. De este modo soporta los tipos de datos gráficos, imágenes, voz y texto de manera natural. Esta estructura tiene gran difusión en aplicaciones web para aplicaciones multimedia.
+---
 
-Otro modo de clasificar las bases de datos es según su ubicación. Veamos las más importantes:
+# 📚 Evolución histórica de las bases de datos
 
-- Bases de datos locales. En modo local tenemos la base de datos y el usuario ubicados en el mismo ordenador. Un ejemplo de base de datos que funciona en modo local es Microsoft Access, que es una base de datos fácil de manejar por usuarios poco expertos que funciona bien en modo local y mientras no tenga que albergar grandes cantidades de información.
-- Bases de datos centralizadas. En los sistemas centralizados tenemos la base de datos completa en un mismo servidor, y todos los usuarios acceden a ese servidor. Que la base de datos esté en un mismo servidor no implica que esté en un solo archivo o en el mismo disco, puede estar repartida.En modo Cliente/Servidor, la base de datos se encuentra en un ordenador (el Servidor) y los usuarios acceden simultáneamente a esa base de datos a través de la red (sea una red local o Internet) desde sus ordenadores a través de un programa Cliente. A nivel de empresas es el sistema que más se utiliza en la actualidad.
-- Bases de datos distribuidas. Tenemos la información repartida en distintas localizaciones unidas todas ellas mediante red y un sistema gestor de bases de datos distribuidas. Las distintas localizaciones suelen ser distintas geográficamente.
+### 1. 📂 **Primeros sistemas (años 60-70)**
+
+* 🌳 **Bases de datos jerárquicas**
+
+  * Datos organizados en árbol (padre-hijo).
+  * Ejemplo: IMS de IBM.
+* 🔗 **Bases de datos en red**
+
+  * Nodos con múltiples relaciones.
+  * Basadas en CODASYL.
+
+---
+
+### 2. 📊 **Bases de datos relacionales (años 70-80)**
+
+* Organizadas en **tablas** con filas y columnas.
+* Uso de **SQL**.
+* Ejemplos: Oracle, MySQL, PostgreSQL, SQL Server.
+
+---
+
+### 3. 🧩 **Bases de datos orientadas a objetos (años 80-90)**
+
+* Datos almacenados como **objetos** con atributos y métodos.
+* Útiles en aplicaciones multimedia o CAD.
+* Ejemplo: ObjectDB.
+
+---
+
+### 4. 🌐 **Bases de datos distribuidas (años 90-2000)**
+
+* Datos repartidos en distintos nodos físicos.
+* Permiten acceso como si fueran una sola base.
+* Ejemplo: Oracle Distributed, replicación en MySQL.
+
+---
+
+### 5. ⚡ **Bases de datos NoSQL (2000 en adelante)**
+
+* Diseñadas para **Big Data** y datos no estructurados.
+* Principales tipos:
+
+  * 🔑 Clave-valor → Redis, DynamoDB.
+  * 📄 Documentales → MongoDB, CouchDB.
+  * 📊 Columnas → Cassandra, HBase.
+  * 🕸️ Grafos → Neo4j, OrientDB.
+
+---
+
+### 6. ☁️ **Bases de datos en la nube (2010 en adelante)**
+
+* Escalables y con pago por uso.
+* Ejemplos: Amazon RDS, Google BigQuery, Azure SQL Database.
+
+---
+
+### 7. 🤖 **Bases de datos modernas y emergentes**
+
+* 🆕 **NewSQL** → Google Spanner, VoltDB.
+* ⚡ **En memoria** → SAP HANA.
+* 🔀 **Multimodelo** → ArangoDB, CosmosDB.
+* 🧠 **Para IA / vectoriales** → Pinecone, Milvus.
+
+
+![Clasificación de las bases de datos](img/clasificacion.jpg)
+
+---
+
+## 🌍 Clasificación de las bases de datos según su ubicación
+
+Otro modo de clasificar las bases de datos es **según dónde se encuentren ubicadas**. Veamos las más importantes:
+
+---
+
+### 💻 Bases de datos locales
+
+En este caso, la **base de datos y el usuario están en el mismo ordenador**.
+
+* Ejemplo: **Microsoft Access**, que resulta sencillo de manejar para usuarios poco expertos.
+* Funciona bien en modo local siempre que no tenga que almacenar **grandes volúmenes de información**.
+* Otros ejemplos: **SQLite** (muy usado en móviles y aplicaciones de escritorio), **dBase** (uno de los primeros sistemas personales).
+
+---
+
+### 🖥️ Bases de datos centralizadas
+
+En los **sistemas centralizados**, toda la base de datos está en un **único servidor**, al que acceden todos los usuarios.
+
+* Que esté en un mismo servidor no significa que esté en un solo archivo o en un único disco; puede estar repartida internamente.
+* En el modelo **Cliente/Servidor**, la base de datos reside en el **servidor** y los usuarios acceden a ella **simultáneamente** desde sus ordenadores (clientes) a través de una red, ya sea local o Internet.
+* 👉 Es el **sistema más utilizado en empresas actualmente**.
+* Ejemplos comerciales: **Oracle Database**, **Microsoft SQL Server**, **IBM Db2**, **MySQL Enterprise**.
+
+---
+
+### 🌐 Bases de datos distribuidas
+
+En este modelo, la información está **repartida en distintas localizaciones** que se encuentran conectadas mediante una **red** y gestionadas por un **sistema de bases de datos distribuidas**.
+
+* Estas localizaciones suelen estar en **lugares geográficos distintos**.
+* El sistema gestor se encarga de que los usuarios perciban los datos como si estuvieran en una única base.
+* Ejemplos comerciales: **Google Spanner**, **Amazon Aurora**, **Microsoft Cosmos DB**, **CockroachDB**, **Cassandra (DataStax Enterprise)**.
+
+---
+
+
 
 ![Clasificación de las bases de datos](img/Bases.png)
 
