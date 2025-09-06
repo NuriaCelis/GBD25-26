@@ -45,13 +45,28 @@ Indica el **uso del fichero**:
 
 ![Clasificación de ficheros](img/clasificacion2.jpg)
 
+## 🏋️‍♂️ Ejercicios sobre ficheros
+
 **Realiza los siguientes ejercicios:**
 
-1. Busca en tu ordenador un fichero con extensión docx y ábrelo con el bloc de notas. ¿Porqué no se ve bien el contenido del fichero?.
-2. Conectate a Internet y busca una tabla de códigos ascii de 8 bits. Observa las siguientes características:
-    - Los 32 primeros caracteres, se llaman caracteres no imprimibles y se utilizaban tradicionalmente para el control de transmisiones.
-    - La distancia entre mayúsculas y minúsculas es exactamente de 32 caracteres.
-3. La siguiente imagen es una captura de una carpeta en el sistema Windows. Indica de que tipo es cada fichero y que contiene.
+### 1️⃣ Abrir un fichero
+- Busca en tu ordenador un fichero con extensión **`.docx`**.  
+- Ábrelo con el **Bloc de notas**.  
+- ❓ Pregunta: ¿Por qué no se ve bien el contenido del fichero?
+
+---
+
+### 2️⃣ Tabla de códigos ASCII
+- Conéctate a **Internet** y busca una **tabla de códigos ASCII de 8 bits**.  
+- Observa las siguientes características:  
+  - Los **32 primeros caracteres** son **no imprimibles** y se utilizaban para el **control de transmisiones**.  
+  - La **distancia entre mayúsculas y minúsculas** es exactamente de **32 caracteres**.
+
+---
+
+### 3️⃣ Identificación de ficheros
+- Observa la siguiente **captura de una carpeta en Windows**.  
+- ❓ Indica **el tipo de cada fichero** y **qué contiene**.
 
 ![Lista de ficheros](img/Lista.png)
 
