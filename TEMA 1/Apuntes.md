@@ -166,8 +166,6 @@ A lo largo de la historia, las bases de datos han utilizado distintos **modelos*
 * 🔀 **Multimodelo** → ArangoDB, CosmosDB.
 * 🧠 **Para IA / vectoriales** → Pinecone, Milvus.
 
-<img src="img/clasificacion.jpg" alt="Clasificación de las bases de datos" width="400">
-
 
 #### 🌍 Clasificación de las bases de datos según su ubicación
 
@@ -199,8 +197,8 @@ En este modelo, la información está **repartida en distintas localizaciones** 
 * El sistema gestor se encarga de que los usuarios perciban los datos como si estuvieran en una única base.
 * Ejemplos comerciales: **Google Spanner**, **Amazon Aurora**, **Microsoft Cosmos DB**, **CockroachDB**, **Cassandra (DataStax Enterprise)**.
 
+<img src="img/clasificacion1.png" alt="Clasificación de las bases de datos" width="400">
 
-![Clasificación de las bases de datos](img/Bases.png)
 
 **Realiza los siguientes ejercicios:**
 
