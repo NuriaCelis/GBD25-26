@@ -179,7 +179,8 @@ A lo largo de la historia, las bases de datos han utilizado distintos **modelos*
 * 🔀 **Multimodelo** → ArangoDB, CosmosDB.
 * 🧠 **Para IA / vectoriales** → Pinecone, Milvus.
 
-<img src="img/clasificacion.jpg" alt="Clasificación de las bases de datos" width="200">
+<img src="img/clasificacion.jpg" alt="Clasificación de las bases de datos" width="400">
+
 ![Clasificación de las bases de datos](img/clasificacion.jpg)
 
 ---
