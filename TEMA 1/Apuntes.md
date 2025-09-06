@@ -57,10 +57,25 @@ Indica el **uso del fichero**:
 ---
 
 ### 2️⃣ Tabla de códigos ASCII
+- 📝 **Tabla ASCII**: Es un conjunto estandarizado de códigos numéricos que representan caracteres que una computadora puede entender.
+
+📦 Contenido de la tabla ASCII:
+
+- Caracteres de control (0–31 y 127): No se imprimen; se usaban para controlar dispositivos, como el retorno de carro CR o salto de línea LF.
+
+- Símbolos y signos de puntuación: Por ejemplo !, @, #, $, %.
+
+- Números (48–57): Los dígitos del 0 al 9.
+
+- Letras mayúsculas (65–90): A a Z.
+
+- Letras minúsculas (97–122): a a z.
+
+Caracteres extendidos (128–255, en ASCII extendido): Permiten letras acentuadas, símbolos gráficos y otros caracteres especiales.
+
+💻 Uso en informática: Permite almacenar, interpretar y transmitir texto de manera uniforme entre sistemas y dispositivos, garantizando que todos comprendan los mismos caracteres.
+
 - Conéctate a **Internet** y busca una **tabla de códigos ASCII de 8 bits**.  
-- Observa las siguientes características:  
-  - Los **32 primeros caracteres** son **no imprimibles** y se utilizaban para el **control de transmisiones**.  
-  - La **distancia entre mayúsculas y minúsculas** es exactamente de **32 caracteres**.
 
 ---
 
