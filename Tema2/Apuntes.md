@@ -11,7 +11,7 @@
       1. [2.1.- 🟦 Entidades](#21---entidades)
       2. [2.2.- 📝 Atributos y tipos](#22---atributos-y-tipos)
    3. [✍️ Ejercicio](#️-ejercicio)
-      1. [2.3.- Relaciones](#23--relaciones)
+      1. [2.3.- 🔗 Relaciones](#23---relaciones)
       2. [2.4.- Cardinalidad](#24--cardinalidad)
       3. [2.5.- Tipo de Correspondencia](#25--tipo-de-correspondencia)
    4. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
@@ -214,31 +214,41 @@ Indica para cada atributo de qué tipo es, haciendo un examen lo más exhaustivo
 - Apellidos
 
 
-### 2.3.- Relaciones
+### 2.3.- 🔗 Relaciones
 
-Una relación es una asociación entre varias entidades a través de una acción realizable entre esas entidades. Suelen ser verbos o formas verbales. Por ejemplo:
+Una **relación** es una asociación entre varias entidades a través de una acción realizable entre ellas. Suelen representarse con **verbos o formas verbales**.  
 
-- COMPRAR (entre CLIENTE y PRODUCTO)
-- CURSAR (entre ALUMNO y MODULO)
-- SER_HIJO (entre ALUMNO y PADRE).
-- SER_JEFE (EMPLEADO consigo misma)
-- COMPRAR (entre las entidades CLIENTE, PRODUCTO, VENDEDOR)
+Ejemplos:  
+- COMPRAR (entre CLIENTE y PRODUCTO)  
+- CURSAR (entre ALUMNO y MÓDULO)  
+- SER_HIJO (entre ALUMNO y PADRE)  
+- SER_JEFE (EMPLEADO consigo misma)  
+- COMPRAR (entre CLIENTE, PRODUCTO y VENDEDOR)  
 
-Vamos a ver que tipos de relaciones nos podemos encontrar.
+---
 
-1. *Relación binaria o de grado dos*: Cuando se da entre dos entidades.
+#### 🟦 Tipos de relaciones
 
-![Relaciones](img/relacion1.png)
+1. **Relación binaria o de grado dos**  
+   Cuando se da entre **dos entidades**.  
 
-En este ejemplo vemos que las relaciones también pueden tener atributos.
+   <img src="img/relacion1.png" alt="Relación binaria" width="400px"/>  
 
-2. *Relación unaria, reflexiva o de grado uno*: Cuando se da entre elementos de la misma entidad, es decir, un elemento de una entidad se relaciona con uno o más elementos de la misma entidad.
+   En este ejemplo vemos que las relaciones también pueden tener **atributos**.  
 
-![Relaciones](img/relacion2.png)
+---
 
-3. *Relación ternaria o de grado tres*: Cuando se da entre tres entidades.
+2. **Relación unaria, reflexiva o de grado uno**  
+   Cuando se da entre **elementos de la misma entidad**, es decir, un elemento se relaciona con uno o más elementos de la misma entidad.  
 
-![Relaciones](img/relacion3.png)
+   <img src="img/relacion2.png" alt="Relación unaria" width="400px"/>  
+
+---
+
+3. **Relación ternaria o de grado tres**  
+   Cuando se da entre **tres entidades**.  
+
+   <img src="img/relacion3.png" alt="Relación ternaria" width="400px"/>  
 
 ### 2.4.- Cardinalidad
 
