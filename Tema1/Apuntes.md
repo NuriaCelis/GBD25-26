@@ -67,8 +67,8 @@ Indica el **uso del fichero**:
 - Letras mayúsculas (65–90): A a Z.
 
 - Letras minúsculas (97–122): a a z.
-
-Caracteres extendidos (128–255, en ASCII extendido): Permiten letras acentuadas, símbolos gráficos y otros caracteres especiales.
+  
+- Caracteres extendidos (128–255, en ASCII extendido): Permiten letras acentuadas, símbolos gráficos y otros caracteres especiales.
 
 💻 Uso en informática: Permite almacenar, interpretar y transmitir texto de manera uniforme entre sistemas y dispositivos, garantizando que todos comprendan los mismos caracteres.
 
