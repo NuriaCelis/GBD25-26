@@ -1,7 +1,6 @@
 # UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.
 
 # INDICE
-
 1. [UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.](#unidad-2-diseño-lógico-de-la-base-de-datos)
 2. [INDICE](#indice)
    1. [1.- 📊 MODELO DE DATOS](#1---modelo-de-datos)
@@ -12,30 +11,28 @@
       2. [2.2.- 📝 Atributos y tipos](#22---atributos-y-tipos)
    3. [✍️ Ejercicio](#️-ejercicio)
       1. [2.3.- 🔗 Relaciones](#23---relaciones)
-      2. [2.4.- Cardinalidad](#24--cardinalidad)
-      3. [2.5.- Tipo de Correspondencia](#25--tipo-de-correspondencia)
-   4. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
-      1. [2.6.- Debilidad](#26--debilidad)
-   5. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-1)
-   6. [3.- EL MODELO E/R AMPLIADO](#3--el-modelo-er-ampliado)
-   7. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-2)
-   8. [4.- CONSTRUCCIÓN DE UN DIAGRAMA E/R](#4--construcción-de-un-diagrama-er)
-   9. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-3)
-   10. [5.- MODELO RELACIONAL](#5--modelo-relacional)
-       1. [5.1.- Elementos de una relación](#51--elementos-de-una-relación)
-       2. [5.2.- Restricciones del modelo relacional](#52--restricciones-del-modelo-relacional)
-       3. [5.3.- Claves primarias y claves ajenas](#53--claves-primarias-y-claves-ajenas)
-       4. [5.4.- Integridad referencial](#54--integridad-referencial)
-       5. [5.5.- Representación del modelo Relacional](#55--representación-del-modelo-relacional)
-       6. [5.6.- Paso del modelo E/R al modelo Relacional](#56--paso-del-modelo-er-al-modelo-relacional)
-   11. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-4)
-   12. [6.- NORMALIZACIÓN](#6--normalización)
-       1. [6.1.- Primera forma normal (1FN)](#61--primera-forma-normal-1fn)
-       2. [6.2.- Segunda forma normal (2FN)](#62--segunda-forma-normal-2fn)
-       3. [6.3.- Tercera forma normal (3FN)](#63--tercera-forma-normal-3fn)
-   13. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-5)
-
-
+      2. [2.4.- 🔢 Cardinalidad](#24---cardinalidad)
+      3. [2.5.- 🔄 Tipo de Correspondencia](#25---tipo-de-correspondencia)
+   4. [📝 HOJAS DE EJERCICIOS](#-hojas-de-ejercicios)
+      1. [2.6.- 🏛️ Debilidad](#26--️-debilidad)
+   5. [📝 HOJAS DE EJERCICIOS](#-hojas-de-ejercicios-1)
+   6. [3.- 🏗️ EL MODELO E/R AMPLIADO](#3--️-el-modelo-er-ampliado)
+   7. [📝 HOJAS DE EJERCICIOS](#-hojas-de-ejercicios-2)
+   8. [4.- 🛠️ CONSTRUCCIÓN DE UN DIAGRAMA E/R](#4--️-construcción-de-un-diagrama-er)
+   9. [📝 HOJAS DE EJERCICIOS](#-hojas-de-ejercicios-3)
+   10. [5.- 🗄️ MODELO RELACIONAL](#5--️-modelo-relacional)
+       1. [5.1.- 📋 Elementos de una relación](#51---elementos-de-una-relación)
+       2. [5.2.- ⚖️ Restricciones del modelo relacional](#52--️-restricciones-del-modelo-relacional)
+       3. [5.3.- 🔑 Claves primarias y claves ajenas](#53---claves-primarias-y-claves-ajenas)
+       4. [5.4.- 🛡️ Integridad referencial](#54--️-integridad-referencial)
+       5. [5.5.- 🖼️ Representación del modelo Relacional](#55--️-representación-del-modelo-relacional)
+       6. [5.6.- 🔄 Paso del modelo E/R al modelo Relacional](#56---paso-del-modelo-er-al-modelo-relacional)
+   11. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
+   12. [6.- 🧩 NORMALIZACIÓN](#6---normalización)
+       1. [6.1.- 1FN (Primera forma normal)](#61--1fn-primera-forma-normal)
+       2. [6.2.- 2FN (Segunda forma normal)](#62--2fn-segunda-forma-normal)
+       3. [6.3.- 3FN (Tercera forma normal)](#63--3fn-tercera-forma-normal)
+   13. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-1)
 
 ## 1.- 📊 MODELO DE DATOS
 
@@ -225,7 +222,6 @@ Ejemplos:
 - SER_JEFE (EMPLEADO consigo misma)  
 - COMPRAR (entre CLIENTE, PRODUCTO y VENDEDOR)  
 
----
 
 #### 🟦 Tipos de relaciones
 
@@ -236,662 +232,608 @@ Ejemplos:
 
    En este ejemplo vemos que las relaciones también pueden tener **atributos**.  
 
----
 
 2. **Relación unaria, reflexiva o de grado uno**  
    Cuando se da entre **elementos de la misma entidad**, es decir, un elemento se relaciona con uno o más elementos de la misma entidad.  
 
    <img src="img/relacion2.png" alt="Relación unaria" width="400px"/>  
 
----
 
 3. **Relación ternaria o de grado tres**  
    Cuando se da entre **tres entidades**.  
 
    <img src="img/relacion3.png" alt="Relación ternaria" width="400px"/>  
 
-### 2.4.- Cardinalidad
+### 2.4.- 🔢 Cardinalidad
 
-En este apartado vemos una serie de definiciones para seguir entendiendo como construir un diagrama E-R.
+En este apartado veremos una serie de definiciones clave para seguir entendiendo cómo construir un **diagrama E-R**.  
 
-- **Ocurrencia**: Es una unidad del conjunto de elementos que representa una entidad. Para la entidad ALUMNO, una ocurrencia de ALUMNO es un alumno concreto. 
-- **Cardinalidad** de una entidad A respecto de otra B en una relación: indica el número mínimo y máximo de ocurrencias de la entidad A que pueden estar relacionadas con una ocurrencia de la entidad B. (A veces aparece como participación y no cardinalidad).
+- **Ocurrencia**: es una unidad del conjunto de elementos que representa una entidad.  
+  👉 Para la entidad **ALUMNO**, una ocurrencia sería un alumno concreto.  
 
-La cardinalidad se indica mediante una pareja números encerrados entre paréntesis. El primer número indica el mínimo número de ocurrencias relacionadas (será siempre un valor 0 o 1). El segundo número indica el máximo número de ocurrencias relacionadas (será siempre un valor 1 o N para muchos).
+- **Cardinalidad**: de una entidad **A** respecto de otra **B** en una relación, indica el **número mínimo y máximo de ocurrencias** de la entidad A que pueden estar relacionadas con una ocurrencia de la entidad B.  
+  (A veces aparece como *participación* en lugar de *cardinalidad*).  
 
-![Cardinalidad](img/cardinalidad1.png)
+La cardinalidad se indica mediante una **pareja de números entre paréntesis**:  
+- El **primer número** indica el mínimo (0 o 1).  
+- El **segundo número** indica el máximo (1 o N, para muchos).  
 
-Vamos a ver ahora que preguntas debemos hacernos para obtener mínimo y máximo de una entidad con la otra. Lo haremos pensando en la imagen anterior.
+<img src="img/cardinalidad1.png" alt="Ejemplo de cardinalidad" width="400px"/>
 
-- ¿Cada alumno como mínimo cuantas materias puede cursar?
-    - Al menos 1, ya que si no este no estaría matriculado.
-- ¿Cada alumno como máximo cuantas materias puede cursar?
-    - N, ya que puede cursar más de una
-- ¿Cada materia puede ser cursada como mínimo por cuantos alumnos?
-    - 0, ya que podría haber una materia sin alumnos. Convalidada.
-- ¿Cada materia puede ser cursada como máximo por cuantos alumnos?
-    - N, ya que puede haber varios alumnos matriculados en ella.
-    
- ![Cardinalidad](img/cardinalidad1.png)
- 
- ![Cardinalidad](img/cardinalidad2.png)
- 
-NOTA: Fíjate que lo obtenido de las 2 primeras preguntas lo ponemos al otro lado de la relación en Materia. Y las dos últimas en Alumno
+#### ❓ Preguntas para obtener mínimos y máximos
 
-Las cardinalidades que se pueden dar en las relaciones son:
+Pensando en la imagen anterior:
+
+- ¿Cada alumno, como mínimo, cuántas materias puede cursar?  
+  👉 **1**, ya que si no, no estaría matriculado.  
+
+- ¿Cada alumno, como máximo, cuántas materias puede cursar?  
+  👉 **N**, ya que puede cursar más de una.  
+
+- ¿Cada materia puede ser cursada como mínimo por cuántos alumnos?  
+  👉 **0**, ya que podría haber una materia sin alumnos (convalidada).  
+
+- ¿Cada materia puede ser cursada como máximo por cuántos alumnos?  
+  👉 **N**, ya que puede haber varios alumnos matriculados en ella.  
+
+<img src="img/cardinalidad1.png" alt="Ejemplo cardinalidad alumno-materia" width="400px"/>  
+<img src="img/cardinalidad2.png" alt="Otro ejemplo de cardinalidad" width="400px"/>  
+
+📌 **Nota**: lo obtenido de las **2 primeras preguntas** se coloca al otro lado de la relación en **Materia**, y las **2 últimas en Alumno**.  
+
+#### 📊 Tipos de cardinalidad en relaciones
 
 | Cardinalidad | Significado |
-| ------------- | ------------- |
-| (0,1)  | Mínimo cero, máximo uno  | 
-| (1,1)  | Minimo uno, máximo uno  | 
-| (0,N)  | Mínimo cero, máximo muchos  | 
-| (1,N)  | Mínimo uno, máximo muchos  | 
+|--------------|-------------|
+| (0,1)        | Mínimo cero, máximo uno |
+| (1,1)        | Mínimo uno, máximo uno |
+| (0,N)        | Mínimo cero, máximo muchos |
+| (1,N)        | Mínimo uno, máximo muchos |
 
-### 2.5.- Tipo de Correspondencia
+
+### 2.5.- 🔄 Tipo de Correspondencia
 
 El tipo de correspondencia o relación de cardinalidad expresa el número máximo de elementos u ocurrencias que se pueden llegar a relacionar entre las entidades de una relación.
 
-- Uno a uno (1:1): Sería el caso de la relación CASADO entre las entidades PERSONA y PERSONA. Un persona podrá estar casada con otra persona pero no con muchas.
-- Uno a muchos (1:N): Sería el caso de la relación PERTENECE entre las entidades MUNICIPIO y PROVINCIA. Un municipio sólo puede pertenecer a una provincia, mientras que a una provincia pertenecen muchos municipios.
-- Muchos a muchos (N:M): Sería el caso de la relación COMPRA entre las entidades PRODUCTOS y CLIENTES. Un cliente puede comprar varios productos y un mismo tipo de producto será comprado por varios clientes. 
+- Uno a uno (1:1): Sería el caso de la relación **CASADO** entre las entidades PERSONA y PERSONA. Una persona podrá estar casada con otra persona pero no con muchas.  
+- Uno a muchos (1:N): Sería el caso de la relación **PERTENECE** entre las entidades MUNICIPIO y PROVINCIA. Un municipio sólo puede pertenecer a una provincia, mientras que a una provincia pertenecen muchos municipios.  
+- Muchos a muchos (N:M): Sería el caso de la relación **COMPRA** entre las entidades PRODUCTOS y CLIENTES. Un cliente puede comprar varios productos y un mismo tipo de producto será comprado por varios clientes.  
 
-Representación de cardinalidad y tipo de correspondencia
+**Representación de cardinalidad y tipo de correspondencia**  
 
- ![Correspondencia](img/correspondencia1.png)
+<img src="img/correspondencia1.png" alt="Correspondencia 1" width="400px"/>  
+<img src="img/correspondencia2.png" alt="Correspondencia 2" width="400px"/>  
 
- ![Correspondencia](img/correspondencia2.png)
-
-**Realiza el siguiente ejercicio:**
+**Realiza el siguiente ejercicio:**  
 
 1. En un supermercado hay productos organizados en categorías. Cada producto pertenece a una única categoría. Están previstas categorías que aún pueden no tener productos. Calcula las cardinalidades de cada entidad y el tipo de correspondencia y represéntalos en el esquema E/R.
 
-## HOJAS DE EJERCICIOS
+## 📝 HOJAS DE EJERCICIOS
 
-💻 Hoja de ejercicios 1.
+💻 Hoja de ejercicios 1.  
 
-Vamos a ver ahora que tipos de correspondencia nos podemos encontrar en una relación ternaria y como se puede obtener.
+Vamos a ver ahora qué tipos de correspondencia nos podemos encontrar en una **relación ternaria** y cómo se pueden obtener.
 
-Tomamos en cuenta una de la entidades y es necesario ver que relación o participación presenta esta con la agrupación de las otras dos. Los casos posibles que se pueden dar son estos:
+Tomamos en cuenta una de las entidades y es necesario ver qué relación o participación presenta esta con la agrupación de las otras dos. Los casos posibles que se pueden dar son estos:
 
-- 1:1:1
-- 1:1:M
-- 1:N:M
-- M:N:P
+- 1:1:1  
+- 1:1:M  
+- 1:N:M  
+- M:N:P  
 
-Vamos a ver con un ejemplo como obtener las cardinalidades en una relación ternaria. Partamos del siguiente caso:
+Vamos a ver con un ejemplo cómo obtener las cardinalidades en una relación ternaria. Partamos del siguiente caso:  
 
- ![Ternaria](img/ternaria1.png)
+<img src="img/ternaria1.png" alt="Relación ternaria 1" width="400px"/>  
 
-1.- Elegimos dos entidades y las ponemos cardinalidad a 1, y preguntamos que relación tiene la tercera entidad con las dos que hemos puesto a uno. Puede ser una relación "a uno" o "a muchos".
+1.- Elegimos dos entidades y las ponemos cardinalidad a 1, y preguntamos qué relación tiene la tercera entidad con las dos que hemos puesto a uno. Puede ser una relación "a uno" o "a muchos".  
 
-En el ejemplo, fijamos 1 asignatura en 1 semestre y nos preguntamos: ¿Cuantos alumnos puede haber matriculados en 1 asignatura para 1 semestre? 
+En el ejemplo, fijamos 1 asignatura en 1 semestre y nos preguntamos: ¿Cuántos alumnos puede haber matriculados en 1 asignatura para 1 semestre?  
 
-La respuesta sería qué puede haber muchos estudiantes matriculados dado que varios estudiantes pueden matricularse de una misma asignatura en el mismo semestre. Por lo tanto el tipo de entidad estudiante participa con grado n en la relación de matrícula.
+La respuesta sería que puede haber muchos estudiantes matriculados, dado que varios estudiantes pueden matricularse de una misma asignatura en el mismo semestre. Por lo tanto, la entidad **ESTUDIANTE** participa con grado N en la relación de matrícula.  
 
-2.- En segundo lugar, nos preguntaremos, por ejemplo, sí fijados un estudiante y una asignatura concretos puede estar matriculado en 1 o muchos semestres. 
+2.- En segundo lugar, nos preguntaremos, por ejemplo, si fijados un estudiante y una asignatura concretos puede estar matriculado en 1 o muchos semestres.  
 
-La respuesta es que puede estar matriculado en muchos semestres dado que un estudiante se puede matricular más de una vez en diferentes semestres hasta que apruebe la asignatura. 
+La respuesta es que puede estar matriculado en muchos semestres, dado que un estudiante se puede matricular más de una vez en diferentes semestres hasta que apruebe la asignatura. Por lo tanto, la entidad **SEMESTRE** participa con grado N en la relación **MATRICULADO**.  
 
-Por lo tanto el tipo de entidad semestre participa con grado en la relación matriculado. 
+<img src="img/ternaria2.png" alt="Relación ternaria 2" width="400px"/>  
 
-![Ternaria](img/ternaria2.png)
+3.- En tercer lugar nos preguntamos si, fijados un estudiante y un semestre en concreto, pueden estar matriculados de una o muchas asignaturas.  
 
-3.- En Tercer lugar no preguntamos sí fijados un estudiante y un semestre en concreto pueden estar matriculados de una o muchas asignaturas. 
+La respuesta es que se pueden tener muchas asignaturas en las cuales el alumno está matriculado, puesto que un alumno se puede matricular de varias asignaturas dentro de un mismo semestre. Por lo tanto, la entidad **ASIGNATURA** también participa con N en la relación **MATRICULADA**.  
 
-La respuesta es que se pueden tener muchas asignaturas en las cuales el alumno está matriculado puesto que un alumno se puede matricular de varias asignaturas dentro de un mismo semestre.
+<img src="img/ternaria3.png" alt="Relación ternaria 3" width="400px"/>  
 
-Por lo tanto la entidad asignatura también participa con N en la relación matriculada. 
+Por lo tanto, nos queda el diagrama así:  
 
-![Ternaria](img/ternaria3.png)
+<img src="img/ternaria4.png" alt="Diagrama ternaria final" width="400px"/>  
 
+Este es un ejemplo de una **relación ternaria 1:1:1**.  
 
-Por lo tanto nos queda el diagrama así:
+En este caso suponemos la relación de defensa de un proyecto por parte de un alumno en el tribunal en 2º curso: **ALUMNO-PROYECTO**. Un alumno que hace un proyecto:  
 
-![Ternaria](img/ternaria4.png)
-
-
-Este es un ejemplo de una relación ternaria 1:1:1.
-
-En este caso suponemos la relación de defensa de un proyecto por parte de un alumno en el tribunal en 2º curso. ALUMNO-PROYECTO: un alumno que hace un proyecto 
-
-![Ternaria](img/ternaria5.png)
-
+<img src="img/ternaria5.png" alt="Relación ternaria 1:1:1 proyecto" width="400px"/>  
 **Realiza el siguiente ejercicio:**
 
-1. Obtén la cardinalidad de cada una de las entidades en la siguiente relación: (Resuelto)
-    - Cardinalidad de autores: ¿Cuántos autores pueden tener un determinado libro publicado en una determinada editorial?
-    - Cardinalidad de Libro: ¿Cuántos libros Puedes tener un determinado autor publicado en una determinada editorial.
-    - Cardinalidad de editorial: ¿En cuantas  editoriales puede un determinado autor publicar un mismo libro? 
+1. Obtén la **cardinalidad** de cada una de las entidades en la siguiente relación: (Resuelto)  
+    - **Cardinalidad de Autores**: ¿Cuántos autores pueden tener un determinado libro publicado en una determinada editorial?  
+    - **Cardinalidad de Libro**: ¿Cuántos libros puede tener un determinado autor publicado en una determinada editorial?  
+    - **Cardinalidad de Editorial**: ¿En cuántas editoriales puede un determinado autor publicar un mismo libro?  
 
-![Ternaria](img/ternaria6.png)
+<img src="img/ternaria6.png" alt="Relación ternaria autores-libro-editorial" width="400px"/>  
 
-2. Calcula los tipos de correspondencia de las siguientes relaciones:
+2. Calcula los **tipos de correspondencia** de las siguientes relaciones:  
+    - Persona casada con persona (en España)  
+    - Persona casada con persona (en Arabia Saudí)  
+    - Jugador juega en equipo (datos registrados actuales)  
+    - Producto contiene pieza  
 
-    - Persona casada con persona (en España)
-    - Persona casada con persona (en Arabia Saudí)
-    - Jugador juega en equipo (datos registrados actuales)
-    - Producto contiene pieza
+### 2.6.- 🏛️ Debilidad
+
+Una entidad es **débil** frente a otra que es **fuerte** cuando para existir un elemento de la débil es necesario que exista un elemento de la fuerte.  
+
+Por ejemplo, en la gestión de pedidos y ventas de un comercio, un pedido consta de varias líneas de pedido (una por cada producto).  
+Si **PEDIDO** es una entidad y **LINEA_PEDIDO** es otra entidad, **PEDIDO** sería entidad fuerte y **LINEA_PEDIDO** una entidad débil respecto de la anterior.  
+
+Una entidad débil solo se da en una relación de 1:N.  
+
+En el ejemplo expuesto, para identificar la línea de pedido, además de su campo **id_línea**, necesito el **id_pedido**.  
+
+Las entidades débiles se representan en los diagramas E/R **rodeadas por una línea doble**:  
+
+<img src="img/debil1.png" alt="Entidad débil" width="400px"/>  
+
+Hay dos tipos de dependencias en relaciones de debilidad:  
+
+1.- **Dependencia en existencia**: Las ocurrencias de una entidad débil no tienen ningún sentido en la base de datos sin una ocurrencia de la entidad fuerte con la que están relacionadas.  
+
+<img src="img/debil2.png" alt="Dependencia en existencia" width="400px"/>  
+
+2.- **Dependencia en identificación**: Además de la dependencia en existencia, la entidad débil necesita a la fuerte para poder crear una clave a partir de la clave que tiene la entidad fuerte.  
+Por ejemplo, cada línea de pedido se identificaría con **numPed** y **numLinea**.  
+
+<img src="img/debil3.png" alt="Dependencia en identificación" width="400px"/>  
+
+## 📝 HOJAS DE EJERCICIOS
+
+💻 Hoja de ejercicios 2.  
+💻 Hoja de ejercicios 3.  
+💻 Hoja de ejercicios 4.  
 
 
-### 2.6.- Debilidad
-
-Una entidad es débil frente a otra que es fuerte cuando para existir un elemento de la débil es necesario que exista un elemento de la fuerte.
-
-Por ejemplo, en la gestión de pedidos y ventas de un comercio, un pedido consta de varias líneas de pedido (una por cada producto). Si PEDIDO es una entidad y LINEA_PEDIDO es otra entidad, PEDIDO sería entidad fuerte y LINEA_PEDIDO una entidad débil respecto de la anterior.
-
-Una entidad débil solo se da en una relación de 1:N.
-
-En el ejemplo expuesto, para identificar la línea de pedido además de su campo id_línea, necesito el id_pedido.
-
-Las entidades débiles se representan en los diagramas E/R rodeadas por una línea doble:
-
-![Debilidad](img/debil1.png)
-
-Hay dos tipos de dependencias en relaciones de debilidad:
-
-1.- **Dependencia en existencia**: Las ocurrencias de una entidad débil no tienen ningún sentido en la base de datos sin una ocurrencia de la entidad fuerte con la que están relacionadas.
-
-![Debilidad](img/debil2.png)
-
-2.- **Dependencia en identificación**: Además de la dependencia en existencia, la entidad débil necesita a la fuerte para poder crear una clave a partir de la clave que tiene la entidad fuerte. Es decir, en el ejemplo, cada línea de pedido se identificaría con numPed y numLinea.
-
-![Debilidad](img/debil3.png)
-
-## HOJAS DE EJERCICIOS
-
-💻 Hoja de ejercicios 2.
-
-💻 Hoja de ejercicios 3.
-
-💻 Hoja de ejercicios 4.
-
-## 3.- EL MODELO E/R AMPLIADO
+## 3.- 🏗️ EL MODELO E/R AMPLIADO
 
 El **Modelo E/R ampliado** recoge todos los conceptos y especificaciones del modelo E/R y añade otros para mejorar el diseño de las bases de datos. Se definen los siguientes conceptos dentro de este modelo:
 
-- **Superclase**: Es una entidad genérica de la que derivan otras entidades. La superclase tiene unos atributos que van a tener también las entidades que derivan de ellas. 
+- **Superclase**: Es una entidad genérica de la que derivan otras entidades. La superclase tiene unos atributos que van a tener también las entidades que derivan de ella.  
 
-- **Subclase**: Es una entidad que deriva de una entidad genérica o superclase. La subclase va a tener los atributos de la superclase más unos atributos específicos. Los elementos que hay en la subclase también estarán en la superclase, aunque esta contendrá normalmente muchos más elementos. 
+- **Subclase**: Es una entidad que deriva de una entidad genérica o superclase. La subclase va a tener los atributos de la superclase más unos atributos específicos. Los elementos que hay en la subclase también estarán en la superclase, aunque esta contendrá normalmente muchos más elementos.  
 
-Por ejemplo, EMPLEADO sería una superclase y OPERARIO y ENCARGADO serían subclases de ésta. 
+  Por ejemplo, **EMPLEADO** sería una superclase y **OPERARIO** y **ENCARGADO** serían subclases de ésta. Otro ejemplo, en un centro de estudios, **PERSONA** podría ser una superclase mientras **ALUMNO** y **PROFESOR** serían subclases.
 
-Otro ejemplo, en un centro de estudios PERSONA podría ser una superclase mientras ALUMNO y PROFESOR serían subclases.
+- **Generalización**: es el proceso de construir una superclase a partir de las características comunes o que comparten varias subclases del sistema de información.  
 
-- **Generalización** es el proceso de construir una superclase a partir de las características comunes o que comparten varias subclases del sistema de información. 
+  Una generalización se representa mediante un **triángulo invertido** que une la superclase y las subclases.  
 
-Una generalización se representa mediante un triángulo invertido 
-que une la superclase y las subclases.
+  <img src="img/ampliado1.png" alt="Generalización" width="400px"/>  
 
-![ERAmpliado](img/ampliado1.png)
-
-- **Especialización** es el proceso inverso a la generalización. En la especialización se trata de buscar los atributos específicos de las subclases y las restricciones de existencia de elementos de las entidades.
+- **Especialización**: es el proceso inverso a la generalización. En la especialización se trata de buscar los **atributos específicos de las subclases** y las **restricciones de existencia** de elementos de las entidades.  
 
 Conforme a las restricciones de existencia de elementos de las entidades, nos podemos encontrar con los siguientes tipos de especialización o generalización:
 
-1. **Especialización exclusiva total**: Por ser exclusiva, un elemento de la superclase sólo puede estar en una subclase. Por ser total, todos los elementos de la superclase están en alguna de las subclases.
-   
-![ERAmpliado](img/ampliado2.png)
+1. **Especialización exclusiva total**: Por ser exclusiva, un elemento de la superclase sólo puede estar en una subclase. Por ser total, todos los elementos de la superclase están en alguna de las subclases.  
 
-2. **Especialización exclusiva parcial**: Por ser exclusiva, un elemento de la superclase sólo puede estar en una subclase. Por ser parcial, no tienen porque estar todos los elementos de la superclase en alguna de las subclases.
- 
-![ERAmpliado](img/ampliado3.png)
+   <img src="img/ampliado2.png" alt="Especialización exclusiva total" width="400px"/>  
 
-3. **Especialización solapada total**: Por ser solapada, un elemento de la superclase podría pertenecer a varias subclases. Por ser total, todos los elementos de la superclase están en alguna de las subclases.
+2. **Especialización exclusiva parcial**: Por ser exclusiva, un elemento de la superclase sólo puede estar en una subclase. Por ser parcial, no tienen por qué estar todos los elementos de la superclase en alguna de las subclases.  
 
-![ERAmpliado](img/ampliado4.png)
+   <img src="img/ampliado3.png" alt="Especialización exclusiva parcial" width="400px"/>  
 
-4. **Especialización solapada parcial**: Por ser solapada, un elemento de la superclase podría pertenecer a varias subclases. Por ser parcial, no tienen porque estar todos los elementos de la superclase están en alguna de las subclases.
-   
-![ERAmpliado](img/ampliado5.png)
+3. **Especialización solapada total**: Por ser solapada, un elemento de la superclase podría pertenecer a varias subclases. Por ser total, todos los elementos de la superclase están en alguna de las subclases.  
 
-Las cardinalidades de la especialización para los cuatro casos que hemos visto son de la siguiente manera:
+   <img src="img/ampliado4.png" alt="Especialización solapada total" width="400px"/>  
 
-![ERAmpliado](img/ampliado6.png)
+4. **Especialización solapada parcial**: Por ser solapada, un elemento de la superclase podría pertenecer a varias subclases. Por ser parcial, no tienen por qué estar todos los elementos de la superclase en alguna de las subclases.  
 
-## HOJAS DE EJERCICIOS
+   <img src="img/ampliado5.png" alt="Especialización solapada parcial" width="400px"/>  
 
-💻 Hoja de ejercicios 5.
+Las **cardinalidades de la especialización** para los cuatro casos que hemos visto son de la siguiente manera:  
 
-💻 Hoja de ejercicios 6.
+<img src="img/ampliado6.png" alt="Cardinalidades de especialización" width="400px"/>  
 
-## 4.- CONSTRUCCIÓN DE UN DIAGRAMA E/R
+## 📝 HOJAS DE EJERCICIOS
+
+💻 Hoja de ejercicios 5.  
+💻 Hoja de ejercicios 6.  
+
+
+## 4.- 🛠️ CONSTRUCCIÓN DE UN DIAGRAMA E/R
 
 Los pasos a seguir serán:
-1. Leer el documento varias veces hasta entender bien el problema y tener clara toda la información de que disponemos.
-2. Obtener una lista de candidatos a entidades, relaciones y atributos:
-    - Identificar las entidades. Los sujetos básicos en el sistema. 
-    - Buscar los atributos de cada entidad. Proponer la clave principal de cada uno. Establecer los tipos de atributos (compuestos, multivaluados, opcionales, derivados). Establecer sus dominios (Fecha, numero real con dos decimales, cadena de caracteres de longitud 9, V/F…) 
-    - Identificar las generalizaciones y especializaciones (tipos de especializaciones exclusiva total, solapada parcial…)
-    - Identificar las relaciones de debilidad, entidades fuertes y débiles. Dependencias de existencia o de identificación.
-3. Averiguar las cardinalidades y los tipos de correspondencia en cada relación.
-4. Revisar lo obtenido para:
-    - Eliminar entidades derivadas.
-    - Ver si es necesario añadir entidades a alguna relación.
-    - Ver si algunos atributos de una entidad se deben agrupar como atributos de una nueva entidad.
-5. Realizar una distribución de las entidades y representar sus relaciones en el diagrama así como los atributos.
-6. Volver a leer el problema para ver si nos hemos dejado algo. Revisar que toda la información está representada en el esquema y refinarlo si es necesario.
 
-## HOJAS DE EJERCICIOS
+1. Leer el documento varias veces hasta entender bien el problema y tener clara toda la información de que disponemos.  
 
-💻 Hoja de ejercicios 7.
+2. Obtener una lista de candidatos a entidades, relaciones y atributos:  
+    - Identificar las entidades: los sujetos básicos en el sistema.  
+    - Buscar los atributos de cada entidad. Proponer la clave principal de cada uno. Establecer los tipos de atributos (compuestos, multivaluados, opcionales, derivados). Establecer sus dominios (Fecha, número real con dos decimales, cadena de caracteres de longitud 9, V/F…).  
+    - Identificar las generalizaciones y especializaciones (tipos de especializaciones: exclusiva total, solapada parcial…).  
+    - Identificar las relaciones de debilidad, entidades fuertes y débiles. Dependencias de existencia o de identificación.  
 
+3. Averiguar las cardinalidades y los tipos de correspondencia en cada relación.  
 
-## 5.- MODELO RELACIONAL
+4. Revisar lo obtenido para:  
+    - Eliminar entidades derivadas.  
+    - Ver si es necesario añadir entidades a alguna relación.  
+    - Ver si algunos atributos de una entidad se deben agrupar como atributos de una nueva entidad.  
 
-El modelo relacional es el más apropiado en la actualidad para representar la estructura de una base de datos. Ellos es debido a:
+5. Realizar una distribución de las entidades y representar sus relaciones en el diagrama, así como los atributos.  
 
-- Es un modelo sencillo, potente y flexible para el diseño de una base de datos.
-- Tiene una base matemática en el álgebra relacional. Cualquier operación sobre elementos del modelo relacional deriva en una operación del álgebra relacional.
-- A partir de este álgebra relacional se ha podido realizar la construcción del lenguajes SQL para manipular los datos.
-- La mayoría de los SGBD relacionales se basan en este modelo.
+6. Volver a leer el problema para ver si nos hemos dejado algo. Revisar que toda la información está representada en el esquema y refinarlo si es necesario.  
 
-### 5.1.- Elementos de una relación
+## 📝 HOJAS DE EJERCICIOS
 
-El elemento principal del modelo relacional es la **RELACION**. Una relación es una tabla. Cada elemento de la relación es una fila y se le denomina tupla de la relación. Cada propiedad, atributo o característica de los elementos es una columna.
+💻 Hoja de ejercicios 7.  
 
-![Relacional](img/relacional1.png)
+---
 
-No debes confundir el concepto de relación en el modelo relacional con el concepto de relación en el modelo E/R.
+## 5.- 🗄️ MODELO RELACIONAL
 
-Al conjunto de valores que puede tomar una columna se le denomina dominio. Y estos pueden ser de dos tipos:
+El **modelo relacional** es el más apropiado en la actualidad para representar la estructura de una base de datos. Esto se debe a:
 
-- General: si los valores pueden ser todos los existentes dentro del tipo de dato correspondiente a la columna.
-- Restringido: si sólo puede tomar valores dentro de un rango de un dominio general, por ejemplo, números reales comprendidos entre 0 y 10.
+- Es un modelo sencillo, potente y flexible para el diseño de una base de datos.  
+- Tiene una base matemática en el álgebra relacional. Cualquier operación sobre elementos del modelo relacional deriva en una operación del álgebra relacional.  
+- A partir de este álgebra relacional se ha podido realizar la construcción del lenguaje **SQL** para manipular los datos.  
+- La mayoría de los SGBD relacionales se basan en este modelo.  
 
-![Relacional](img/relacional2.png)
+### 5.1.- 📋 Elementos de una relación
 
-### 5.2.- Restricciones del modelo relacional
+El elemento principal del modelo relacional es la **RELACIÓN**. Una relación es una **tabla**. Cada elemento de la relación es una **fila**, denominada **tupla**. Cada propiedad, atributo o característica de los elementos es una **columna**.  
 
-Los datos que almacenan las BD tienen como objetivo fundamental representar situaciones del mundo real. En ocasiones esto no es así.
+<img src="img/relacional1.png" alt="Modelo relacional - tabla" width="400px"/>  
 
-Supongamos, por ejemplo, el caso de una relación empleados en el que su sueldo es negativo (-1000 euros). Esto hace necesario la  creación de restricciones que nos permita representar de manera coherente dicha información.
+No debes confundir el concepto de relación en el modelo relacional con el concepto de relación en el modelo E/R.  
 
-Existen dos tipos de restricciones:
+Al conjunto de valores que puede tomar una columna se le denomina **dominio**, y estos pueden ser de dos tipos:  
 
-- Las propias o inherentes al modelo relacional: son condiciones más generales, propias de un modelo de datos, y se deben cumplir en toda base de datos que siga dicho modelo. 
-    - No puede haber dos tuplas o filas que tengan el mismo contenido en todas sus columnas.
-    - Ninguna columna que sea clave primaria (restricción de usuario) admite nulos. 
-    - Ninguna columna que sea clave primaria admite valores repetidos en las tuplas.
-    - Ninguna columna que sea clave alternativa admite valores repetidos en las tuplas.
+- **General**: si los valores pueden ser todos los existentes dentro del tipo de dato correspondiente a la columna.  
+- **Restringido**: si sólo puede tomar valores dentro de un rango de un dominio general, por ejemplo, números reales comprendidos entre 0 y 10.  
 
-- Las propias del usuario: son condiciones específicas de una base de datos concreta, es decir, son las que se deben cumplir en una base de datos particular con unos usuarios concretos, pero que no son necesariamente relevantes en otra base de datos. Por ejemplo, tener empleados con sueldo negativo. En otra BD, puede que no haya sueldo, o que sea siempre positivo. El modelo permite que el usuario establezca:
-    - Clave primaria (Primary Key) 
-    - Unicidad o clave alternativa(UNIQUE)
-    - Obligatoriedad (NOT NULL)
-    - Clave ajena (FOREIGN KEY)
-    - Verificación o chequeo (CHECK)
-    - Aserciones o asertos (ASSERTION)
-    - Disparadores (TRIGGER)
+<img src="img/relacional2.png" alt="Dominios de columnas" width="400px"/>  
+
+### 5.2.- ⚖️ Restricciones del modelo relacional
+
+Los datos que almacenan las BD tienen como objetivo fundamental representar situaciones del mundo real. En ocasiones esto no es así.  
+
+Supongamos, por ejemplo, el caso de una relación **empleados** en la que su sueldo es negativo (-1000 euros). Esto hace necesaria la creación de **restricciones** que nos permitan representar de manera coherente dicha información.  
+
+Existen dos tipos de restricciones:  
+
+- **Propias o inherentes al modelo relacional**: son condiciones más generales, propias de un modelo de datos, y se deben cumplir en toda base de datos que siga dicho modelo.  
+    - No puede haber dos tuplas o filas que tengan el mismo contenido en todas sus columnas.  
+    - Ninguna columna que sea clave primaria (restricción de usuario) admite nulos.  
+    - Ninguna columna que sea clave primaria admite valores repetidos en las tuplas.  
+    - Ninguna columna que sea clave alternativa admite valores repetidos en las tuplas.  
+
+- **Propias del usuario**: son condiciones específicas de una base de datos concreta, es decir, son las que se deben cumplir en una base de datos particular con unos usuarios concretos, pero que no son necesariamente relevantes en otra base de datos. Por ejemplo, tener empleados con sueldo negativo. En otra BD, puede que no haya sueldo, o que sea siempre positivo.  
+  El modelo permite que el usuario establezca:  
+    - **Clave primaria** (Primary Key)  
+    - **Unicidad o clave alternativa** (UNIQUE)  
+    - **Obligatoriedad** (NOT NULL)  
+    - **Clave ajena** (FOREIGN KEY)  
+    - **Verificación o chequeo** (CHECK)  
+    - **Aserciones o asertos** (ASSERTION)  
+    - **Disparadores** (TRIGGER)  
+
   
-### 5.3.- Claves primarias y claves ajenas
+### 5.3.- 🔑 Claves primarias y claves ajenas
 
-La **Clave primaria o principal (PRIMARY KEY)** es un conjunto de atributos o columnas que identifican de forma única a cada tupla de una relación (a cada fila de una tabla). 
+La **Clave primaria o principal (PRIMARY KEY)** es un conjunto de atributos o columnas que identifican de forma única a cada tupla de una relación (a cada fila de una tabla).  
 
-Se debe declarar clave primaria en cualquier tabla, aunque no es obligatorio hacerlo. 
+Se debe declarar clave primaria en cualquier tabla, aunque no es obligatorio hacerlo.  
 
-Sólo puede definirse una clave primaria en una tabla y debe ser, dentro de las columnas que puedan servir para identificar a cada tupla, la columna o el conjunto de columnas que se considere mejor para identificar de forma única a cada tupla o elemento de la tabla. 
+Sólo puede definirse una clave primaria en una tabla y debe ser, dentro de las columnas que puedan servir para identificar a cada tupla, la columna o el conjunto de columnas que se considere mejor para identificar de forma única a cada tupla o elemento de la tabla.  
 
-Sobre las claves primarias  quedan establecidas las restricciones inherentes comentadas anteriormente. (Que no puede estar vacía y que no se puede repetir).
+Sobre las claves primarias quedan establecidas las restricciones inherentes comentadas anteriormente (que no puede estar vacía y que no se puede repetir).  
 
-![Clave](img/clave1.png)
+<img src="img/clave1.png" alt="Clave primaria" width="400px"/>  
 
-Nota: En este esquema, la línea continua representa una relación identificada. La clave ajena forma parte de la clave primaria de la tabla donde está. La línea discontinua representa una relación no identificada. La clave ajena no forma parte de la clave primaria de la tabla donde está.
+**Nota:** En este esquema, la línea continua representa una relación identificada. La clave ajena forma parte de la clave primaria de la tabla donde está. La línea discontinua representa una relación no identificada. La clave ajena no forma parte de la clave primaria de la tabla donde está.  
 
-La **clave ajena (FOREIGN KEY)** sirve para indicar que uno o más atributos que forman clave ajena en una tabla (tabla secundaria en la relación, referenciante) están relacionados con uno o más atributos de otra tabla (principal en la relación, referenciada) que forman clave primaria o clave alternativa en esa otra tabla. 
+La **clave ajena (FOREIGN KEY)** sirve para indicar que uno o más atributos que forman clave ajena en una tabla (tabla secundaria en la relación, referenciante) están relacionados con uno o más atributos de otra tabla (principal en la relación, referenciada) que forman clave primaria o clave alternativa en esa otra tabla.  
 
-Por ejemplo, si tenemos una tabla COUNTRY que contiene datos de todos los países del mundo y una tabla CITY que contiene datos de ciudades del mundo, para controlar el país al que pertenece cada ciudad, podrá haber una relación de clave ajena entre:
+Por ejemplo, si tenemos una tabla **COUNTRY** que contiene datos de todos los países del mundo y una tabla **CITY** que contiene datos de ciudades del mundo, para controlar el país al que pertenece cada ciudad, podrá haber una relación de clave ajena entre:  
 
-- CITY (tabla secundaria) 
-- COUNTRY (tabla principal) 
+- **CITY** (tabla secundaria)  
+- **COUNTRY** (tabla principal)  
 
-![Clave](img/clave2.png)
+<img src="img/clave2.png" alt="Clave ajena" width="400px"/>  
 
-### 5.4.- Integridad referencial
+### 5.4.- 🛡️ Integridad referencial
 
-Las restricciones de integridad referencial son las que permiten que el SGBD controle incoherencias entre los datos cargados en la clave ajena y los datos existentes en la clave primaria de la tabla principal. Las restricciones de integridad referencial actúan cuando:
+Las **restricciones de integridad referencial** permiten que el SGBD controle incoherencias entre los datos cargados en la clave ajena y los datos existentes en la clave primaria de la tabla principal.  
+Estas restricciones actúan cuando:  
 
-- Se inserta una nueva fila en la tabla secundaria.
+- **Se inserta una nueva fila en la tabla secundaria**  
 
-![Integridad Referencial](img/integridad1.png)
+<img src="img/integridad1.png" alt="Integridad al insertar" width="400px"/>  
 
-Al insertar una nueva city se comprobaría que el CountryCode de la nueva ciudad esté cargado en Code de algún Country. Si no lo está, se rechaza la inserción.
+Al insertar una nueva **CITY**, se comprobaría que el **CountryCode** de la nueva ciudad esté cargado en **Code** de algún **COUNTRY**. Si no lo está, se rechaza la inserción.  
 
-- Se modifica el valor de la clave ajena en la tabla secundaria.
+- **Se modifica el valor de la clave ajena en la tabla secundaria**  
 
-![Integridad Referencial](img/integridad2.png)
+<img src="img/integridad2.png" alt="Integridad al modificar clave ajena" width="400px"/>  
 
-Al modificar el contenido de una CITY, se comprueba que el nuevo valor cargado en la clave ajena CountryCode exista en la clave primaria Code de tabla principal COUNTRY. Si no existe se rechaza la modificación y queda la fila con el valor anterior
+Al modificar el contenido de una **CITY**, se comprueba que el nuevo valor cargado en la clave ajena **CountryCode** exista en la clave primaria **Code** de la tabla principal **COUNTRY**. Si no existe, se rechaza la modificación y queda la fila con el valor anterior.  
+
+- **Se borra una fila en la tabla principal**. En este caso, podemos definir diferentes restricciones de integridad referencial.  
+
+<img src="img/integridad3.png" alt="Integridad al borrar fila" width="400px"/>  
+
+  - **Borrado en cascada (BC)**: Si se elimina un país, se eliminan todas las ciudades del país.  
+  - **Borrado restringido (BR)**: Si se trata de eliminar un país y hay ciudades de ese país en la tabla CITY, no se permite la eliminación.  
+  - **Borrado con puesta a nulos (BN)**: Si se trata de eliminar un país y hay ciudades de ese país en la tabla CITY, se elimina el país y en la columna clave ajena (**countrycode**) de CITY de todas las ciudades de ese país, se carga NULL.  
+  - **Borrado con puesta a valor por defecto (BD)**: Si se trata de eliminar un país y hay ciudades de ese país en la tabla CITY, se elimina el país y en la columna clave ajena (**countrycode**) de CITY de todas las ciudades de ese país, se carga un valor por defecto.  
+
+- **Se modifica la clave primaria en la tabla principal**. Al igual que en el caso anterior, también se pueden definir diferentes restricciones de integridad referencial.  
+
+<img src="img/integridad4.png" alt="Integridad al modificar clave primaria" width="400px"/>  
+
+  - **Modificación en cascada (MC)**: Si se modifica el código de un país, se modifica **countrycode** de todas las ciudades del país.  
+  - **Modificación restringida (MR)**: Si se trata de modificar el código de un país y hay ciudades de ese país en la tabla CITY, no se permite la modificación.  
+  - **Modificación con puesta a nulos (MN)**: Si se trata de modificar el código de un país y hay ciudades de ese país en la tabla CITY, se carga NULL en la columna clave ajena (**countrycode**) de CITY de todas las ciudades de ese país.  
 
 
-- Se borra una fila en la tabla principal. En este caso, podemos definir diferentes restricciones de integridad referencial.
-
-![Integridad Referencial](img/integridad3.png)
-
-  - **Borrado en cascada**: Si se elimina un país, se eliminan todas las ciudades del país. **BC**
-  - **Borrado restringido**: Si se trata de eliminar un país y hay ciudades de ese país en la tabla CITY, no se permite la eliminación. **BR**
-  - **Borrado con puesta a nulos**: Si se trata de eliminar un país y hay ciudades de ese país en la tabla CITY, se elimina el país y en la columna clave ajena (countrycode) de CITY de todas las ciudades de ese país, se carga NULL. **BN**
-  - **Borrado con puesta a valor por defecto**: Si se trata de eliminar un país y hay ciudades de ese país en la tabla CITY, se elimina el país y en la columna clave ajena (countrycode) de CITY de todas las ciudades de ese país, se carga un valor por defecto. **BD**
-
-
-- Se modifica la clave primaria en la tabla principal. Al igual que en el caso anterior, también se pueden definir diferentes restricciones de integridad referencial.
-
-![Integridad Referencial](img/integridad4.png)
-
-  - **Modificación en cascada**: Si se modifica el código de  un país, se modifica countrycode de  todas las ciudades del pais. **MC**
-  - **Modificación restringida**: Si se trata de modificar el código de un país y hay ciudades de ese país en la tabla CITY, no se permite la modificación. **MR**
-  - **Modificación  con puesta a nulos**: Si se trata de modificar el código de  un país y hay ciudades de ese país en la tabla CITY, se carga NULL en la columna clave ajena (countrycode) de CITY de todas las ciudades de ese país. **MN**
-
-### 5.5.- Representación del modelo Relacional
+### 5.5.- 🖼️ Representación del modelo Relacional
 
 Existen diversas formas de representar el modelo relacional. Veamos ejemplos de algunas de ellas:
 
-1. Esquema relacional conectado a columnas.
+1. **Esquema relacional conectado a columnas**  
 
-![Modelo 1](img/esquema1.png)
+<img src="img/esquema1.png" alt="Esquema relacional columnas" width="400px"/>  
 
-2. Esquema relacional crow´s foot o esquema pata de cuervo. La parte de la pata va en la tabla donde está la clave ajena.
+2. **Esquema relacional crow's foot o pata de cuervo**  
+La parte de la pata va en la tabla donde está la clave ajena.  
 
-![Modelo 2](img/esquema2.png)
+<img src="img/esquema2.png" alt="Esquema crow's foot" width="400px"/>  
 
-3. Grafo relacional.
+3. **Grafo relacional**  
 
-![Modelo 3](img/esquema3.png)
+<img src="img/esquema3.png" alt="Grafo relacional" width="400px"/>  
 
-Veamos ahora como se construye un grafo relacional, el tercero de los esquemas que hemos visto:
+Veamos ahora cómo se construye un grafo relacional:  
 
-- Cada nodo o elemento representa una tabla o relación con todos sus atributos.
-- Se representan las claves ajenas a través de flechas dirigidas entre la clave ajena y la tabla donde se encuentra la clave primaria relacionada.
-- Cada nodo en el grafo (tabla) se representa, si es posible, con una línea de texto. Esta línea contiene en letras mayúsculas el nombre de la tabla y a continuación, entre paréntesis, los nombres de los atributos o columnas de la siguiente forma:
- 
-    - Si un atributo es clave primaria se representa subrayado.
-    - Si un atributo es clave alternativa se representa en negrilla.
-    - Si un atributo puede tomar valores nulos, se representa con un asterisco al final del nombre del atributo. 
-    - Si un atributo es clave ajena se representa en letra cursiva.
+- Cada nodo representa una tabla o relación con todos sus atributos.  
+- Se representan las claves ajenas a través de flechas dirigidas entre la clave ajena y la tabla que contiene la clave primaria relacionada.  
+- Cada nodo se representa con una línea de texto: nombre de la tabla en mayúsculas seguido de los atributos entre paréntesis.  
+  - Clave primaria: subrayada  
+  - Clave alternativa: en negrilla  
+  - Atributos que pueden ser nulos: asterisco al final  
+  - Clave ajena: cursiva  
 
-Lo vemos con un ejemplo:
+Ejemplo:
 
-![Ejemplo](img/esquema4.png)
+<img src="img/esquema4.png" alt="Ejemplo grafo relacional 1" width="400px"/>  
+<img src="img/esquema5.png" alt="Ejemplo grafo relacional 2" width="400px"/>  
 
-![Ejemplo](img/esquema5.png)
+- Para representar la relación de la clave ajena:  
+  - Flecha desde la clave ajena hasta la tabla relacionada.  
+  - Se escriben restricciones de borrado y modificación si se establecen.  
+  - Se representa la cardinalidad (1:N → 1 en tabla principal, N en origen).  
+- En el modelo relacional **no se permite N:M**, solo 1:1 y 1:N.  
 
-- Si un atributo es clave ajena se representa en letra cursiva. 
-- Para representar la clave con la que está relacionada la clave ajena, se traza una flecha dirigida desde el nombre de la clave ajena hasta el nombre de la tabla que contiene la clave relacionada. 
-- En el origen de la flecha se deben escribir las restricciones de borrado y modificación, si es que se van a establecer.
-- En la relación debe representarse la cardinalidad. Si el tipo es 1:N, se escribirá 1 al final de la flecha, es decir, en la tabla principal y se escribirá N en el origen de la flecha. 
-- En el modelo relacional no se permite representar cardinalidades N:M, sólo se permiten 1:1 y 1:N
+Ejemplo:
 
-Lo vemos con un ejemplo:
+<img src="img/esquema6.png" alt="Ejemplo grafo relacional 3" width="400px"/>  
 
-![Ejemplo](img/esquema6.png)
+**Caso práctico:**  
+En la tabla **CountryLanguage**, la columna **CountryCode** es clave ajena y se relaciona con la primary key de **Country**. Por cada país puede haber varias filas en CountryLanguage. Restricción de borrado normal (no se puede borrar un país con idiomas asociados) y modificación en cascada (si se cambia el código de un país, se actualiza en todas las filas de CountryLanguage).  
 
-En la tabla CountryLanguage: columna CountryCode es clave ajena y está relacionada con la primary key de la tabla Country. Por cada fila de Country (por cada país) puede haber muchas filas en CountryLanguage. Hay en esa clave ajena restricción de borrado normal, entonces no se puede borrar un país si hay idiomas del país cargados en countrylanguage. Hay en esa clave ajena restricción de modificación en cascada, entonces si se modifica el código de un país se modifica ese código en todos los idiomas del país.
+---
 
-### 5.6.- Paso del modelo E/R al modelo Relacional
+### 5.6.- 🔄 Paso del modelo E/R al modelo Relacional
 
-Para hacer el cambio a modelo relacional, ya hemos visto todo se reduce a relaciones representadas por tablas. 
-En terminos generales se puede decir:
+Para convertir un modelo E/R a relacional, todo se reduce a **relaciones representadas por tablas**.  
 
-- Para cada conjunto de **entidades fuertes A**, existe una única tabla a la que se le asigna el nombre del conjunto de entidades A, y cuyos atributos son los atributos del conjunto de entidades. 
-- Para cada conjunto de **entidades débiles B** existe una única tabla a la que se le asigna el nombre de la entidad débil, y cuyos atributos son los atributos de la entidad débil mas el o los atributos de la clave primaria de la entidad fuerte a la que está subordinada. 
-- Para cada conjunto de **relaciones** existe una única tabla a la  que se le asigna el nombre del conjunto de relaciones y cuyos atributos son las claves primarias de todas las entidades que relaciona más los atributos propios de la relación. 
+- Para cada conjunto de **entidades fuertes A** → tabla con el mismo nombre y atributos del conjunto.  
+- Para cada conjunto de **entidades débiles B** → tabla con los atributos de B + atributos de clave primaria de la entidad fuerte correspondiente.  
+- Para cada conjunto de **relaciones** → tabla con claves primarias de todas las entidades relacionadas + atributos propios de la relación.  
 
-Vamos a ver detalladamente los pasos que hay que dar para transformar el modelo E/R al modelo relacional:
+**Pasos detallados:**  
 
-* Toda entidad, sea del tipo que sea, pasa a ser una relación y por lo tanto se transforma en una tabla que contiene los mismos atributos de la entidad, excepto los multivaluados.
-  
-![Paso](img/paso1.png)
+* Toda entidad se transforma en una tabla con los mismos atributos, excepto los multivaluados.  
 
-* En una relación con cardinalidad 1:N se debe propagar la clave primaria de la entidad con participación máxima 1 para ser clave ajena en la tabla que tiene participación máxima N.
-  
-![Paso](img/paso2.png)
+<img src="img/paso1.png" alt="Paso entidad a tabla" width="400px"/>  
 
-* Las relaciones con tipo de correspondencia N:M entre una entidad A y una entidad B dan origen a una tabla cuya clave primaria está formada por la concatenación de las claves primarias de las tablas A y B. La tabla tendrá, además, los atributos que sean propios de la relación.
+* Relación 1:N → Propagar clave primaria de la entidad con participación 1 como clave ajena en la tabla con N.  
 
-![Paso](img/paso3.png)
+<img src="img/paso2.png" alt="Paso 1:N" width="400px"/>  
 
-* Una relación con cardinalidad 1:1 entre dos entidades A y B presenta tres casos:
+* Relación N:M → Tabla con clave primaria concatenada de las tablas A y B + atributos de la relación.  
 
-  - Si la participación de A es (0,1) y la de B es (1,1), se propaga la clave primaria de B para ser clave ajena en la tabla A.
+<img src="img/paso3.png" alt="Paso N:M" width="400px"/>  
 
-![Paso](img/paso4.png)
+* Relación 1:1 → Tres casos:  
+  - A (0,1) y B (1,1) → clave primaria de B como clave ajena en A.  
 
-  - Si la participación de A es (1,1) y la de B es (1,1) se propaga la clave primaria de cualquiera de las dos tablas como clave ajena de la otra tabla. 
+<img src="img/paso4.png" alt="Paso 1:1 caso 1" width="400px"/>  
 
-  - Si la participación de ambas entidades es (0,1), se trata como el caso de las relaciones con tipo de correspondencia N:M.
+  - A (1,1) y B (1,1) → propagar clave primaria de cualquiera de las dos tablas como clave ajena de la otra.  
+  - A y B (0,1) → tratar como N:M.  
 
+* Atributo multivaluado → Tabla con dos atributos: clave de la entidad + atributo correspondiente. Clave primaria concatenada o un identificador nuevo.  
 
-* Un atributo multivaluado de una entidad da lugar a una tabla formada por dos atributos: 
-    - la clave de la entidad de la que forma parte y el atributo correspondiente, no siendo multivaluado en esta nueva tabla. 
-    - La clave primaria será la concatenación de los dos atributos o bien un identificador nuevo elegido para esa función. 
+<img src="img/paso5.png" alt="Atributo multivaluado" width="400px"/>  
 
-![Paso](img/paso5.png)
+* Dependencia en existencia → Propagar clave primaria de entidad fuerte como clave ajena en la entidad débil.  
 
-* Una relación con dependencia en existencia hace que se propague la clave primaria de la entidad fuerte como clave ajena en la tabla correspondiente a la entidad débil. La clave primaria en la tabla correspondiente a la entidad débil será la que se haya indicado para dicha entidad en el esquema E-R.
+<img src="img/paso6.png" alt="Dependencia en existencia" width="400px"/>  
 
-![Paso](img/paso6.png)
+* Dependencia en identificación → Propagar clave primaria de entidad fuerte como clave ajena en entidad débil. Clave primaria = concatenación de la clave ajena y el identificador de la entidad débil.  
 
-* Una relación con dependencia en identificación hace que se propague la clave primaria de la entidad fuerte como clave ajena en la tabla correspondiente a la entidad débil. La clave primaria en la tabla correspondiente a la entidad débil será la concatenación de la clave ajena propagada y el identificador de la entidad débil indicado en el esquema E-R.
+<img src="img/paso7.png" alt="Dependencia en identificación" width="400px"/>  
 
-![Paso](img/paso7.png)
+* Especialización → Tres modos:  
+  - **Modo 1:** tabla superentidad + tabla por cada subentidad con referencia a superentidad. Funciona siempre.  
 
-  - MODO 1: Una especialización genera una tabla para la superentidad y una tabla por cada subentidad con referencia a la superentidad. Este modo de hacerlo funciona siempre bien.
+<img src="img/paso8.png" alt="Especialización modo 1" width="400px"/>  
 
-![Paso](img/paso8.png)
+  - **Modo 2:** tabla por cada subentidad con referencia a superentidad. Funciona si especialización total.  
 
-  - MODO 2: Una especialización genera una tabla para cada subentidad con referencia a la superentidad. Este modo de hacerlo funciona bien si es una especialización total.
+<img src="img/paso9.png" alt="Especialización modo 2" width="400px"/>  
 
-![Paso](img/paso9.png)
+  - **Modo 3:** una tabla con todos los atributos de superentidad y subentidades + atributo tipo. Puede generar nulos. No recomendada.  
 
-  - MODO 3: Una especialización genera una tabla que engloba todos los atributos de la superentidad y las subentidades más un atributo tipo. Puede generar valores nulos. No recomendada.
+<img src="img/paso10.png" alt="Especialización modo 3" width="400px"/>  
 
-![Paso](img/paso10.png)
-
-Os dejo un documento resumen de como hacer el paso del modelo E-R al modelo Relacional.
-
-[Resumen](ConversionER-Relacional.pdf)
+📄 Documento resumen de conversión E-R → Relacional:  
+[Resumen](ConversionER-Relacional.pdf)  
 
 **Realiza el siguiente ejercicio:**
 
-1. Representa el esquema relacional correspondiente a una base de datos sobre la red de albergues del Camino de Santiago del Norte. 
-- De cada albergue se registrará su nombre, dirección, localidad y km. que faltan para el destino final (Santiago de Compostela)
-- Existen albergues con el mismo nombre genérico (Albergue de peregrino, por ejemplo). 
-- Los albergues son de propiedad municipal,  pertenecen a Ayuntamientos. Un determinado Ayuntamiento puede disponer de varios albergues.
-- De cada Ayuntamiento debemos conocer su nombre, dirección, teléfono y URL de su web.
-- En los albergues pernoctan peregrinos de los que se registra un número de tarjeta (único), su nombre y nacionalidad.
-- Se debe registrar la fecha de entrada de cada peregrino en el albergue correspondiente.
+1. Representa el esquema relacional correspondiente a una base de datos sobre la red de albergues del Camino de Santiago del Norte.  
+- De cada albergue se registrará su nombre, dirección, localidad y km que faltan para el destino final (Santiago de Compostela).  
+- Existen albergues con el mismo nombre genérico (Albergue de peregrino, por ejemplo).  
+- Los albergues son de propiedad municipal y pertenecen a Ayuntamientos. Un determinado Ayuntamiento puede disponer de varios albergues.  
+- De cada Ayuntamiento debemos conocer su nombre, dirección, teléfono y URL de su web.  
+- En los albergues pernoctan peregrinos, de los que se registra un número de tarjeta (único), su nombre y nacionalidad.  
+- Se debe registrar la fecha de entrada de cada peregrino en el albergue correspondiente.  
 
 ## HOJAS DE EJERCICIOS
 
-💻 Hoja de ejercicios 8.
+💻 Hoja de ejercicios 8.  
+💻 Hoja de ejercicios 9.  
+💻 Hoja de ejercicios 10.  
+💻 Hoja de ejercicios 11.  
+💻 Hoja de ejercicios 12.  
+💻 Hoja de ejercicios 13.  
+💻 Hoja de ejercicios 14.  
 
-💻 Hoja de ejercicios 9.
+## 6.- 🧩 NORMALIZACIÓN
 
-💻 Hoja de ejercicios 10.
+Al diseñar una base de datos se ha de evaluar la calidad del diseño. Para ello, uno de los parámetros que se utiliza son las **formas normales** en las que se encuentra dicho diseño.  
+Se llama **normalización** al proceso de obligar a los atributos incluidos en el diseño a cumplir varias formas normales.
 
-💻 Hoja de ejercicios 11.
+Las formas normales son reglas que aseguran que el esquema tenga buen comportamiento respecto a:
 
-💻 Hoja de ejercicios 12.
+- Redundancia de información  
+- Pérdida de información  
+- Presentación de la información  
 
-💻 Hoja de ejercicios 13.
-
-💻 Hoja de ejercicios 14.
-
-## 6.- NORMALIZACIÓN
-
-Al diseñar una base de datos se ha de evaluar la calidad del diseño. Para poder llevar a cabo dicha evaluación de la calidad, uno de los parámetros que se utiliza son las **formas normales** en las que se encuentra dicho diseño. Se llama **normalización** al proceso de obligar a los atributos incluidos en el diseño a cumplir varias formas normales.
-
-Las formas normales son unas reglas que, al cumplirse, aseguran que el esquema diseñado tenga un buen comportamiento respecto a:
-
-- Redundancia de información
-- Pérdida de información
-- Presentación de la información
-
-Vamos a verlo con un ejemplo. Tenemos el siguiente caso, con la tabla Suministros:
+**Ejemplo:** tabla Suministros
 
 | CodProv | CodArticulo | Cantidad | CiudadProv |
-| ------------- | ------------- | ------------- |------------- |
-| P1  | C1  | 12 | Cantabria |
-| P1  | C2  | 25 | Cantabria |
-| P1  | C3  | 11 | Cantabria |
-| P2  | C1  | 52 | Valencia |
-| P2  | C2  | 35 | Valencia |
-| P3  | C5  | 22 | Valladolid |
+|---------|------------|---------|------------|
+| P1      | C1         | 12      | Cantabria  |
+| P1      | C2         | 25      | Cantabria  |
+| P1      | C3         | 11      | Cantabria  |
+| P2      | C1         | 52      | Valencia   |
+| P2      | C2         | 35      | Valencia   |
+| P3      | C5         | 22      | Valladolid |
 
-Partimos de la relación suministros. Esta relación representa que artículos suministran diferentes proveedores y en que cantidad. Además, nos indica de que provincia son los proveedores.
+Esta tabla presenta redundancia y posibles anomalías:
 
-> Suministros(<u>codprov, codarticulo </u>, cantidad, ciudad)
+1. **Anomalías de modificación:** si un proveedor cambia de ciudad, hay que modificar todas las tuplas que lo contengan.  
 
-Como consecuencia de un mal diseño, podemos tener relaciones que presentan un alto grado de redundancia, es decir, presentan repeticiones que son evitables. Este hecho complica el mantenimiento, dado que producen anomalias. La normalización conseguirá evitar estas anomalías. El tipo de anomalías que nos podemos encontrar son:
+2. **Anomalías de borrado:** si un proveedor deja de suministrar artículos, se pierden sus datos.  
 
-1. Anomalías de modificación: En el ejemplo anterior, ¿Qué sucede si un proveedor cambia de ciudad? Es necesario poner la nueva ciudad del proveedor en todas las tuplas que hagan referencia al proveedor en cuestión, si no queremos que la base de datos sea inconsistente.
+3. **Anomalías de inserción:** si queremos añadir un proveedor sin artículos, tendríamos que poner NULL en columnas de clave primaria, rompiendo la integridad referencial.
 
-Por ejemplo, el proveedor P2 se traslada de Valencia a Bilbao. Si el proveedor nos suministra 500 artículos, tendré que cambiar en todas las tuplas en las que aparezca. IMPOSIBLE. Lo ideal, si el diseño es correcto, es que esto se lleve a cabo una sola vez.
+El origen de estas anomalías: la tabla Suministros describe dos hechos diferentes: los artículos que suministra cada proveedor y el proveedor en sí, que son independientes, aunque se relacionen indirectamente.
 
-| CodProv | CodArticulo | Cantidad | CiudadProv |
-| ------------- | ------------- | ------------- |------------- |
-| P1  | C1  | 12 | Cantabria |
-| P1  | C2  | 25 | Cantabria |
-| P1  | C3  | 11 | Cantabria |
-| P2  | C1  | 52 | ~~Valencia~~ Bilbao |
-| P2  | C2  | 35 | ~~Valencia~~ Bilbao |
-| P3  | C5  | 22 | Valladolid |
+Si la BD se diseña usando un modelo semántico (E/R), la normalización suele ser menos necesaria.  
 
+En bases de datos relacionales, las **formas normales (FN)** indican el grado de vulnerabilidad de una tabla a inconsistencias y anomalías. Cada FN incluye a las anteriores.
 
-2. Anomalías de borrado: En el ejemplo anterior, ¿Qué sucede si un proveedor que suministra un solo producto deja de hacerlo? Se habrá de borrar la tupla de la relación Suministros y se perderán sus datos, en este caso, el código de proveedor y la ciudad.
+<img src="img/formas1.png" alt="Formas normales" width="400px"/>  
 
-| CodProv | CodArticulo | Cantidad | CiudadProv |
-| ------------- | ------------- | ------------- |------------- |
-| P1  | C1  | 12 | Cantabria |
-| P1  | C2  | 25 | Cantabria |
-| P1  | C3  | 11 | Cantabria |
-| P2  | C1  | 52 | Valencia |
-| P2  | C2  | 35 | Valencia |
-| ~~P3~~  | ~~C5~~  | ~~22~~ | ~~Valladolid~~ |
+**Definiciones previas:**
 
+- Dependencia funcional: A → B. Para cada valor de A hay un único valor de B.  
+- Dependencia funcional completa: B depende de toda la clave A.  
+- Dependencia transitiva: A → B → C. C depende transitivamente de A.  
+- Determinante funcional: atributo del que depende otro.  
+- Dependencia multivaluada: A →→ B. Un valor de A implica varios valores de B.
 
-3. Anomalías de inserción: En el ejemplo anterior, ¿Qué sucede si quiero añadir un nuevo proveedor con su ciudad, pero no conozco su información respecto a los artículos suministrados?
-Tendré que añadir la tupla, pero en codarticulo y cantidad tengo que poner NULL. Esto es imposible, ya que codarticulo forma parte de la clave primaria y no puede ser NULL  	:arrow_right: ROMPE LA INTEGRIDAD REFERENCIAL.
+### 6.1.- 1FN (Primera forma normal)
 
-| CodProv | CodArticulo | Cantidad | CiudadProv |
-| ------------- | ------------- | ------------- |------------- |
-| P1  | C1  | 12 | Cantabria |
-| P1  | C2  | 25 | Cantabria |
-| P1  | C3  | 11 | Cantabria |
-| P2  | C1  | 52 | Valencia |
-| P2  | C2  | 35 | Valencia |
-| P3  | C5  | 22 | Valladolid |
-| ~~P4~~  | ~~NULL~~  | ~~NULL~~ | ~~Asturias~~ |
+Una relación está en 1FN si cada atributo es atómico, es decir, cada celda contiene un solo valor.  
 
-El origen de todas estas anomalías subyace en que la relación Suministros, ya que  describe dos hechos elementales del mundo real diferentes: 
+**Ejemplo:** tabla de pedidos de clientes
 
-- Los artículos que suministra cada proveedor.
-- El proveedor en sí mismo.
+<img src="img/formas2.png" alt="Ejemplo pedidos 1FN" width="400px"/>  
 
-Además, estos hechos son independientes entre sí, puesto que los artículos que suministra cada proveedor no guardan ninguna relación directa con el hecho de que el proveedor sea, por ejemplo, de una ciudad o de otra, y al revés. 
+Se observa que la tabla no está en 1FN, ya que hay campos repetidos: Num_art, Nom_art, Cant y Precio.  
 
-En todo caso, entre estos dos hechos hay una relación indirecta al afectar a un mismo individuo del mundo real, es decir, al propio proveedor.
+Solución: crear una nueva tabla con estos campos y su clave primaria, dejando la tabla original con la clave primaria de la orden:
 
-En conclusión, toda relación que no representa un concepto (o hecho elemental) único del mundo real está sujeta a presentar redundancias, anomalías de mantenimiento e inconsistencias potenciales, como sucede en la relación Suministros.
+<img src="img/formas3.png" alt="Tabla normalizada 1FN" width="400px"/>  
 
-En la práctica, si la BD se ha diseñado haciendo uso de modelos semánticos como el modelo E/R no suele ser necesaria la normalización. Por otro lado si nos proporcionan una base de datos creada sin realizar un diseño previo, es muy probable que necesitemos normalizar.
+### 6.2.- 2FN (Segunda forma normal)
 
-En la teoría de bases de datos relacionales, las formas normales (FN) proporcionan los criterios para determinar el grado de vulnerabilidad de una tabla a inconsistencias y anomalías lógicas. Cuanto más alta sea la forma normal aplicable a una tabla, menos vulnerable será a inconsistencias y anomalías. Cada forma normal incluye a las anteriores.
+Una relación está en 2FN si está en 1FN y todos los atributos no clave dependen funcionalmente de la **clave completa**.  
 
-![Formas](img/formas1.png)
+Ejemplo: seguimos con la tabla en 1FN:
 
-Antes de dar los conceptos de formas normales veamos unas definiciones previas:
+- Identificar columnas que dependen solo de parte de la clave primaria.  
+- Crear una nueva tabla con estas columnas, usando como clave primaria la de la que dependen.  
 
-- Dependencia funcional: A → B, representa que B es funcionalmente dependiente de A. Para un valor de A siempre aparece un valor de B. Ejemplo: Si A es el D.N.I., y B el Nombre, está claro que para un número de D.N.I, siempre aparece el mismo nombre de titular
-- Dependencia funcional completa: A → B, si B depende de A en su totalidad. Ejemplo: Tiene sentido plantearse este tipo de dependencia cuando A está compuesto por más de un atributo. Por ejemplo, supongamos que A corresponde al atributo compuesto: D.N.I._Empleado + Cod._Dpto. y B es Nombre_Dpto. En este caso B depende del Cod_Dpto., pero no del D.N.I._Empleado. Por tanto no habría dependencia funcional completa.
-- Dependencia transitiva: A→B→C. Si A→B y B→C, Entonces decimos que C depende de forma transitiva de A. Ejemplo: Sea A el D.N.I. de un alumno, B la localidad en la que vive y C la provincia. Es un caso de dependencia transitiva A→ B → C.
-- Determinante funcional: todo atributo, o conjunto de ellos, de los que depende algún otro atributo. Ejemplo: El D.N.I. es un determinante funcional pues atributos como nombre, dirección, localidad, etc, dependen de él.
-- Dependencia multivaluada: A→→B. Son un tipo de dependencias en las que un determinante funcional no implica un único valor, sino un conjunto de ellos. Un valor de A siempre implica varios valores de B. Ejemplo: CursoBachillerato →→ Modalidad. Para primer curso siempre va a aparecer en el campo Modalidad uno de los siguientes valores: Ciencias, Humanidades/Ciencias Sociales o Artes. Igual para segundo curso.
+Si la clave primaria solo tiene un campo, la tabla ya está en 2FN.  
 
-### 6.1.- Primera forma normal (1FN)
+En nuestro ejemplo:  
 
-Una Relación está en 1FN si y sólo si cada atributo es atómico. Eso significa que, al elegir una clave primaria de entre todos los campos de la tabla, te aseguras que en cada celda solo tienes un dato, y no varios. 
+- Tabla **Ordenes** → clave principal Id_orden (ya está en 2FN).  
+- Tabla **Articulos_Ordenes** → Nom_art y Precio dependen solo de Num_art → se crean tabla **Articulos** con estas columnas + Num_art como clave primaria.
 
-Vamos a ver como se va normalizando una tabla desde la 1FN hasta la 3FN a través de un ejemplo.
+Resultado final:
 
-**Ejemplo:** Supongamos que tenemos la siguiente tabla con datos de ordenes de pedidos de varios clientes de diversos artículos.
+<img src="img/formas4.png" alt="Tablas 2FN 1" width="400px"/>  
+<img src="img/formas5.png" alt="Tablas 2FN 2" width="400px"/>  
 
-![Formas](img/formas2.png)
+Tablas en 2FN:
 
-Tomamos como clave principal Id_orden. Como se puede observar, esta tabla no está en 1FN puesto que hay varios campos que se repiten para el mismo Id_orden, que son: Num_art, nom_art, cant y Precio. 
-
-La solución para pasar a 1FN sería eliminar los campos que se repiten en una nueva tabla cuya clave primaria sea la clave primaria de la tabla base y el grupo repetido. Quedaría de la siguiente manera:
-
-![Formas](img/formas3.png)
-
-### 6.2.- Segunda forma normal (2FN)
-
-Una Relación esta en 2FN si y sólo si está en 1FN y todos los atributos que no forman parte de la Clave Principal tienen dependencia funcional completa de ella.
-
-Ejemplo: Seguimos con el ejemplo anterior. Partimos de la 1FN y tenemos que eliminar cualquier campo que no depende de toda la clave primaria. Los pasos a seguir son:
-
-- Saber que columnas dependen solo de una parte de la clave primaria.
-- Eliminar esas columnas de la tabla
-- Crear una nueva tabla con esas columnas repetidas y como clave primaria el campo del que dependen.
-
-NOTA: Si la tabla esta en 1FN y su clave primaria solo tiene un campo, ya está en 2FN.
-
-Conclusión: 
-
-La tabla Ordenes ya está en 2FN puesto que esta en 1FN y su clave principal está formada por un solo campo.
-
-La tabla Articulos_Ordenes no está en 2FN puesto que el precio y el nom_art dependen solo de Num_art, pero no de Id_Orden. Lo que se hace es eliminar esas columnas de la tabla Articulos_ordenes y crear una tabla Articulos con dichas columnas y la clave primaria de la que dependen. 
-
-El resultado es el siguiente: 
-
-![Formas](img/formas4.png)
-
-![Formas](img/formas5.png)
-
-De momento, en 2FN nos quedan 3 tablas:
-
-- Tabla ordenes, con clave principal id_orden.
-- Tabla Articulos_ordenes, con clave principal id_orden, num_art.
-- Tabla Articulos, con clave principal num_art.
-
-### 6.3.- Tercera forma normal (3FN)
-
-Una Relación esta en 3FN si y sólo si está en 2FN y no existen dependencias transitivas. Todas las dependencias funcionales deben ser respecto a la clave principal.
-
-Es decir, tenemos que buscar atributos que dependen de otros atributos que no son clave principal.
-
-Ejemplo: Seguimos con el ejemplo anterior. Se parten de las tres tablas que tenemos en 2FN. Los pasos a seguir son:
-
-- Determinar las columnas que son dependientes de otras columnas que nos son clave.
-- Eliminar esas columnas de la tabla base.
-- Crear una segunda tabla con esas columnas y con la columna no clave de la cual son dependientes.
-
-En nuestro ejemplo tanto la tabla Articulos como la tabla Articulos_ordenes ya están en 3FN, porque todos sus campos dependen de la clave principal. Sin embargo, la tabla ordenes no lo está, puesto que el nom_cliente y estado son dependientes del Id_cliente, y esa columna no es clave primaria.
-
-![Formas](img/formas6.png)
-
-Para normalizar esta tabla moveremos las columnas no clave y la columna clave a otra tabla llamada Clientes. Las tablas clientes y ordenes se muestran a continuación:
-
-![Formas](img/formas7.png)
-
-De modo que el resultado final es:
-
-![Formas](img/formas8.png)
+- Ordenes (clave principal Id_orden)  
+- Articulos_Ordenes (clave principal Id_orden, Num_art)  
+- Articulos (clave principal Num_art)  
 
 
-![Formas](img/formas11.png)
+### 6.3.- 3FN (Tercera forma normal)
 
-Nosotros en clase solo vamos a trabajar hasta la 3FN. Si quieres saber más sobre la 4FN y la 5FN, te dejo el siguiente enlace para que investigues por tu cuenta:
+Una relación está en 3FN si y solo si está en 2FN y no existen **dependencias transitivas**.  
+Todas las dependencias funcionales deben ser respecto a la clave principal.  
 
-[Enlace a la wikipedia](https://es.wikipedia.org/wiki/Normalizaci%C3%B3n_de_bases_de_datos)
+Es decir, debemos identificar atributos que dependen de otros atributos que **no** son clave principal.  
+
+**Ejemplo:** seguimos con las tres tablas obtenidas en 2FN. Los pasos son:
+
+- Determinar columnas dependientes de atributos que no son clave.  
+- Eliminar esas columnas de la tabla base.  
+- Crear una nueva tabla con esas columnas y la columna no clave de la cual dependen.
+
+En nuestro ejemplo:  
+
+- Tabla **Articulos** → ya está en 3FN.  
+- Tabla **Articulos_Ordenes** → ya está en 3FN.  
+- Tabla **Ordenes** → **no está** en 3FN, porque `nom_cliente` y `estado` dependen de `Id_cliente`, que no es clave primaria.
+
+<img src="img/formas6.png" alt="Normalización a 3FN" width="400px"/>  
+
+Para normalizar: mover columnas no clave y la columna dependiente a otra tabla llamada **Clientes**. Resultado:
+
+<img src="img/formas7.png" alt="Tablas Clientes y Ordenes" width="400px"/>  
+
+El resultado final es:
+
+<img src="img/formas8.png" alt="Resultado final 3FN" width="400px"/>  
+<img src="img/formas11.png" alt="Tablas finales normalizadas" width="400px"/>  
+
+> Nota: en clase trabajaremos hasta la 3FN.  
+Si quieres profundizar en 4FN y 5FN, puedes consultar el siguiente enlace:  
+
+[Wikipedia: Normalización de bases de datos](https://es.wikipedia.org/wiki/Normalizaci%C3%B3n_de_bases_de_datos)
 
 ## HOJAS DE EJERCICIOS
 
-💻 Hoja de ejercicios 15.
-
-💻 Hoja de ejercicios 16.
-
-💻 Hoja de ejercicios 17.
-
-💻 Hoja de ejercicios 18.
-
+💻 Hoja de ejercicios 15.  
+💻 Hoja de ejercicios 16.  
+💻 Hoja de ejercicios 17.  
+💻 Hoja de ejercicios 18.  
 💻 Hoja de ejercicios 19. REPASO DE TODO EL TEMA.
