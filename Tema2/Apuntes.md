@@ -10,29 +10,30 @@
    2. [2.- 🗂️ LOS DIAGRAMAS E/R](#2--️-los-diagramas-er)
       1. [2.1.- 🟦 Entidades](#21---entidades)
       2. [2.2.- 📝 Atributos y tipos](#22---atributos-y-tipos)
-      3. [2.3.- Relaciones](#23--relaciones)
-      4. [2.4.- Cardinalidad](#24--cardinalidad)
-      5. [2.5.- Tipo de Correspondencia](#25--tipo-de-correspondencia)
-   3. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
+   3. [✍️ Ejercicio](#️-ejercicio)
+      1. [2.3.- Relaciones](#23--relaciones)
+      2. [2.4.- Cardinalidad](#24--cardinalidad)
+      3. [2.5.- Tipo de Correspondencia](#25--tipo-de-correspondencia)
+   4. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
       1. [2.6.- Debilidad](#26--debilidad)
-   4. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-1)
-   5. [3.- EL MODELO E/R AMPLIADO](#3--el-modelo-er-ampliado)
-   6. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-2)
-   7. [4.- CONSTRUCCIÓN DE UN DIAGRAMA E/R](#4--construcción-de-un-diagrama-er)
-   8. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-3)
-   9. [5.- MODELO RELACIONAL](#5--modelo-relacional)
-      1. [5.1.- Elementos de una relación](#51--elementos-de-una-relación)
-      2. [5.2.- Restricciones del modelo relacional](#52--restricciones-del-modelo-relacional)
-      3. [5.3.- Claves primarias y claves ajenas](#53--claves-primarias-y-claves-ajenas)
-      4. [5.4.- Integridad referencial](#54--integridad-referencial)
-      5. [5.5.- Representación del modelo Relacional](#55--representación-del-modelo-relacional)
-      6. [5.6.- Paso del modelo E/R al modelo Relacional](#56--paso-del-modelo-er-al-modelo-relacional)
-   10. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-4)
-   11. [6.- NORMALIZACIÓN](#6--normalización)
+   5. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-1)
+   6. [3.- EL MODELO E/R AMPLIADO](#3--el-modelo-er-ampliado)
+   7. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-2)
+   8. [4.- CONSTRUCCIÓN DE UN DIAGRAMA E/R](#4--construcción-de-un-diagrama-er)
+   9. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-3)
+   10. [5.- MODELO RELACIONAL](#5--modelo-relacional)
+       1. [5.1.- Elementos de una relación](#51--elementos-de-una-relación)
+       2. [5.2.- Restricciones del modelo relacional](#52--restricciones-del-modelo-relacional)
+       3. [5.3.- Claves primarias y claves ajenas](#53--claves-primarias-y-claves-ajenas)
+       4. [5.4.- Integridad referencial](#54--integridad-referencial)
+       5. [5.5.- Representación del modelo Relacional](#55--representación-del-modelo-relacional)
+       6. [5.6.- Paso del modelo E/R al modelo Relacional](#56--paso-del-modelo-er-al-modelo-relacional)
+   11. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-4)
+   12. [6.- NORMALIZACIÓN](#6--normalización)
        1. [6.1.- Primera forma normal (1FN)](#61--primera-forma-normal-1fn)
        2. [6.2.- Segunda forma normal (2FN)](#62--segunda-forma-normal-2fn)
        3. [6.3.- Tercera forma normal (3FN)](#63--tercera-forma-normal-3fn)
-   12. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-5)
+   13. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-5)
 
 
 
@@ -76,8 +77,6 @@ Una opción bastante usada a la hora de clasificar los modelos de datos es hacer
   Ejemplos: Access, MySQL, PostgreSQL, Oracle...  
 
 <img src="img/modeloDatos.png" alt="Clasificación de los modelos de datos" width="400">
-
-![Esquema del modelo de datos](img/modeloDatos.png)
 
 En este tema vamos a trabajar el modelo conceptual, más concretamente el modelo Entidad-Relación, o modelo E-R.
 
@@ -147,69 +146,73 @@ Ejemplos de atributos y dominios de la entidad EMPLEADO:
 | JornadaCompleta | Verdadero o Falso                            |
 
 
+## ✍️ Ejercicio
+
 **Realiza el siguiente ejercicio:**
 
-1. Indica cual sería el dominio de cada uno de los siguientes atributos de la entidad PERSONA:
+1️⃣ Indica cuál sería el **dominio** de cada uno de los siguientes atributos de la entidad **PERSONA**:
 
-- Fecha de nacimiento
-- Localidad de nacimiento
-- Edad
-- EsMayorDeEdad
-- DNI
-- Teléfonos
-- Nombre
-- Apellidos
+- 📅 Fecha de nacimiento  
+- 🏙️ Localidad de nacimiento  
+- 🔢 Edad  
+- ✅ EsMayorDeEdad  
+- 🆔 DNI  
+- 📞 Teléfonos  
+- 📝 Nombre  
+- 🧑‍🤝‍🧑 Apellidos  
 
-#### Tipos de atributos.
 
-1. *Atributos simples y atributos compuestos*: 
-    - Un atributo es simple si su contenido no se considera dividido en partes, por ejemplo NOMBRE. 
-    - Es compuesto si admite dividirse en partes. Por ejemplo, FECHA podría ser compuesto si se considera que de FECHA se puede usar aisladamente DIA, MES y AÑO.
+#### 🧭 Tipos de atributos
 
-      ![Atributos](img/atributo2.png)
+1. 🧩 *Atributos simples y atributos compuestos*  
+    - Un atributo es simple si su contenido no se considera dividido en partes, por ejemplo **NOMBRE**.  
+    - Es compuesto si admite dividirse en partes. Por ejemplo, **FECHA** podría ser compuesto si se considera que de FECHA se puede usar aisladamente **DÍA**, **MES** y **AÑO**.
 
-2. *Atributos monovaluados y atributos multivaluados*: 
-    - Un atributo es monovaluado si admite para cada elemento de la entidad un solo valor, por ejemplo nombre de una persona sería monovaluado. 
-    - Si un atributo admite una lista de valores para cada elemento, sería multivaluado, por ejemplo si un atributo de la entidad CLIENTE fuese teléfono_cliente, éste podría ser  atributo multivaluado. 
+    <img src="img/atributo2.png" alt="Atributos simples y compuestos" width="400px"/>
 
-      ![Atributos](img/atributo3.png)
+2. 🔢 *Atributos monovaluados y atributos multivaluados*  
+    - Un atributo es monovaluado si admite, para cada elemento de la entidad, un solo valor; por ejemplo, el **nombre** de una persona.  
+    - Si un atributo admite una lista de valores para cada elemento, sería multivaluado; por ejemplo, si un atributo de la entidad **CLIENTE** fuese **teléfono_cliente**, éste podría ser multivaluado.
 
-3. *Atributos obligatorios y atributos opcionales*: 
-    - Un atributo es obligatorio si para todo elemento debe contener algún valor y es opcional si puede haber elementos que no tengan asignado ningún valor para ese atributo. Por ejemplo, el atributo Aficiones podría ser opcional para una entidad CLIENTE.
+    <img src="img/atributo3.png" alt="Atributos monovaluados y multivaluados" width="400px"/>
+
+3. ⚠️ *Atributos obligatorios y atributos opcionales*  
+    - Un atributo es **obligatorio** si para todo elemento debe contener algún valor, y es **opcional** si puede haber elementos que no tengan asignado ningún valor para ese atributo. Por ejemplo, el atributo **Aficiones** podría ser opcional para una entidad **CLIENTE**.  
     - Un atributo opcional se representa:
 
-      ![Atributos](img/atributo4.png)
+    <img src="img/atributo4.png" alt="Atributos opcionales" width="400px"/>
 
-4. *Atributos derivados y no derivados*: 
-    - Un atributo es derivado si se puede obtener a partir de los datos contenidos en otros atributos. Un atributo derivado podría ser IMPORTE DE VENTA si los valores para ese atributo se obtuviesen a través de los atributos UNIDADES VENDIDAS y PRECIO UNIDAD. No es recomendable usar atributos derivados.
-    - Un atributo es no derivado si su valor no depende de ningún otro atributo. 
+4. 🧮 *Atributos derivados y no derivados*  
+    - Un atributo es **derivado** si se puede obtener a partir de los datos contenidos en otros atributos. Por ejemplo, **IMPORTE DE VENTA** si se obtiene de **UNIDADES VENDIDAS** × **PRECIO UNIDAD** (no es recomendable abusar de atributos derivados).  
+    - Un atributo es **no derivado** si su valor no depende de ningún otro atributo.
 
-5. *Atributo Clave* : Una clave sirve para identificar de forma única a cada elemento de una entidad. Una clave puede estar formada por un solo atributo o por varios. En una clave no se pueden repetir valores, es decir, no puede haber dos elementos de la misma entidad con la misma clave. En una entidad puede haber dos tipos de clave:
-    - Clave primaria o principal: Dentro de los conjuntos de atributos que pueden permitir identificar a los elementos de una entidad, debería ser la que se considera más adecuada en base a una serie de requisitos: simplicidad, longitud, representatividad, estabilidad.
-    - Clave secundaria o alternativa. Puede haber varias en una entidad pero no se debe abusar de estas claves. Serán todas aquellas que decidamos, aparte de la primaria.
+5. 🔑 *Atributo Clave*  
+    Una **clave** sirve para identificar de forma única a cada elemento de una entidad. Puede estar formada por uno o varios atributos y no permite valores repetidos. En una entidad puede haber dos tipos de clave:  
+    - **Clave primaria o principal**: entre los posibles conjuntos de atributos que identifican a los elementos, debería ser la más adecuada por **simplicidad**, **longitud**, **representatividad** y **estabilidad**.  
+    - **Clave secundaria o alternativa**: puede haber varias en una entidad, pero no se debe abusar de ellas. Son todas aquellas que decidamos aparte de la primaria.
 
-Representación de los distintos tipos de atributos: 
+**Representación de los distintos tipos de atributos:**
 
-![Atributos](img/atributo5.png)
+<img src="img/atributo5.png" alt="Representación de tipos de atributos" width="400px"/>
 
-**Observa y analiza el siguiente ejemplo:**
+**Observa y analiza el siguiente ejemplo:**  
+Indica para cada atributo de qué tipo es, haciendo un examen lo más exhaustivo posible.
 
-Indica para cada atributo de que tipo es, haciendo un examen lo más exhaustivo posible.
-
-![Atributos](img/atributo6.png)
+<img src="img/atributo6.png" alt="Ejemplo de atributos" width="400px"/>
 
 **Realiza el siguiente ejercicio:**
 
-1. Justifica si los siguientes atributos sería obligatorios-opcionales, compuestos-simples,  derivado-no derivado, monovaluado-multivaluado.
+1. Justifica si los siguientes atributos serían **obligatorios/opcionales**, **compuestos/simples**, **derivado/no derivado**, **monovaluado/multivaluado**.
 
-- Fecha de nacimiento
-- Localidad de nacimiento
-- Edad
-- EsMayorDeEdad
-- DNI
-- Teléfonos
-- Nombre
+- Fecha de nacimiento  
+- Localidad de nacimiento  
+- Edad  
+- EsMayorDeEdad  
+- DNI  
+- Teléfonos  
+- Nombre  
 - Apellidos
+
 
 ### 2.3.- Relaciones
 
