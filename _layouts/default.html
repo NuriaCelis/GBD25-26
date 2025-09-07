@@ -31,10 +31,10 @@
             <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
           {% endif %}--> 
 
-
+        <div style="text-align: center;">
           <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
           <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-
+        </div>
           {% if site.show_downloads %}
             <section id="downloads">
               <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
@@ -48,7 +48,7 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
       
-<div style="width: 100%; margin-left: 0; margin-right: 0; padding-left: 20px; padding-right: 20px;">
+<div style="width: 100%; margin-left: 0; margin-right: 0; padding-left: 50px; padding-right: 50px;">
   {{ content }}
 </div>
 
