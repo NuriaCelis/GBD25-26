@@ -48,15 +48,12 @@ Indica el **uso del fichero**:
 **Realiza los siguientes ejercicios:**
 
 #### 1️⃣ Abrir un fichero
-- Busca en tu ordenador un fichero con extensión **`.docx`**.  
-- Ábrelo con el **Bloc de notas**.  
+Busca en tu ordenador un fichero con extensión **`.docx`**, ábrelo con el **Bloc de notas**.  
 - ❓ Pregunta: ¿Por qué no se ve bien el contenido del fichero?
 
 
 #### 2️⃣ Tabla de códigos ASCII
-- 📝 **Tabla ASCII**: Es un conjunto estandarizado de códigos numéricos que representan caracteres que una computadora puede entender.
-
-📦 Contenido de la tabla ASCII:
+📝 **Tabla ASCII**: Es un conjunto estandarizado de códigos numéricos que representan caracteres que una computadora puede entender. Su uso en informática permite almacenar, interpretar y transmitir texto de manera uniforme entre sistemas y dispositivos, garantizando que todos comprendan los mismos caracteres.El contenido de la tabla ASCII es el siguiente:
 
 - Caracteres de control (0–31 y 127): No se imprimen; se usaban para controlar dispositivos, como el retorno de carro CR o salto de línea LF.
 
@@ -70,13 +67,11 @@ Indica el **uso del fichero**:
   
 - Caracteres extendidos (128–255, en ASCII extendido): Permiten letras acentuadas, símbolos gráficos y otros caracteres especiales.
 
-💻 Uso en informática: Permite almacenar, interpretar y transmitir texto de manera uniforme entre sistemas y dispositivos, garantizando que todos comprendan los mismos caracteres.
-
-- Conéctate a **Internet** y busca una **tabla de códigos ASCII de 8 bits**.  
+- ❓ Realiza: Conéctate a **Internet** y busca una **tabla de códigos ASCII de 8 bits** y comprueba las características descritas anteriormente.  
 
 
 #### 3️⃣ Identificación de ficheros
-- Observa la siguiente **captura de una carpeta en Windows**.  
+Observa la siguiente **captura de una carpeta en Windows**.  
 - ❓ Indica **el tipo de cada fichero** y **qué contiene**.
 
 ![Lista de ficheros](img/Lista.png)
