@@ -2,61 +2,80 @@
 
 # INDICE
 
-- [UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.](#unidad-2-diseño-lógico-de-la-base-de-datos)
-- [INDICE](#indice)
-  - [1.- MODELO DE DATOS](#1--modelo-de-datos)
-    - [1.1.- Clasificación de los modelos de datos](#11--clasificación-de-los-modelos-de-datos)
-  - [2.- LOS DIAGRAMAS E/R](#2--los-diagramas-er)
-    - [2.1.- Entidades](#21--entidades)
-    - [2.2.- Atributos y tipos](#22--atributos-y-tipos)
-      - [Tipos de atributos.](#tipos-de-atributos)
-    - [2.3.- Relaciones](#23--relaciones)
-    - [2.4.- Cardinalidad](#24--cardinalidad)
-    - [2.5.- Tipo de Correspondencia](#25--tipo-de-correspondencia)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
-    - [2.6.- Debilidad](#26--debilidad)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-1)
-  - [3.- EL MODELO E/R AMPLIADO](#3--el-modelo-er-ampliado)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-2)
-  - [4.- CONSTRUCCIÓN DE UN DIAGRAMA E/R](#4--construcción-de-un-diagrama-er)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-3)
-  - [5.- MODELO RELACIONAL](#5--modelo-relacional)
-    - [5.1.- Elementos de una relación](#51--elementos-de-una-relación)
-    - [5.2.- Restricciones del modelo relacional](#52--restricciones-del-modelo-relacional)
-    - [5.3.- Claves primarias y claves ajenas](#53--claves-primarias-y-claves-ajenas)
-    - [5.4.- Integridad referencial](#54--integridad-referencial)
-    - [5.5.- Representación del modelo Relacional](#55--representación-del-modelo-relacional)
-    - [5.6.- Paso del modelo E/R al modelo Relacional](#56--paso-del-modelo-er-al-modelo-relacional)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-4)
-  - [6.- NORMALIZACIÓN](#6--normalización)
-    - [6.1.- Primera forma normal (1FN)](#61--primera-forma-normal-1fn)
-    - [6.2.- Segunda forma normal (2FN)](#62--segunda-forma-normal-2fn)
-    - [6.3.- Tercera forma normal (3FN)](#63--tercera-forma-normal-3fn)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-5)
+1. [UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.](#unidad-2-diseño-lógico-de-la-base-de-datos)
+2. [INDICE](#indice)
+   1. [1.- 📊 MODELO DE DATOS](#1---modelo-de-datos)
+      1. [📌 Modelos de datos más utilizados](#-modelos-de-datos-más-utilizados)
+      2. [1.1.- 🔎 Clasificación de los modelos de datos](#11---clasificación-de-los-modelos-de-datos)
+   2. [2.- LOS DIAGRAMAS E/R](#2--los-diagramas-er)
+      1. [2.1.- Entidades](#21--entidades)
+      2. [2.2.- Atributos y tipos](#22--atributos-y-tipos)
+      3. [2.3.- Relaciones](#23--relaciones)
+      4. [2.4.- Cardinalidad](#24--cardinalidad)
+      5. [2.5.- Tipo de Correspondencia](#25--tipo-de-correspondencia)
+   3. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
+      1. [2.6.- Debilidad](#26--debilidad)
+   4. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-1)
+   5. [3.- EL MODELO E/R AMPLIADO](#3--el-modelo-er-ampliado)
+   6. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-2)
+   7. [4.- CONSTRUCCIÓN DE UN DIAGRAMA E/R](#4--construcción-de-un-diagrama-er)
+   8. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-3)
+   9. [5.- MODELO RELACIONAL](#5--modelo-relacional)
+      1. [5.1.- Elementos de una relación](#51--elementos-de-una-relación)
+      2. [5.2.- Restricciones del modelo relacional](#52--restricciones-del-modelo-relacional)
+      3. [5.3.- Claves primarias y claves ajenas](#53--claves-primarias-y-claves-ajenas)
+      4. [5.4.- Integridad referencial](#54--integridad-referencial)
+      5. [5.5.- Representación del modelo Relacional](#55--representación-del-modelo-relacional)
+      6. [5.6.- Paso del modelo E/R al modelo Relacional](#56--paso-del-modelo-er-al-modelo-relacional)
+   10. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-4)
+   11. [6.- NORMALIZACIÓN](#6--normalización)
+       1. [6.1.- Primera forma normal (1FN)](#61--primera-forma-normal-1fn)
+       2. [6.2.- Segunda forma normal (2FN)](#62--segunda-forma-normal-2fn)
+       3. [6.3.- Tercera forma normal (3FN)](#63--tercera-forma-normal-3fn)
+   12. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-5)
 
 
 
-## 1.- MODELO DE DATOS
+## 1.- 📊 MODELO DE DATOS
 
-Un modelo pretende crear una simplificación de la realidad para poder comprenderla mejor. Para realizar un modelo se realiza una abstracción más simple de la realidad. Se usan modelos en diferentes áreas de la informática, como por ejemplo UML en Ingeniería del software o el modelo Entidad/Relación para BD.
+Un modelo pretende crear una simplificación de la realidad para poder comprenderla mejor.  
+Para realizar un modelo se realiza una **abstracción más simple** de la realidad.  
 
-Un **modelo de datos** es un conjunto de herramientas y reglas para representar los datos, las relaciones entre éstos y las restricciones de una base de datos.
+Se usan modelos en diferentes áreas de la informática, como por ejemplo:  
+- UML en Ingeniería del Software  
+- Modelo Entidad/Relación para BD  
 
-Fundamentalmente se han utilizado los siguientes modelos de datos:
+Un **modelo de datos** es un conjunto de herramientas y reglas para representar:  
+- Datos  
+- Relaciones entre éstos  
+- Restricciones de una base de datos  
 
-- Relacional
-- Jerárquico
-- En red
-- Orientado a Objetos
-- Relacional orientado a objetos
+### 📌 Modelos de datos más utilizados
+- Relacional  
+- Jerárquico  
+- En red  
+- Orientado a Objetos  
+- Relacional orientado a objetos  
 
-### 1.1.- Clasificación de los modelos de datos
+---
 
-Una opción bastante usada a la hora de clasificar los modelos de datos es hacerlo de acuerdo al nivel de abstracción que presentan:
+### 1.1.- 🔎 Clasificación de los modelos de datos
 
-- Modelos de Datos Conceptuales: Describe las estructuras de datos y restricciones de integridad. Se usan en la fase de Análisis y representan los datos y las relaciones entre ellos. El esquema más típico es el *Modelo Entidad-Relación*.
-- Modelos de Datos Lógicos: Describe la estructura que tendrá la base de datos en función del tipo de SGBD que hayamos elegido. El ejemplo más típico es el *Modelo Relacional*.
-- Modelos de Datos Físicos: Describe exactamente como se implementan los datos dentro del SGBD elegido. Puede ser en Access, MySQL, PostgreSQL, Oracle...
+Una opción bastante usada a la hora de clasificar los modelos de datos es hacerlo de acuerdo al **nivel de abstracción** que presentan:
+
+- 🧠 **Modelos de Datos Conceptuales**  
+  Se usan en la fase de *Análisis*. Representan datos y relaciones.  
+  Ejemplo: *Modelo Entidad-Relación*  
+
+- ⚙️ **Modelos de Datos Lógicos**  
+  Describen la estructura de la base de datos según el SGBD.  
+  Ejemplo: *Modelo Relacional*  
+
+- 💾 **Modelos de Datos Físicos**  
+  Indican cómo se implementan los datos en el SGBD.  
+  Ejemplos: Access, MySQL, PostgreSQL, Oracle...  
+
+<img src="img/modeloDatos.png" alt="Clasificación de los modelos de datos" width="400">
 
 ![Esquema del modelo de datos](img/modeloDatos.png)
 
