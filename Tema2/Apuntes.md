@@ -7,9 +7,9 @@
    1. [1.- 📊 MODELO DE DATOS](#1---modelo-de-datos)
       1. [📌 Modelos de datos más utilizados](#-modelos-de-datos-más-utilizados)
       2. [1.1.- 🔎 Clasificación de los modelos de datos](#11---clasificación-de-los-modelos-de-datos)
-   2. [2.- LOS DIAGRAMAS E/R](#2--los-diagramas-er)
-      1. [2.1.- Entidades](#21--entidades)
-      2. [2.2.- Atributos y tipos](#22--atributos-y-tipos)
+   2. [2.- 🗂️ LOS DIAGRAMAS E/R](#2--️-los-diagramas-er)
+      1. [2.1.- 🟦 Entidades](#21---entidades)
+      2. [2.2.- 📝 Atributos y tipos](#22---atributos-y-tipos)
       3. [2.3.- Relaciones](#23--relaciones)
       4. [2.4.- Cardinalidad](#24--cardinalidad)
       5. [2.5.- Tipo de Correspondencia](#25--tipo-de-correspondencia)
@@ -81,59 +81,70 @@ Una opción bastante usada a la hora de clasificar los modelos de datos es hacer
 
 En este tema vamos a trabajar el modelo conceptual, más concretamente el modelo Entidad-Relación, o modelo E-R.
 
-## 2.- LOS DIAGRAMAS E/R
+## 2.- 🗂️ LOS DIAGRAMAS E/R
 
-El modelo Entidad-Relación es un modelo puramente conceptual. Representa el funcionamiento de un sistema de información mediante un diagrama Entidad Relación (E/R).
-Facilita enormemente el diseño de una base de datos. Es muy representativo del funcionamiento del sistema de información y es independiente del SGBD. Toma como referencia la percepción que tenemos del funcionamiento del mundo real:
+El modelo Entidad-Relación es un modelo **puramente conceptual**. Representa el funcionamiento de un sistema de información mediante un diagrama Entidad-Relación (E/R).  
 
-- Esa percepción se basa en entidades que actúan sobre otras entidades haciendo procesos.
-- Consta de una colección de objetos básicos llamados **entidades** y de unas **relaciones** establecidas entre dichas entidades.  
+Facilita enormemente el diseño de una base de datos. Es muy representativo del funcionamiento del sistema de información y es **independiente del SGBD**. Toma como referencia la percepción que tenemos del funcionamiento del mundo real:
 
-Se han desarrollado varios modelos E/R y diagramas de representación para el modelo. En este curso vamos a usar el modelo de Chen. Vemos en la siguiente imagen un ejemplo de Diagrama E-R siguiendo el modelo de Chen:
+- Esa percepción se basa en entidades que actúan sobre otras entidades haciendo procesos.  
+- Consta de una colección de objetos básicos llamados **entidades** y de unas **relaciones** establecidas entre dichas entidades.  
 
-![Esquema E-R](img/esquemaER.png)
+Se han desarrollado varios modelos E/R y diagramas de representación para el modelo. En este curso vamos a usar el **modelo de Chen**.  
+Vemos en la siguiente imagen un ejemplo de Diagrama E-R siguiendo este modelo:  
 
-En los siguientes apartados vamos a ir desgranando los elementos que componen un diagrama E-R y como se construye.
+<img src="img/esquemaER.png" alt="Esquema E-R" width="400px"/>
 
-### 2.1.- Entidades
+En los siguientes apartados vamos a ir desgranando los elementos que componen un diagrama E-R y cómo se construye.  
 
-Las entidades son uno de los elementos usados en los diagramas E/R. Una entidad es un objeto, sujeto o concepto sobre el que se recoge información básica en el sistema para poder realizar los procesos que se requieran. En un sistema de información que permite gestionar el funcionamiento de un centro de estudios.
+---
 
-En el esquema anterior, serían entidades:
+### 2.1.- 🟦 Entidades
 
-- ALUMNO
-- MODULO
-- PROFESOR
+Las **entidades** son uno de los elementos usados en los diagramas E/R.  
+Una entidad es un objeto, sujeto o concepto sobre el que se recoge información básica en el sistema para poder realizar los procesos que se requieran.  
 
-Una entidad se representa en un diagrama E/R mediante un rectángulo.
+En el esquema anterior, serían entidades:  
+- ALUMNO  
+- MODULO  
+- PROFESOR  
 
-![Entidades](img/entidades.png)
+Una entidad se representa en un diagrama E/R mediante un **rectángulo**.  
 
-### 2.2.- Atributos y tipos
+<img src="img/entidades.png" alt="Entidades" width="400px"/>
 
-Un atributo es una propiedad o una característica de una entidad. Como veremos más adelante, las relaciones también pueden tener atributos.Por ejemplo, la entidad ALUMNO puede tener los atributos:
+---
 
-- Numero
-- Nombre
-- Apellidos
-- Fecha Nac.
-- Poblacion
+### 2.2.- 📝 Atributos y tipos
 
-Los atributos de una entidad, se representan mediante pequeños círculos unidos a la entidad por una línea. Al lado de cada círculo se escribe el nombre del atributo. 
+Un **atributo** es una propiedad o característica de una entidad.  
+Como veremos más adelante, las **relaciones también pueden tener atributos**.  
 
-![Atributos](img/atributo1.png)
+Por ejemplo, la entidad ALUMNO puede tener los atributos:  
+- Numero  
+- Nombre  
+- Apellidos  
+- Fecha Nac.  
+- Población  
 
-El dominio de un atributo es todo el conjunto de valores que se pueden asignar a ese atributo. Ejemplos de atributos y dominios de una entidad EMPLEADO:
+Los atributos de una entidad se representan mediante **pequeños círculos unidos a la entidad por una línea**.  
+Al lado de cada círculo se escribe el nombre del atributo.  
 
-| Atributo | Dominio |
-| ------------- | ------------- |
-| DNI  | Cadena de caracteres de longitud 9  | 
-| Nombre  | Cadena de caracteres de longitud 20  | 
-| Apellidos  | Cadena de caracteres de longitud 30  | 
-| Antigüedad  | Fecha  | 
-| Salario  | Numero real con dos decimales  |
-| Categoría  | Enumerado de categorías  |
-| JornadaCompleta  | Verdadero o Falso  |
+<img src="img/atributo1.png" alt="Atributos" width="400px"/>
+
+El **dominio de un atributo** es todo el conjunto de valores que se pueden asignar a ese atributo.  
+
+Ejemplos de atributos y dominios de la entidad EMPLEADO:  
+
+| Atributo        | Dominio                                      |
+|-----------------|----------------------------------------------|
+| DNI             | Cadena de caracteres de longitud 9           |
+| Nombre          | Cadena de caracteres de longitud 20          |
+| Apellidos       | Cadena de caracteres de longitud 30          |
+| Antigüedad      | Fecha                                        |
+| Salario         | Número real con dos decimales                |
+| Categoría       | Enumerado de categorías                      |
+| JornadaCompleta | Verdadero o Falso                            |
 
 
 **Realiza el siguiente ejercicio:**
