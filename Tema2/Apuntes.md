@@ -1,38 +1,33 @@
 # UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.
 
 # INDICE
-1. [UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.](#unidad-2-diseño-lógico-de-la-base-de-datos)
-2. [INDICE](#indice)
-   1. [1.- 📊 MODELO DE DATOS](#1---modelo-de-datos)
-      1. [📌 Modelos de datos más utilizados](#-modelos-de-datos-más-utilizados)
-      2. [1.1.- 🔎 Clasificación de los modelos de datos](#11---clasificación-de-los-modelos-de-datos)
-   2. [2.- 🗂️ LOS DIAGRAMAS E/R](#2--️-los-diagramas-er)
-      1. [2.1.- 🟦 Entidades](#21---entidades)
-      2. [2.2.- 📝 Atributos y tipos](#22---atributos-y-tipos)
-   3. [✍️ Ejercicio](#️-ejercicio)
-      1. [2.3.- 🔗 Relaciones](#23---relaciones)
-      2. [2.4.- 🔢 Cardinalidad](#24---cardinalidad)
-      3. [2.5.- 🔄 Tipo de Correspondencia](#25---tipo-de-correspondencia)
-   4. [📝 HOJAS DE EJERCICIOS](#-hojas-de-ejercicios)
-      1. [2.6.- 🏛️ Debilidad](#26--️-debilidad)
-   5. [📝 HOJAS DE EJERCICIOS](#-hojas-de-ejercicios-1)
-   6. [3.- 🏗️ EL MODELO E/R AMPLIADO](#3--️-el-modelo-er-ampliado)
-   7. [📝 HOJAS DE EJERCICIOS](#-hojas-de-ejercicios-2)
-   8. [4.- 🛠️ CONSTRUCCIÓN DE UN DIAGRAMA E/R](#4--️-construcción-de-un-diagrama-er)
-   9. [📝 HOJAS DE EJERCICIOS](#-hojas-de-ejercicios-3)
-   10. [5.- 🗄️ MODELO RELACIONAL](#5--️-modelo-relacional)
-       1. [5.1.- 📋 Elementos de una relación](#51---elementos-de-una-relación)
-       2. [5.2.- ⚖️ Restricciones del modelo relacional](#52--️-restricciones-del-modelo-relacional)
-       3. [5.3.- 🔑 Claves primarias y claves ajenas](#53---claves-primarias-y-claves-ajenas)
-       4. [5.4.- 🛡️ Integridad referencial](#54--️-integridad-referencial)
-       5. [5.5.- 🖼️ Representación del modelo Relacional](#55--️-representación-del-modelo-relacional)
-       6. [5.6.- 🔄 Paso del modelo E/R al modelo Relacional](#56---paso-del-modelo-er-al-modelo-relacional)
-   11. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
-   12. [6.- 🧩 NORMALIZACIÓN](#6---normalización)
-       1. [6.1.- 1FN (Primera forma normal)](#61--1fn-primera-forma-normal)
-       2. [6.2.- 2FN (Segunda forma normal)](#62--2fn-segunda-forma-normal)
-       3. [6.3.- 3FN (Tercera forma normal)](#63--3fn-tercera-forma-normal)
-   13. [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-1)
+- [UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.](#unidad-2-diseño-lógico-de-la-base-de-datos)
+- [INDICE](#indice)
+  - [1.- 📊 MODELO DE DATOS](#1---modelo-de-datos)
+    - [📌 Modelos de datos más utilizados](#-modelos-de-datos-más-utilizados)
+    - [1.1.- 🔎 Clasificación de los modelos de datos](#11---clasificación-de-los-modelos-de-datos)
+  - [2.- 🗂️ LOS DIAGRAMAS E/R](#2--️-los-diagramas-er)
+    - [2.1.- 🟦 Entidades](#21---entidades)
+    - [2.2.- 📝 Atributos y tipos](#22---atributos-y-tipos)
+  - [✍️ Ejercicio](#️-ejercicio)
+    - [2.3.- 🔗 Relaciones](#23---relaciones)
+    - [2.4.- 🔢 Cardinalidad](#24---cardinalidad)
+    - [2.5.- 🔄 Tipo de Correspondencia](#25---tipo-de-correspondencia)
+    - [2.6.- 🏛️ Debilidad](#26--️-debilidad)
+  - [3.- 🏗️ EL MODELO E/R AMPLIADO](#3--️-el-modelo-er-ampliado)
+  - [4.- 🛠️ CONSTRUCCIÓN DE UN DIAGRAMA E/R](#4--️-construcción-de-un-diagrama-er)
+  - [5.- 🗄️ MODELO RELACIONAL](#5--️-modelo-relacional)
+    - [5.1.- 📋 Elementos de una relación](#51---elementos-de-una-relación)
+    - [5.2.- ⚖️ Restricciones del modelo relacional](#52--️-restricciones-del-modelo-relacional)
+    - [5.3.- 🔑 Claves primarias y claves ajenas](#53---claves-primarias-y-claves-ajenas)
+    - [5.4.- 🛡️ Integridad referencial](#54--️-integridad-referencial)
+    - [5.5.- 🖼️ Representación del modelo Relacional](#55--️-representación-del-modelo-relacional)
+    - [5.6.- 🔄 Paso del modelo E/R al modelo Relacional](#56---paso-del-modelo-er-al-modelo-relacional)
+  - [6.- 🧩 NORMALIZACIÓN](#6---normalización)
+    - [6.1.- 1FN (Primera forma normal)](#61--1fn-primera-forma-normal)
+    - [6.2.- 2FN (Segunda forma normal)](#62--2fn-segunda-forma-normal)
+    - [6.3.- 3FN (Tercera forma normal)](#63--3fn-tercera-forma-normal)
+
 
 ## 1.- 📊 MODELO DE DATOS
 
@@ -308,7 +303,7 @@ El tipo de correspondencia o relación de cardinalidad expresa el número máxim
 
 1. En un supermercado hay productos organizados en categorías. Cada producto pertenece a una única categoría. Están previstas categorías que aún pueden no tener productos. Calcula las cardinalidades de cada entidad y el tipo de correspondencia y represéntalos en el esquema E/R.
 
-## 📝 HOJAS DE EJERCICIOS
+#### 📝 HOJAS DE EJERCICIOS
 
 💻 Hoja de ejercicios 1.  
 
@@ -393,7 +388,7 @@ Por ejemplo, cada línea de pedido se identificaría con **numPed** y **numLinea
 
 <img src="img/debil3.png" alt="Dependencia en identificación" width="400px"/>  
 
-## 📝 HOJAS DE EJERCICIOS
+#### 📝 HOJAS DE EJERCICIOS
 
 💻 Hoja de ejercicios 2.  
 💻 Hoja de ejercicios 3.  
@@ -440,7 +435,7 @@ Las **cardinalidades de la especialización** para los cuatro casos que hemos vi
 
 <img src="img/ampliado6.png" alt="Cardinalidades de especialización" width="400px"/>  
 
-## 📝 HOJAS DE EJERCICIOS
+#### 📝 HOJAS DE EJERCICIOS
 
 💻 Hoja de ejercicios 5.  
 💻 Hoja de ejercicios 6.  
@@ -469,7 +464,7 @@ Los pasos a seguir serán:
 
 6. Volver a leer el problema para ver si nos hemos dejado algo. Revisar que toda la información está representada en el esquema y refinarlo si es necesario.  
 
-## 📝 HOJAS DE EJERCICIOS
+#### 📝 HOJAS DE EJERCICIOS
 
 💻 Hoja de ejercicios 7.  
 
@@ -697,7 +692,7 @@ Para convertir un modelo E/R a relacional, todo se reduce a **relaciones represe
 - En los albergues pernoctan peregrinos, de los que se registra un número de tarjeta (único), su nombre y nacionalidad.  
 - Se debe registrar la fecha de entrada de cada peregrino en el albergue correspondiente.  
 
-## HOJAS DE EJERCICIOS
+#### HOJAS DE EJERCICIOS
 
 💻 Hoja de ejercicios 8.  
 💻 Hoja de ejercicios 9.  
@@ -830,7 +825,7 @@ Si quieres profundizar en 4FN y 5FN, puedes consultar el siguiente enlace:
 
 [Wikipedia: Normalización de bases de datos](https://es.wikipedia.org/wiki/Normalizaci%C3%B3n_de_bases_de_datos)
 
-## HOJAS DE EJERCICIOS
+#### HOJAS DE EJERCICIOS
 
 💻 Hoja de ejercicios 15.  
 💻 Hoja de ejercicios 16.  
