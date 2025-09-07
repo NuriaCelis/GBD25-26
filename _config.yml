@@ -2,7 +2,7 @@
 #plugins:
 #- jekyll-remote-theme # add this line to the plugins list if you already have one
 
-title: Gestión de Bases de Datos 2025-26
+title: Gestión de Bases de Datos. Curso 2025-26.
 description: Apuntes y recursos para la asignatura de Gestión de Bases de Datos del IES Miguel Herrero 2025-26
 remote_theme: pages-themes/slate@v0.2.0
 plugins:
