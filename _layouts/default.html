@@ -9,15 +9,7 @@
 
 {% seo %}
     {% include head-custom.html %}
-    <style>
-  .wrapper, .container, .inner {
-    max-width: 100% !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-</style>
+   
 
 
   </head>
@@ -48,9 +40,9 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
       
-<div style="width: 100%; margin-left: 0; margin-right: 0; padding-left: 100px; padding-right: 200px;">
+
   {{ content }}
-</div>
+
 
 
       </section>
@@ -60,9 +52,9 @@
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        <p class="copyright">{{ site.title | default: site.github.repository_name }} </a></p>
         {% endif %}
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        
       </footer>
     </div>
   </body>
