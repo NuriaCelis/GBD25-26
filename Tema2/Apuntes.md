@@ -1,15 +1,14 @@
 # UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.
 
-# INDICE
+# INDICE- [UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.](#unidad-2-diseño-lógico-de-la-base-de-datos)
 - [UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.](#unidad-2-diseño-lógico-de-la-base-de-datos)
-- [INDICE](#indice)
+- [INDICE- UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.](#indice--unidad-2-diseño-lógico-de-la-base-de-datos)
   - [1.- 📊 MODELO DE DATOS](#1---modelo-de-datos)
     - [📌 Modelos de datos más utilizados](#-modelos-de-datos-más-utilizados)
     - [1.1.- 🔎 Clasificación de los modelos de datos](#11---clasificación-de-los-modelos-de-datos)
   - [2.- 🗂️ LOS DIAGRAMAS E/R](#2--️-los-diagramas-er)
     - [2.1.- 🟦 Entidades](#21---entidades)
     - [2.2.- 📝 Atributos y tipos](#22---atributos-y-tipos)
-  - [✍️ Ejercicio](#️-ejercicio)
     - [2.3.- 🔗 Relaciones](#23---relaciones)
     - [2.4.- 🔢 Cardinalidad](#24---cardinalidad)
     - [2.5.- 🔄 Tipo de Correspondencia](#25---tipo-de-correspondencia)
@@ -138,7 +137,7 @@ Ejemplos de atributos y dominios de la entidad EMPLEADO:
 | JornadaCompleta | Verdadero o Falso                            |
 
 
-## ✍️ Ejercicio
+#### ✍️ Ejercicio
 
 **Realiza el siguiente ejercicio:**
 
