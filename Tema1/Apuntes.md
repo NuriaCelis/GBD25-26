@@ -209,8 +209,8 @@ En este modelo, la información está **repartida en distintas localizaciones** 
 
 ## 🗄️ 3.- BASES DE DATOS RELACIONALES
 
-En este curso trabajaremos con **bases de datos relacionales**.  
-Veremos conceptos básicos sobre **bases de datos en general** y **bases de datos relacionales** en particular.
+En este curso trabajaremos con **bases de datos relacionales** y **bases de datos no relacionales**.  
+Veremos conceptos básicos sobre **bases de datos en general** y **bases de datos relacionales** en particular. Las **bases de datos no relacionales** las veremos a final de curso.
 
 
 ### 📝 3.1.- Conceptos
@@ -326,6 +326,6 @@ Los SGBD se pueden clasificar según el tipo de BD que gestionan (jerárquicas, 
 - 💻 **Hoja de ejercicios 2**  
 - 💻 **Hoja de ejercicios 3**  
 - 💻 **Hoja de ejercicios 4**  
-- 💻 **Hoja de ejercicios 5**
+
 
 
