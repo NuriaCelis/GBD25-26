@@ -13,6 +13,7 @@
     - [2.6.- 🏛️ Debilidad](#26--️-debilidad)
   - [3.- 🏗️ EL MODELO E/R AMPLIADO](#3--️-el-modelo-er-ampliado)
   - [4.- 🛠️ CONSTRUCCIÓN DE UN DIAGRAMA E/R](#4--️-construcción-de-un-diagrama-er)
+  - [💻 Hoja de ejercicios 7 bis.](#-hoja-de-ejercicios-7-bis)
   - [5.- 🗄️ MODELO RELACIONAL](#5--️-modelo-relacional)
     - [5.1.- 📋 Elementos de una relación](#51---elementos-de-una-relación)
     - [5.2.- ⚖️ Restricciones del modelo relacional](#52--️-restricciones-del-modelo-relacional)
@@ -371,7 +372,6 @@ Las **cardinalidades de la especialización** para los cuatro casos que hemos vi
 💻 Hoja de ejercicios 5.  
 💻 Hoja de ejercicios 6.  
 
-
 ## 4.- 🛠️ CONSTRUCCIÓN DE UN DIAGRAMA E/R
 
 Los pasos a seguir serán:
@@ -398,7 +398,7 @@ Los pasos a seguir serán:
 #### 📝 HOJAS DE EJERCICIOS
 
 💻 Hoja de ejercicios 7.  
-
+💻 Hoja de ejercicios 7 bis. 
 ---
 
 ## 5.- 🗄️ MODELO RELACIONAL
@@ -423,7 +423,7 @@ Al conjunto de valores que puede tomar una columna se le denomina **dominio**, y
 - **General**: si los valores pueden ser todos los existentes dentro del tipo de dato correspondiente a la columna.  
 - **Restringido**: si sólo puede tomar valores dentro de un rango de un dominio general, por ejemplo, números reales comprendidos entre 0 y 10.  
 
-<img src="img/relacional2.png" alt="Dominios de columnas" width="400px"/>  
+<img src="img/relacional2.png" alt="Dominios de columnas" width="200px"/>  
 
 ### 5.2.- ⚖️ Restricciones del modelo relacional
 
