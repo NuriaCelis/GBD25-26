@@ -281,7 +281,7 @@ El tipo de correspondencia o relación de cardinalidad expresa el número máxim
 
 **Realiza el siguiente ejercicio:**  
 
-1. En un supermercado hay productos organizados en categorías. Cada producto pertenece a una única categoría. Están previstas categorías que aún pueden no tener productos. Calcula las cardinalidades de cada entidad y el tipo de correspondencia y represéntalos en el esquema E/R.
+1. En un supermercado hay productos que se organizan en categorías. Cada producto pertenece a una única categoría. Están previstas categorías que aún pueden no tener productos. Calcula las cardinalidades de cada entidad y el tipo de correspondencia y represéntalos en el esquema E/R.
 
 #### 📝 HOJAS DE EJERCICIOS
 
