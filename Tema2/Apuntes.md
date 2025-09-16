@@ -219,6 +219,12 @@ Ejemplos:
 
    <img src="img/relacion3.png" alt="Relación ternaria" width="400px"/>  
 
+Antes de seguir avanzando con el resto de los conceptos, vamos a hacer algún ejercicio básico para practicar lo visto hasta ahora.
+
+#### 📝 HOJAS DE EJERCICIOS
+
+💻 Hoja de ejercicios 1. Solo hacemos el ejercicio 1, 2 y 3, sin poner las cardinalidades. Los completaremos más adelante.
+
 ### 2.4.- 🔢 Cardinalidad
 
 En este apartado veremos una serie de definiciones clave para seguir entendiendo cómo construir un **diagrama E-R**.  
