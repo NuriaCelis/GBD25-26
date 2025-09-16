@@ -304,61 +304,6 @@ El tipo de correspondencia o relación de cardinalidad expresa el número máxim
 
 💻 Hoja de ejercicios 1.  
 
-Vamos a ver ahora qué tipos de correspondencia nos podemos encontrar en una **relación ternaria** y cómo se pueden obtener.
-
-Tomamos en cuenta una de las entidades y es necesario ver qué relación o participación presenta esta con la agrupación de las otras dos. Los casos posibles que se pueden dar son estos:
-
-- 1:1:1  
-- 1:1:M  
-- 1:N:M  
-- M:N:P  
-
-Vamos a ver con un ejemplo cómo obtener las cardinalidades en una relación ternaria. Partamos del siguiente caso:  
-
-<img src="img/ternaria1.png" alt="Relación ternaria 1" width="400px"/>  
-
-1.- Elegimos dos entidades y las ponemos cardinalidad a 1, y preguntamos qué relación tiene la tercera entidad con las dos que hemos puesto a uno. Puede ser una relación "a uno" o "a muchos".  
-
-En el ejemplo, fijamos 1 asignatura en 1 semestre y nos preguntamos: ¿Cuántos alumnos puede haber matriculados en 1 asignatura para 1 semestre?  
-
-La respuesta sería que puede haber muchos estudiantes matriculados, dado que varios estudiantes pueden matricularse de una misma asignatura en el mismo semestre. Por lo tanto, la entidad **ESTUDIANTE** participa con grado N en la relación de matrícula.  
-
-2.- En segundo lugar, nos preguntaremos, por ejemplo, si fijados un estudiante y una asignatura concretos puede estar matriculado en 1 o muchos semestres.  
-
-La respuesta es que puede estar matriculado en muchos semestres, dado que un estudiante se puede matricular más de una vez en diferentes semestres hasta que apruebe la asignatura. Por lo tanto, la entidad **SEMESTRE** participa con grado N en la relación **MATRICULADO**.  
-
-<img src="img/ternaria2.png" alt="Relación ternaria 2" width="400px"/>  
-
-3.- En tercer lugar nos preguntamos si, fijados un estudiante y un semestre en concreto, pueden estar matriculados de una o muchas asignaturas.  
-
-La respuesta es que se pueden tener muchas asignaturas en las cuales el alumno está matriculado, puesto que un alumno se puede matricular de varias asignaturas dentro de un mismo semestre. Por lo tanto, la entidad **ASIGNATURA** también participa con N en la relación **MATRICULADA**.  
-
-<img src="img/ternaria3.png" alt="Relación ternaria 3" width="400px"/>  
-
-Por lo tanto, nos queda el diagrama así:  
-
-<img src="img/ternaria4.png" alt="Diagrama ternaria final" width="400px"/>  
-
-Este es un ejemplo de una **relación ternaria 1:1:1**.  
-
-En este caso suponemos la relación de defensa de un proyecto por parte de un alumno en el tribunal en 2º curso: **ALUMNO-PROYECTO**. Un alumno que hace un proyecto:  
-
-<img src="img/ternaria5.png" alt="Relación ternaria 1:1:1 proyecto" width="400px"/>  
-**Realiza el siguiente ejercicio:**
-
-1. Obtén la **cardinalidad** de cada una de las entidades en la siguiente relación: (Resuelto)  
-    - **Cardinalidad de Autores**: ¿Cuántos autores pueden tener un determinado libro publicado en una determinada editorial?  
-    - **Cardinalidad de Libro**: ¿Cuántos libros puede tener un determinado autor publicado en una determinada editorial?  
-    - **Cardinalidad de Editorial**: ¿En cuántas editoriales puede un determinado autor publicar un mismo libro?  
-
-<img src="img/ternaria6.png" alt="Relación ternaria autores-libro-editorial" width="400px"/>  
-
-2. Calcula los **tipos de correspondencia** de las siguientes relaciones:  
-    - Persona casada con persona (en España)  
-    - Persona casada con persona (en Arabia Saudí)  
-    - Jugador juega en equipo (datos registrados actuales)  
-    - Producto contiene pieza  
-
 ### 2.6.- 🏛️ Debilidad
 
 Una entidad es **débil** frente a otra que es **fuerte** cuando para existir un elemento de la débil es necesario que exista un elemento de la fuerte.  
