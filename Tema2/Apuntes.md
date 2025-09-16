@@ -533,34 +533,6 @@ Existen diversas formas de representar el modelo relacional. Veamos ejemplos de 
 
 <img src="img/esquema3.png" alt="Grafo relacional" width="400px"/>  
 
-- Cada nodo representa una tabla o relación con todos sus atributos.  
-- Se representan las claves ajenas a través de flechas dirigidas entre la clave ajena y la tabla que contiene la clave primaria relacionada.  
-- Cada nodo se representa con una línea de texto: nombre de la tabla en mayúsculas seguido de los atributos entre paréntesis.  
-  - Clave primaria: subrayada  
-  - Clave alternativa: en negrilla  
-  - Atributos que pueden ser nulos: asterisco al final  
-  - Clave ajena: cursiva  
-
-Ejemplo:
-
-<img src="img/esquema4.png" alt="Ejemplo grafo relacional 1" width="400px"/>  
-<img src="img/esquema5.png" alt="Ejemplo grafo relacional 2" width="400px"/>  
-
-- Para representar la relación de la clave ajena:  
-  - Flecha desde la clave ajena hasta la tabla relacionada.  
-  - Se escriben restricciones de borrado y modificación si se establecen.  
-  - Se representa la cardinalidad (1:N → 1 en tabla principal, N en origen).  
-- En el modelo relacional **no se permite N:M**, solo 1:1 y 1:N.  
-
-Ejemplo:
-
-<img src="img/esquema6.png" alt="Ejemplo grafo relacional 3" width="400px"/>  
-
-**Caso práctico:**  
-En la tabla **CountryLanguage**, la columna **CountryCode** es clave ajena y se relaciona con la primary key de **Country**. Por cada país puede haber varias filas en CountryLanguage. Restricción de borrado normal (no se puede borrar un país con idiomas asociados) y modificación en cascada (si se cambia el código de un país, se actualiza en todas las filas de CountryLanguage).  
-
----
-
 ### 5.6.- 🔄 Paso del modelo E/R al modelo Relacional
 
 Para convertir un modelo E/R a relacional, todo se reduce a **relaciones representadas por tablas**.  
