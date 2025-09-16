@@ -522,20 +522,16 @@ Al modificar el contenido de una **CITY**, se comprueba que el nuevo valor carga
 
 Existen diversas formas de representar el modelo relacional. Veamos ejemplos de algunas de ellas:
 
-1. **Esquema relacional conectado a columnas**  
+- **Esquema relacional conectado a columnas**: 
+  <img src="img/esquema1.png" alt="Esquema relacional columnas" width="400px"/>  
 
-<img src="img/esquema1.png" alt="Esquema relacional columnas" width="400px"/>  
-
-2. **Esquema relacional crow's foot o pata de cuervo**  
-La parte de la pata va en la tabla donde está la clave ajena.  
+- **Esquema relacional crow's foot o pata de cuervo**: La parte de la pata va en la tabla donde está la clave ajena.  
 
 <img src="img/esquema2.png" alt="Esquema crow's foot" width="400px"/>  
 
-3. **Grafo relacional**  
+- **Grafo relacional**  
 
 <img src="img/esquema3.png" alt="Grafo relacional" width="400px"/>  
-
-Veamos ahora cómo se construye un grafo relacional:  
 
 - Cada nodo representa una tabla o relación con todos sus atributos.  
 - Se representan las claves ajenas a través de flechas dirigidas entre la clave ajena y la tabla que contiene la clave primaria relacionada.  
