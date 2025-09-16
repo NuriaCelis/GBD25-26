@@ -496,22 +496,22 @@ Vamos a ver como actua la restricción de integridad referencial con un **ejempl
 
 Las restricciones actúan cuando:  
 
-- **Se inserta una nueva fila en la tabla secundaria**  
+- Se **inserta una nueva fila** en la tabla secundaria 
 
 Al insertar una nueva **CITY**, se comprobaría que el **CountryCode** de la nueva ciudad esté cargado en **Code** de algún **COUNTRY**. Si no lo está, se rechaza la inserción.  
 
-- **Se modifica el valor de la clave ajena en la tabla secundaria**  
+- Se **modifica el valor de la clave ajena** en la tabla secundaria  
 
 Al modificar el contenido de una **CITY**, se comprueba que el nuevo valor cargado en la clave ajena **CountryCode** exista en la clave primaria **Code** de la tabla principal **COUNTRY**. Si no existe, se rechaza la modificación y queda la fila con el valor anterior.  
 
-- **Se borra una fila en la tabla principal**. En este caso, podemos definir diferentes restricciones de integridad referencial.  
+- Se **borra una fila en la tabla principal**. En este caso, podemos definir diferentes restricciones de integridad referencial.  
 
   - **Borrado en cascada (BC)**: Si se elimina un país, se eliminan todas las ciudades del país.  
   - **Borrado restringido (BR)**: Si se trata de eliminar un país y hay ciudades de ese país en la tabla CITY, no se permite la eliminación.  
   - **Borrado con puesta a nulos (BN)**: Si se trata de eliminar un país y hay ciudades de ese país en la tabla CITY, se elimina el país y en la columna clave ajena (**countrycode**) de CITY de todas las ciudades de ese país, se carga NULL.  
   - **Borrado con puesta a valor por defecto (BD)**: Si se trata de eliminar un país y hay ciudades de ese país en la tabla CITY, se elimina el país y en la columna clave ajena (**countrycode**) de CITY de todas las ciudades de ese país, se carga un valor por defecto.  
 
-- **Se modifica la clave primaria en la tabla principal**. Al igual que en el caso anterior, también se pueden definir diferentes restricciones de integridad referencial.  
+- Se **modifica la clave primaria en la tabla principal**. Al igual que en el caso anterior, también se pueden definir diferentes restricciones de integridad referencial.  
 
   - **Modificación en cascada (MC)**: Si se modifica el código de un país, se modifica **countrycode** de todas las ciudades del país.  
   - **Modificación restringida (MR)**: Si se trata de modificar el código de un país y hay ciudades de ese país en la tabla CITY, no se permite la modificación.  
