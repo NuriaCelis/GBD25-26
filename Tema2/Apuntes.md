@@ -71,14 +71,9 @@ En este tema vamos a trabajar el modelo conceptual, más concretamente el modelo
 
 ## 2.- 🗂️ LOS DIAGRAMAS E/R
 
-El modelo Entidad-Relación es un modelo **puramente conceptual**. Representa el funcionamiento de un sistema de información mediante un diagrama Entidad-Relación (E/R).  
+El modelo Entidad-Relación es un modelo **puramente conceptual**. Representa el funcionamiento de un sistema de información mediante un diagrama Entidad-Relación (E/R). Facilita enormemente el diseño de una base de datos. Es muy representativo del funcionamiento del sistema de información y es **independiente del SGBD**. Toma como referencia la percepción que tenemos del funcionamiento del mundo real.
 
-Facilita enormemente el diseño de una base de datos. Es muy representativo del funcionamiento del sistema de información y es **independiente del SGBD**. Toma como referencia la percepción que tenemos del funcionamiento del mundo real:
-
-- Esa percepción se basa en entidades que actúan sobre otras entidades haciendo procesos.  
-- Consta de una colección de objetos básicos llamados **entidades** y de unas **relaciones** establecidas entre dichas entidades.  
-
-En un **esquema Entidad–Relación** representamos de manera gráfica cómo se organiza la información en una base de datos.
+En un **esquema Entidad–Relación** representamos de manera gráfica cómo se organiza la información en una base de datos. Consta solo de tres elementos:
 
 - **Entidades**: son los objetos principales sobre los que queremos almacenar información (por ejemplo, un *Cliente*, un *Coche*, un *Empleado*…). Cada entidad se representa con un **rectángulo**.  
 - **Atributos**: son las propiedades o características de las entidades. Por ejemplo, un *Cliente* puede tener como atributos *nombre*, *teléfono* o *dirección*, y un *Coche* puede tener *matrícula* o *marca*. Los atributos se representan con **círculos**, unidos a la entidad a la que pertenecen.  
