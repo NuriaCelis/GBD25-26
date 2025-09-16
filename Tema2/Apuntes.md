@@ -93,8 +93,7 @@ En los siguientes apartados vamos a ir desgranando los elementos que componen un
 
 ### 2.1.- 🟦 Entidades
 
-Las **entidades** son uno de los elementos usados en los diagramas E/R.  
-Una entidad es un objeto, sujeto o concepto sobre el que se recoge información básica en el sistema para poder realizar los procesos que se requieran.  
+Las **entidades** son uno de los elementos usados en los diagramas E/R. Una entidad es un objeto, sujeto o concepto sobre el que se recoge información básica en el sistema para poder realizar los procesos que se requieran.  
 
 En el esquema anterior, serían entidades:  
 - ALUMNO  
@@ -109,18 +108,16 @@ Una entidad se representa en un diagrama E/R mediante un **rectángulo**.
 
 ### 2.2.- 📝 Atributos y tipos
 
-Un **atributo** es una propiedad o característica de una entidad.  
-Como veremos más adelante, las **relaciones también pueden tener atributos**.  
+Un **atributo** es una propiedad o característica de una entidad. Como veremos más adelante, las **relaciones también pueden tener atributos**.  
 
 Por ejemplo, la entidad ALUMNO puede tener los atributos:  
 - Numero  
 - Nombre  
 - Apellidos  
-- Fecha Nac.  
+- Fecha Nacimiento  
 - Población  
 
-Los atributos de una entidad se representan mediante **pequeños círculos unidos a la entidad por una línea**.  
-Al lado de cada círculo se escribe el nombre del atributo.  
+Los atributos de una entidad se representan mediante **pequeños círculos unidos a la entidad por una línea**.  Al lado de cada círculo se escribe el nombre del atributo.  
 
 <img src="img/atributo1.png" alt="Atributos" width="400px"/>
 
@@ -180,7 +177,7 @@ Ejemplos de atributos y dominios de la entidad EMPLEADO:
     - Un atributo es **no derivado** si su valor no depende de ningún otro atributo.
 
 5. 🔑 *Atributo Clave*  
-    Una **clave** sirve para identificar de forma única a cada elemento de una entidad. Puede estar formada por uno o varios atributos y no permite valores repetidos. En una entidad puede haber dos tipos de clave:  
+    Una **clave** sirve para identificar de forma única a cada elemento de una entidad. Puede estar formada por uno o varios atributos y no permite valores repetidos ni puede estar sin valor o vacío. En una entidad puede haber dos tipos de clave:  
     - **Clave primaria o principal**: entre los posibles conjuntos de atributos que identifican a los elementos, debería ser la más adecuada por **simplicidad**, **longitud**, **representatividad** y **estabilidad**.  
     - **Clave secundaria o alternativa**: puede haber varias en una entidad, pero no se debe abusar de ellas. Son todas aquellas que decidamos aparte de la primaria.
 
@@ -189,54 +186,36 @@ Ejemplos de atributos y dominios de la entidad EMPLEADO:
 <img src="img/atributo5.png" alt="Representación de tipos de atributos" width="400px"/>
 
 **Observa y analiza el siguiente ejemplo:**  
-Indica para cada atributo de qué tipo es, haciendo un examen lo más exhaustivo posible.
+Indica para cada atributo de qué tipo es, haciendo un examen lo más exhaustivo posible. Indica para cada campo si es **obligatorios/opcionales**, **compuestos/simples**, **derivado/no derivado**, **monovaluado/multivaluado**.
 
 <img src="img/atributo6.png" alt="Ejemplo de atributos" width="400px"/>
 
-**Realiza el siguiente ejercicio:**
-
-1. Justifica si los siguientes atributos serían **obligatorios/opcionales**, **compuestos/simples**, **derivado/no derivado**, **monovaluado/multivaluado**.
-
-- Fecha de nacimiento  
-- Localidad de nacimiento  
-- Edad  
-- EsMayorDeEdad  
-- DNI  
-- Teléfonos  
-- Nombre  
-- Apellidos
-
-
 ### 2.3.- 🔗 Relaciones
 
-Una **relación** es una asociación entre varias entidades a través de una acción realizable entre ellas. Suelen representarse con **verbos o formas verbales**.  
+Una **relación** es una asociación entre varias entidades a través de una acción realizable entre ellas. Los podemos localizar en los enunciados de los ejercicios porque suelen representarse con **verbos o formas verbales**.  
 
 Ejemplos:  
 - COMPRAR (entre CLIENTE y PRODUCTO)  
 - CURSAR (entre ALUMNO y MÓDULO)  
 - SER_HIJO (entre ALUMNO y PADRE)  
 - SER_JEFE (EMPLEADO consigo misma)  
-- COMPRAR (entre CLIENTE, PRODUCTO y VENDEDOR)  
+- COMPRAR (entre CLIENTE, PRODUCTO)  
 
 
 #### 🟦 Tipos de relaciones
 
-1. **Relación binaria o de grado dos**  
-   Cuando se da entre **dos entidades**.  
+1. **Relación binaria o de grado dos**: Cuando se da entre **dos entidades**.  
 
    <img src="img/relacion1.png" alt="Relación binaria" width="400px"/>  
 
-   En este ejemplo vemos que las relaciones también pueden tener **atributos**.  
+   En este ejemplo vemos que las relaciones también pueden tener **atributos**.  Lo veremos con detalle más adelante.
 
-
-2. **Relación unaria, reflexiva o de grado uno**  
-   Cuando se da entre **elementos de la misma entidad**, es decir, un elemento se relaciona con uno o más elementos de la misma entidad.  
+2. **Relación unaria, reflexiva o de grado uno**:  Cuando se da entre **elementos de la misma entidad**, es decir, un elemento se relaciona con uno o más elementos de la misma entidad.  
 
    <img src="img/relacion2.png" alt="Relación unaria" width="400px"/>  
 
 
-3. **Relación ternaria o de grado tres**  
-   Cuando se da entre **tres entidades**.  
+3. **Relación ternaria o de grado tres**:  Cuando se da entre **tres entidades**.  Nosotros no vamos a utilizarlas, en principio. Una relación ternaria siempre se puede sustituir por dos relaciones binarias. Son más sencillas de entender.
 
    <img src="img/relacion3.png" alt="Relación ternaria" width="400px"/>  
 
