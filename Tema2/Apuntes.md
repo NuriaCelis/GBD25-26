@@ -1,8 +1,6 @@
 # UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.
 
-# INDICE- [UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.](#unidad-2-diseño-lógico-de-la-base-de-datos)
 - [UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.](#unidad-2-diseño-lógico-de-la-base-de-datos)
-- [INDICE- UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.](#indice--unidad-2-diseño-lógico-de-la-base-de-datos)
   - [1.- 📊 MODELO DE DATOS](#1---modelo-de-datos)
     - [📌 Modelos de datos más utilizados](#-modelos-de-datos-más-utilizados)
     - [1.1.- 🔎 Clasificación de los modelos de datos](#11---clasificación-de-los-modelos-de-datos)
