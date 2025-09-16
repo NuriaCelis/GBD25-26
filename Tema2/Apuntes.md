@@ -488,7 +488,9 @@ Por ejemplo, si tenemos una tabla **COUNTRY** que contiene datos de todos los pa
 
 ### 5.4.- 🛡️ Integridad referencial
 
-Las **restricciones de integridad referencial** permiten que el SGBD controle incoherencias entre los datos cargados en la clave ajena y los datos existentes en la clave primaria de la tabla principal. Vamos a ver como actua la restricción de integridad referencial con un ejemplo entre dos tablas. El esquema está formado por dos tablas, una de paises y otra de ciudades. Una ciudad pertenece a un país, y cada país puede tener varias ciudades.
+Las **restricciones de integridad referencial** permiten que el SGBD controle incoherencias entre los datos cargados en la clave ajena y los datos existentes en la clave primaria de la tabla principal. 
+
+Vamos a ver como actua la restricción de integridad referencial con un **ejemplo** entre dos tablas. El esquema está formado por dos tablas, una de paises y otra de ciudades. Una ciudad pertenece a un país, y cada país puede tener varias ciudades.
 
 <img src="img/integridad1.png" alt="Integridad al insertar" width="200px"/>  
 
