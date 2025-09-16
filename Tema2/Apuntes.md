@@ -13,7 +13,6 @@
     - [2.6.- 🏛️ Debilidad](#26--️-debilidad)
   - [3.- 🏗️ EL MODELO E/R AMPLIADO](#3--️-el-modelo-er-ampliado)
   - [4.- 🛠️ CONSTRUCCIÓN DE UN DIAGRAMA E/R](#4--️-construcción-de-un-diagrama-er)
-  - [💻 Hoja de ejercicios 7 bis.](#-hoja-de-ejercicios-7-bis)
   - [5.- 🗄️ MODELO RELACIONAL](#5--️-modelo-relacional)
     - [5.1.- 📋 Elementos de una relación](#51---elementos-de-una-relación)
     - [5.2.- ⚖️ Restricciones del modelo relacional](#52--️-restricciones-del-modelo-relacional)
@@ -399,6 +398,7 @@ Los pasos a seguir serán:
 
 💻 Hoja de ejercicios 7.  
 💻 Hoja de ejercicios 7 bis. 
+
 ---
 
 ## 5.- 🗄️ MODELO RELACIONAL
