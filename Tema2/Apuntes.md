@@ -291,7 +291,7 @@ El tipo de correspondencia o relación de cardinalidad expresa el número máxim
 
 #### 📝 HOJAS DE EJERCICIOS
 
-💻 Hoja de ejercicios 1.  
+💻 Hoja de ejercicios 1.  Colocamos la cardinalidad y correspondencia de los tres primeros ejercicios y hacemos el resto de los ejercicios.
 
 ### 2.6.- 🏛️ Debilidad
 
