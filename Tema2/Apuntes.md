@@ -296,13 +296,26 @@ El tipo de correspondencia o relación de cardinalidad expresa el número máxim
 ### 2.6.- 🏛️ Debilidad
 
 Una entidad es **débil** frente a otra que es **fuerte** cuando para existir un elemento de la débil es necesario que exista un elemento de la fuerte.  
+Una manera de localizar este tipo de entidades, es cuando no tienes ningún campo en una entidad que pueda ser clave principal, pero en cambio si la puedes hacer con la clave principal de otra entidad.
 
-Por ejemplo, en la gestión de pedidos y ventas de un comercio, un pedido consta de varias líneas de pedido (una por cada producto).  
-Si **PEDIDO** es una entidad y **LINEA_PEDIDO** es otra entidad, **PEDIDO** sería entidad fuerte y **LINEA_PEDIDO** una entidad débil respecto de la anterior.  
+
+Veamos un ejemplo de cómo se diferencian las entidades fuertes y débiles:
+
+- **Entidad fuerte**: `Factura` → existe por sí misma y tiene un identificador único (**IDFactura**).  
+- **Entidad débil**: `DetalleFactura` → depende de la `Factura` a la que pertenece. Su identificación completa requiere el **IDFactura** y su propio número de línea (**NumLinea**).
+
+
+<img src="img/ejemplo-factura.png" alt="Factura" width="400px"/>  
+
+- **◻️ Factura** → entidad fuerte  
+- **◻️ DetalleFactura** → entidad débil, depende de Factura para existir
+
+
+ 
 
 Una entidad débil solo se da en una relación de 1:N.  
 
-En el ejemplo expuesto, para identificar la línea de pedido, además de su campo **id_línea**, necesito el **id_pedido**.  
+
 
 Las entidades débiles se representan en los diagramas E/R **rodeadas por una línea doble**:  
 
