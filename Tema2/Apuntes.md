@@ -545,7 +545,7 @@ Para convertir un modelo E/R a relacional, todo se reduce a **relaciones represe
 
 * Toda entidad se transforma en una tabla con los mismos atributos, excepto los multivaluados.  
 
-<img src="img/paso1.png" alt="Paso entidad a tabla" width="400px"/>  
+<img src="img/paso1.png" alt="Paso entidad a tabla" width="200px"/>  
 
 * Relación 1:N → Propagar clave primaria de la entidad con participación 1 como clave ajena en la tabla con N.  
 
@@ -609,7 +609,7 @@ Para convertir un modelo E/R a relacional, todo se reduce a **relaciones represe
 💻 Hoja de ejercicios 11.  
 💻 Hoja de ejercicios 12.  
 💻 Hoja de ejercicios 13.  
-💻 Hoja de ejercicios 14.  
+💻 Hoja de ejercicios 14 y 14 bis.  
 
 ## 6.- 🧩 NORMALIZACIÓN
 
