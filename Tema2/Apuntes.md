@@ -178,6 +178,8 @@ Ejemplos de atributos y dominios de la entidad EMPLEADO:
     - **Clave primaria o principal**: entre los posibles conjuntos de atributos que identifican a los elementos, debería ser la más adecuada por **simplicidad**, **longitud**, **representatividad** y **estabilidad**.  
     - **Clave secundaria o alternativa**: puede haber varias en una entidad, pero no se debe abusar de ellas. Son todas aquellas que decidamos aparte de la primaria.
 
+<img src="img/atributos.png" alt="Resumen Atributos" width="400px"/>
+
 **Representación de los distintos tipos de atributos:**
 
 <img src="img/atributo5.png" alt="Representación de tipos de atributos" width="400px"/>
@@ -277,9 +279,12 @@ El tipo de correspondencia o relación de cardinalidad expresa el número máxim
 - Uno a muchos (1:N): Sería el caso de la relación **PERTENECE** entre las entidades MUNICIPIO y PROVINCIA. Un municipio sólo puede pertenecer a una provincia, mientras que a una provincia pertenecen muchos municipios.  
 - Muchos a muchos (N:M): Sería el caso de la relación **COMPRA** entre las entidades PRODUCTOS y CLIENTES. Un cliente puede comprar varios productos y un mismo tipo de producto será comprado por varios clientes.  
 
-**Representación de cardinalidad y tipo de correspondencia**  
+**Representación de cardinalidad y tipo de correspondencia**  para una relación unaria:
 
 <img src="img/correspondencia1.png" alt="Correspondencia 1" width="400px"/>  
+
+**Representación de cardinalidad y tipo de correspondencia**  para una relación binaria:
+
 <img src="img/correspondencia2.png" alt="Correspondencia 2" width="400px"/>  
 
 **Realiza el siguiente ejercicio:**  
