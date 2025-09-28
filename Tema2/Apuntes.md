@@ -67,7 +67,7 @@ Una opción bastante usada a la hora de clasificar los modelos de datos es hacer
 
 <img src="img/modeloDatos.png" alt="Clasificación de los modelos de datos" width="400">
 
-En este tema vamos a trabajar el modelo conceptual, más concretamente el modelo Entidad-Relación, o modelo E-R.
+En este tema vamos a trabajar el modelo conceptual, más concretamente el modelo Entidad-Relación, o modelo E-R y el modelo lógico, con el modelo Relacional.
 
 ## 2.- 🗂️ LOS DIAGRAMAS E/R
 
@@ -82,14 +82,12 @@ En un **esquema Entidad–Relación** representamos de manera gráfica cómo se 
 De esta forma, el diagrama nos permite ver de un vistazo qué entidades forman parte del sistema, qué características tiene cada una y cómo se relacionan entre ellas.
 
 
-Se han desarrollado varios modelos E/R y diagramas de representación para el modelo. En este curso vamos a usar el **modelo de Chen**.  
-Vemos en la siguiente imagen un ejemplo de Diagrama E-R siguiendo este modelo:  
+Se han desarrollado varios modelos E/R y diagramas de representación para el modelo. Vemos en la siguiente imagen un ejemplo de Diagrama E-R que utilizaremos en clase:  
 
 <img src="img/esquemaER.png" alt="Esquema E-R" width="400px"/>
 
 En los siguientes apartados vamos a ir desgranando los elementos que componen un diagrama E-R y cómo se construye.  
 
----
 
 ### 2.1.- 🟦 Entidades
 
@@ -104,7 +102,6 @@ Una entidad se representa en un diagrama E/R mediante un **rectángulo**.
 
 <img src="img/entidades.png" alt="Entidades" width="400px"/>
 
----
 
 ### 2.2.- 📝 Atributos y tipos
 
@@ -311,10 +308,7 @@ Veamos un ejemplo de cómo se diferencian las entidades fuertes y débiles:
 - **◻️ DetalleFactura** → entidad débil, depende de Factura para existir
 
 
- 
-
 Una entidad débil solo se da en una relación de 1:N.  
-
 
 
 Las entidades débiles se representan en los diagramas E/R **rodeadas por una línea doble**:  
@@ -412,24 +406,32 @@ Los pasos a seguir serán:
 💻 Hoja de ejercicios 7.  
 💻 Hoja de ejercicios 7 bis. 
 
----
 
 ## 5.- 🗄️ MODELO RELACIONAL
 
-El **modelo relacional** es el más apropiado en la actualidad para representar la estructura de una base de datos. Esto se debe a:
-
-- Es un modelo sencillo, potente y flexible para el diseño de una base de datos.  
-- Tiene una base matemática en el álgebra relacional. Cualquier operación sobre elementos del modelo relacional deriva en una operación del álgebra relacional.  
-- A partir de este álgebra relacional se ha podido realizar la construcción del lenguaje **SQL** para manipular los datos.  
-- La mayoría de los SGBD relacionales se basan en este modelo.  
+El **modelo relacional** organiza la información en tablas con filas y columnas, lo que facilita su comprensión y manejo. Permite relacionar datos de diferentes tablas, evitar duplicidades y mantener la integridad y consistencia de la información. Además, el uso de SQL hace que las consultas, actualizaciones y análisis sean rápidos y eficientes, adaptándose a entornos desde pequeños sistemas hasta grandes empresas.
 
 ### 5.1.- 📋 Elementos de una relación
 
-El elemento principal del modelo relacional es la **RELACIÓN**. Una relación es una **tabla**. Cada elemento de la relación es una **fila**, denominada **tupla**. Cada propiedad, atributo o característica de los elementos es una **columna**.  
+El elemento principal del modelo relacional es la **RELACIÓN**. Una relación es una **tabla**. Cada elemento de la relación es una **fila**, denominada **tupla o registro**. Cada propiedad, atributo o característica de los elementos es una **columna**.  
 
 <img src="img/relacional1.png" alt="Modelo relacional - tabla" width="400px"/>  
 
-No debes confundir el concepto de relación en el modelo relacional con el concepto de relación en el modelo E/R.  
+> ⚠️ **NOTA IMPORTANTE**  
+> No debes confundir el concepto de **relación en el modelo relacional** con el concepto de **relación en el modelo E/R**.
+
+---
+
+#### 🔹 Relación en el modelo Entidad-Relación (ER)
+- 💡 **Concepto lógico** que representa una **asociación entre entidades**.  
+- 📌 Ejemplo: “Un cliente realiza un pedido” → relación entre *Cliente* y *Pedido*.
+
+#### 🔹 Relación en el modelo relacional
+- 🗄️ **Estructura física o lógica** implementada como **tabla** en la base de datos.  
+- 📊 Contiene **tuplas (filas)** y **atributos (columnas)** que representan los datos de la asociación.
+
+---
+
 
 Al conjunto de valores que puede tomar una columna se le denomina **dominio**, y estos pueden ser de dos tipos:  
 
@@ -517,6 +519,9 @@ Al modificar el contenido de una **CITY**, se comprueba que el nuevo valor carga
   - **Modificación restringida (MR)**: Si se trata de modificar el código de un país y hay ciudades de ese país en la tabla CITY, no se permite la modificación.  
   - **Modificación con puesta a nulos (MN)**: Si se trata de modificar el código de un país y hay ciudades de ese país en la tabla CITY, se carga NULL en la columna clave ajena (**countrycode**) de CITY de todas las ciudades de ese país.  
 
+#### RESUMEN VISUAL
+
+<img src="img/resumen.png" alt="Esquema relacional" width="400px"/>  
 
 ### 5.5.- 🖼️ Representación del modelo Relacional
 
