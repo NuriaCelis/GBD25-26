@@ -579,20 +579,20 @@ Con **ALTER TABLE** podemos modificar la estructura de una tabla. Algunas de las
 ### 🛠 Especificaciones de ALTER TABLE I
 
 - **`ADD columna [AFTER col_name | FIRST]`**: añade una columna indicando nombre, tipo y restricciones.  
-- **ADD INDEX [nombre_indice] (columna1, ...)**: añade un índice normal.  
-- **ADD FULLTEXT [nombre_indice] (columna1, ...)**: añade un índice para búsquedas de texto.  
-- **ADD UNIQUE [nombre_indice] (columna1, ...)**: añade un índice único.  
-- **ADD PRIMARY KEY (columna1, ...)**: crea una clave primaria.  
-- **ADD [CONSTRAINT [nombre]] FOREIGN KEY (columna1, ...) REFERENCES tabla (columna1, ...) [condiciones]**: añade clave ajena.  
-- **ALTER columna {SET DEFAULT valor | DROP DEFAULT}**: establece o elimina valor por defecto.  
-- **CHANGE columna definicion_nueva [FIRST | AFTER columna]**: cambia nombre, tipo y restricciones.  
-- **MODIFY definicion_columna [FIRST | AFTER columna]**: modifica tipo y restricciones de la columna.  
-- **DROP columna**: elimina una columna.  
-- **DROP PRIMARY KEY**: elimina la clave primaria.  
-- **DROP INDEX nombre_indice**: elimina un índice (`INDEX`, `UNIQUE` o `FULLTEXT`).  
-- **DROP FOREIGN KEY nombre_constraint**: elimina clave ajena.  
-- **RENAME nuevo_nombre_tabla**: cambia el nombre de la tabla.  
-- **AUTO_INCREMENT = valor**: establece el siguiente valor para la columna autoincremental.  
+- **`ADD INDEX [nombre_indice] (columna1, ...)`**: añade un índice normal.  
+- **`ADD FULLTEXT [nombre_indice] (columna1, ...)`**: añade un índice para búsquedas de texto.  
+- **`ADD UNIQUE [nombre_indice] (columna1, ...)`**: añade un índice único.  
+- **`ADD PRIMARY KEY (columna1, ...)`**: crea una clave primaria.  
+- **`ADD [CONSTRAINT [nombre]] FOREIGN KEY (columna1, ...) REFERENCES tabla (columna1, ...) [condiciones]`**: añade clave ajena.  
+- **`ALTER columna {SET DEFAULT valor | DROP DEFAULT}`**: establece o elimina valor por defecto.  
+- **`CHANGE columna definicion_nueva [FIRST | AFTER columna]`**: cambia nombre, tipo y restricciones.  
+- **`MODIFY definicion_columna [FIRST | AFTER columna]`**: modifica tipo y restricciones de la columna.  
+- **`DROP columna`**: elimina una columna.  
+- **`DROP PRIMARY KEY`**: elimina la clave primaria.  
+- **`DROP INDEX nombre_indice`**: elimina un índice (`INDEX`, `UNIQUE` o `FULLTEXT`).  
+- **`DROP FOREIGN KEY nombre_constraint`**: elimina clave ajena.  
+- **`RENAME nuevo_nombre_tabla`**: cambia el nombre de la tabla.  
+- **`AUTO_INCREMENT = valor`**: establece el siguiente valor para la columna autoincremental.  
 
 ⚠️ **INDEX**: estructura de datos que mejora la velocidad de las consultas. Se crea sobre una o varias columnas y físicamente mantiene un orden que hace más rápidas las queries.
 
