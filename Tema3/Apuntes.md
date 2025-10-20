@@ -35,7 +35,7 @@ Vemos algunas de las herramientas gráficas gratuitas que podemos encontrar:
 
 **Realiza el siguiente ejercicio:**
 
-1. 🏗 Crea una base de datos **EmpTransportes**.
+1. 🏗 Crea una base de datos **EmpTransportes** en MySQLWorkbench utilizando los iconos de la barra de herramientas.
 
     - ❓ ¿Cuál es la instrucción SQL para crear la base de datos?  
     - 🖱 Selecciona la nueva base de datos e identifica los **botones de la barra de herramientas** para añadir **tablas**, **vistas** y **rutinas**.
@@ -50,18 +50,15 @@ Vemos algunas de las herramientas gráficas gratuitas que podemos encontrar:
 
 # 3.- 📄 EL LENGUAJE DE DEFINICIÓN DE DATOS (DDL)
 
-Desde este momento comenzamos a usar el lenguaje **SQL** (**Structured Query Language**), un lenguaje estandarizado para **interactuar con sistemas de bases de datos relacionales**.  
-Se entiende por **consulta** cualquier petición que se hace al **SGBD**.
+Desde este momento comenzamos a usar el lenguaje **SQL (Structured Query Language)**, el estándar moderno para interactuar con sistemas de bases de datos relacionales.  
 
-Los SGBD relacionales incluyen siempre alguna herramienta para **ejecutar instrucciones SQL**.  
-Desde el primer estándar **ANSI-SQL** de 1986, se han desarrollado varios estándares o versiones de SQL. El último es **SQL-2016**.
+El **DDL (Data Definition Language)** es el subconjunto de SQL encargado de **definir y modificar la estructura de la base de datos**, incluyendo la creación, modificación y eliminación de tablas, índices, vistas y otros objetos.
 
-Un estándar establece **reglas de sintaxis y funcionamiento** para las instrucciones SQL.  
-En general, los SGBD incluyen prácticamente todo el repertorio del estándar SQL con la misma sintaxis, aunque puede ocurrir que:
+Aunque SQL es un estándar ampliamente soportado por los SGBD modernos, no todas las instrucciones de DDL están necesariamente disponibles en todos los sistemas, y algunos SGBD incluyen extensiones propias. Por eso, al trabajar con diferentes plataformas, puede ocurrir que:
 
-- ⚠️ No incluyan alguna instrucción.  
-- ✨ Incluyan alguna instrucción propia no perteneciente al estándar.  
-- 📝 En algunas instrucciones la sintaxis pueda variar ligeramente por no incluir alguna funcionalidad o por añadir una propia.
+⚠️ Algunas instrucciones no estén implementadas.  
+✨ Existan funcionalidades adicionales propias del SGBD.  
+📝 La sintaxis de ciertas instrucciones pueda variar ligeramente.
 
 ### 🔍 Interpretación de la sintaxis de una instrucción SQL
 
