@@ -478,7 +478,6 @@ Por ejemplo, si tenemos en un tabla los datos de todos los alumnos de Cantabria 
 - 🔑 **PRIMARY KEY**: clave primaria de la tabla.  
 - 🔒 **UNIQUE**: índice que no admite valores repetidos. Se pueden declarar varios UNIQUE en una tabla y aplicarse a una o varias columnas.  
 - 📌 **INDEX**: índice normal que admite valores repetidos.  
-- 📝 **FULLTEXT**: se emplean para búsquedas sobre texto (`CHAR`, `VARCHAR` y `TEXT`). Permiten buscar palabras dentro del contenido de las columnas.  
 - 🔗 **FOREIGN KEY**: al crear una clave ajena, la columna se establece automáticamente como `INDEX`, salvo que ya tuviera un índice.
 
 #### ✍️ Ejercicio
