@@ -128,7 +128,8 @@ La cláusula `IF NOT EXISTS` hace que no se intente crear la base de datos si ya
 Si queremos que la base de datos se cree para usar el conjunto de caracteres latin1 (en lugar de utf8 usado por defecto) y con ordenación alfabética para el español (por defecto, se usa general_ci):
 
 ```sql
-    CREATE DATABASE IF NOT EXISTS EmpTransportes CHARSET latin1 COLLATE latin1_spanish_ci;
+    CREATE DATABASE IF NOT EXISTS EmpTransportes 
+    CHARSET latin1 COLLATE latin1_spanish_ci;
 ```
 
 La instrucción para **mostrar las bases de datos** montadas en el servidor es la siguiente:
