@@ -578,7 +578,7 @@ Con **ALTER TABLE** podemos modificar la estructura de una tabla. Algunas de las
 
 ### 🛠 Especificaciones de ALTER TABLE I
 
-- **ADD columna [AFTER col_name | FIRST]**: añade una columna indicando nombre, tipo y restricciones.  
+- **`ADD columna [AFTER col_name | FIRST]`**: añade una columna indicando nombre, tipo y restricciones.  
 - **ADD INDEX [nombre_indice] (columna1, ...)**: añade un índice normal.  
 - **ADD FULLTEXT [nombre_indice] (columna1, ...)**: añade un índice para búsquedas de texto.  
 - **ADD UNIQUE [nombre_indice] (columna1, ...)**: añade un índice único.  
