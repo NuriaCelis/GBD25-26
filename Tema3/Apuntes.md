@@ -1,40 +1,6 @@
 
 # UNIDAD 3. DISEÑO FÍSICO DE LA BASE DE DATOS.
 
-## INDICE
-- [UNIDAD 3. DISEÑO FÍSICO DE LA BASE DE DATOS.](#unidad-3-diseño-físico-de-la-base-de-datos)
-  - [INDICE](#indice)
-- [1.- CARACTERÍSTICAS DEL DISEÑO FÍSICO](#1--características-del-diseño-físico)
-- [2.- HERREMIENTAS GRÁFICAS PARA LA IMPLEMENTACIÓN DE LA BASE DE DATOS.](#2--herremientas-gráficas-para-la-implementación-de-la-base-de-datos)
-- [3.- EL LENGUAJE DE DEFINICIÓN DE DATOS (DDL)](#3--el-lenguaje-de-definición-de-datos-ddl)
-    - [Interpretación de la sintaxis de una instrucción SQL.](#interpretación-de-la-sintaxis-de-una-instrucción-sql)
-    - [Subconjuntos del lenguaje SQL](#subconjuntos-del-lenguaje-sql)
-- [4.- CREACIÓN, MODIFICACIÓN Y ELIMINACIÓN DE BASES DE DATOS](#4--creación-modificación-y-eliminación-de-bases-de-datos)
-- [5.- TIPOS DE DATOS. VALORES Y OPERADORES](#5--tipos-de-datos-valores-y-operadores)
-    - [Tipos de datos numéricos](#tipos-de-datos-numéricos)
-    - [Tipos de datos cadena de caracteres](#tipos-de-datos-cadena-de-caracteres)
-    - [Tipos de datos cadena de bytes o binarias](#tipos-de-datos-cadena-de-bytes-o-binarias)
-    - [Tipos de datos para fecha y hora](#tipos-de-datos-para-fecha-y-hora)
-    - [Tipos de datos booleanos](#tipos-de-datos-booleanos)
-    - [Tipos de datos enumerados](#tipos-de-datos-enumerados)
-    - [Tipos de datos conjuntos](#tipos-de-datos-conjuntos)
-    - [Representación de valores literales](#representación-de-valores-literales)
-    - [Operadores](#operadores)
-- [6.- ADMINISTRACIÓN DE TABLAS](#6--administración-de-tablas)
-  - [6.1.- Sintaxis de la instrucción CREATE TABLE](#61--sintaxis-de-la-instrucción-create-table)
-    - [6.1.1.- Tipos de índices](#611--tipos-de-índices)
-  - [6.2.- Opciones de tabla](#62--opciones-de-tabla)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
-  - [6.3.- Modificación de tablas](#63--modificación-de-tablas)
-    - [6.3.1.- Alter table](#631--alter-table)
-      - [Ejemplos de uso de Alter Table.](#ejemplos-de-uso-de-alter-table)
-    - [6.3.1.- Create Index](#631--create-index)
-    - [6.3.2.- Drop Index](#632--drop-index)
-  - [6.3.3.- Rename table](#633--rename-table)
-  - [6.4.- Eliminación de tablas](#64--eliminación-de-tablas)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-1)
-- [7.- VISTAS](#7--vistas)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-2)
 
 # 1.- CARACTERÍSTICAS DEL DISEÑO FÍSICO
 
@@ -45,6 +11,18 @@ El diseño físico se realiza a partir del diseño lógico (grafo relacional). C
 3. Se crean vistas. (Tablas virtuales que permiten simplificar búsquedas complejas)
 4. Se crean procedimientos (conjuntos de queries), funciones y triggers (objetos que se activan cuando sucede una acción).
 5. Se establecen propiedades sobre las tablas (motor de almacenamiento, carpeta de almacenamiento, valor autoincrement, particiones, etc.)
+
+# 1.- 🧱 CARACTERÍSTICAS DEL DISEÑO FÍSICO
+
+El **diseño físico** se realiza a partir del **diseño lógico** (*grafo relacional*).  
+Consiste en definir todas las **instrucciones SQL necesarias** para implementar la base de datos en el **DBMS** (*Database Management System*).
+
+1. Hay que **crear las tablas**, eligiendo un **nombre adecuado**. Se establecen los **tipos de tabla** y las **restricciones** correspondientes. Para cada tabla se definen las **columnas**, sus **nombres** y los **tipos de datos** que contienen.  
+2. Se establecen las **restricciones necesarias** sobre las columnas de las tablas (`PRIMARY KEY`, `NOT NULL`, `UNIQUE`, `FOREIGN KEY`, etc.).  
+3. Se **crean vistas**, que son **tablas virtuales** utilizadas para **simplificar búsquedas complejas**.  
+4. Se **crean procedimientos**, **funciones** y **triggers**, que son objetos que se activan automáticamente cuando ocurre una determinada acción.  
+5. Se establecen las **propiedades físicas** sobre las tablas, como el **motor de almacenamiento**, la **carpeta de almacenamiento**, el valor **AUTO_INCREMENT**, o las **particiones**.
+
 
 # 2.- HERREMIENTAS GRÁFICAS PARA LA IMPLEMENTACIÓN DE LA BASE DE DATOS.
 
