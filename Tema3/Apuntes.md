@@ -119,8 +119,7 @@ La cláusula `IF NOT EXISTS` hace que no se intente crear la base de datos si ya
 **Realiza el siguiente ejercicio:**
 
 1. Crea la base de datos **EmpTransportes** utilizando código SQL.  
-2. 
-3. Evita que la instrucción produzca error si **EmpTransportes** ya existe.
+2. Evita que la instrucción produzca error si **EmpTransportes** ya existe.
 
 
 [Solución](#Soluciones)
