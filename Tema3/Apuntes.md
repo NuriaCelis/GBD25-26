@@ -285,7 +285,7 @@ No es adecuado definir una columna para cargar en ella un fichero; para eso es m
 
 - **ENUM**: contiene un valor de un conjunto de textos definidos en la declaración.  
 - Sintaxis: `ENUM('cad1', 'cad2', …, 'cadN')`  
-- Ejemplo para días de la semana:
+Ejemplo para días de la semana:
 
 ```sql
 Dia ENUM('lunes','martes','miercoles','jueves','viernes','sabado','domingo')
@@ -296,11 +296,11 @@ Se pueden usar tanto los valores definidos como los índices.
 
 Se ordenan por el índice.
 
-📚 Tipos de datos conjuntos
+### 📚 Tipos de datos conjuntos
 
-SET: puede contener varios valores o ninguno de un conjunto de textos definidos en la declaración.
+**SET**: puede contener varios valores o ninguno de un conjunto de textos definidos en la declaración.
 
-Sintaxis: SET('cad1', 'cad2', …, 'cadN')
+Sintaxis: `SET('cad1', 'cad2', …, 'cadN')`
 
 Ejemplo para definir el formato de letra fuente en una columna:
 
