@@ -2,16 +2,6 @@
 # UNIDAD 3. DISEÑO FÍSICO DE LA BASE DE DATOS.
 
 
-# 1.- CARACTERÍSTICAS DEL DISEÑO FÍSICO
-
-El diseño físico se realiza a partir del diseño lógico (grafo relacional). Consta de todas las instrucciones SQL necesarias para implementar la base de datos en el DBMS.
-
-1. Hay que crear las tablas eligiendo un nombre adecuado. Se establecen los tipos de tabla y restricciones de tabla. Para cada tabla se definen las columnas, sus nombres y los tipos de datos que contienen.
-2. Se establecen las restricciones necesarias sobre las columnas de las tablas (PRIMARY KEY, NOT NULL, UNIQUE, FOREIGN KEY, etc.)
-3. Se crean vistas. (Tablas virtuales que permiten simplificar búsquedas complejas)
-4. Se crean procedimientos (conjuntos de queries), funciones y triggers (objetos que se activan cuando sucede una acción).
-5. Se establecen propiedades sobre las tablas (motor de almacenamiento, carpeta de almacenamiento, valor autoincrement, particiones, etc.)
-
 # 1.- 🧱 CARACTERÍSTICAS DEL DISEÑO FÍSICO
 
 El **diseño físico** se realiza a partir del **diseño lógico** (*grafo relacional*).  
@@ -24,22 +14,22 @@ Consiste en definir todas las **instrucciones SQL necesarias** para implementar 
 5. Se establecen las **propiedades físicas** sobre las tablas, como el **motor de almacenamiento**, la **carpeta de almacenamiento**, el valor **AUTO_INCREMENT**, o las **particiones**.
 
 
-# 2.- HERREMIENTAS GRÁFICAS PARA LA IMPLEMENTACIÓN DE LA BASE DE DATOS.
-
+# 2.- 🛠 HERREMIENTAS GRÁFICAS PARA LA IMPLEMENTACIÓN DE LA BASE DE DATOS
 
 Vemos algunas de las herramientas gráficas gratuitas que podemos encontrar:
 
-MySQL Workbench
+**MySQL Workbench**
 
 ![MySqlWorkbech](img/imagen1.png)
 
-phpMyAdmin (Requiere servicio Apache con motor PHP)
+**phpMyAdmin** (Requiere servicio Apache con motor PHP)
 
 ![phpMyAdmin](img/imagen2.png)
 
-HeidiSQL
+**HeidiSQL**
 
 ![HeidiSQL](img/imagen3.png)
+
 
 **Realiza el siguiente ejercicio:**
 
