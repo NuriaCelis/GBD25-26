@@ -14,7 +14,7 @@ Consiste en definir todas las **instrucciones SQL necesarias** para implementar 
 5. Se establecen las **propiedades físicas** sobre las tablas, como el **motor de almacenamiento**, la **carpeta de almacenamiento**, el valor **AUTO_INCREMENT**, o las **particiones**.
 
 
-# 2.- 🛠 HERREMIENTAS GRÁFICAS PARA LA IMPLEMENTACIÓN DE LA BASE DE DATOS
+# 2.- 🛠 HERRAMIENTAS GRÁFICAS PARA LA IMPLEMENTACIÓN DE LA BASE DE DATOS
 
 Vemos algunas de las herramientas gráficas gratuitas que podemos encontrar:
 
