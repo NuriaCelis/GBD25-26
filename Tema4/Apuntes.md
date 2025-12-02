@@ -1,40 +1,39 @@
-# UNIDAD 4. REALIZACIÓN DE CONSULTAS.
+// ...existing code...
+# UNIDAD 4. REALIZACIÓN DE CONSULTAS. 📚
 
-- [UNIDAD 4. REALIZACIÓN DE CONSULTAS.](#unidad-4-realización-de-consultas)
-  - [1.- LA INSTRUCCIÓN SELECT](#1--la-instrucción-select)
-    - [1.1.-Operadores en consultas SELECT](#11-operadores-en-consultas-select)
-    - [1.2.- Consultar todas las filas de una tabla](#12--consultar-todas-las-filas-de-una-tabla)
-    - [1.3.- Ordenar resultados](#13--ordenar-resultados)
-    - [1.4.- No repetir filas y limitar resultados.](#14--no-repetir-filas-y-limitar-resultados)
-    - [1.5.- Consultar algunas filas de una tabla](#15--consultar-algunas-filas-de-una-tabla)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
-    - [1.6.-Seleccionar con IN, LIKE, BETWEEN y campos NULL](#16-seleccionar-con-in-like-between-y-campos-null)
-    - [1.7.- Operadores Lógicos](#17--operadores-lógicos)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-1)
-  - [2.- CONSULTAS SOBRE TABLAS COMBINADAS](#2--consultas-sobre-tablas-combinadas)
-    - [2.1.- La reunión interna. INNER JOIN](#21--la-reunión-interna-inner-join)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-2)
-    - [2.2.- El producto cartesiano](#22--el-producto-cartesiano)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-3)
-    - [2.3.- Las reuniones externas. LEFT JOIN. RIGHT JOIN.](#23--las-reuniones-externas-left-join-right-join)
-      - [La reunión externa por la izquierda. LEFT JOIN.](#la-reunión-externa-por-la-izquierda-left-join)
-      - [La reunión externa por la derecha. RIGHT JOIN.](#la-reunión-externa-por-la-derecha-right-join)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-4)
-    - [2.4.- Las consultas de resumen y el agrupamiento de registros.](#24--las-consultas-de-resumen-y-el-agrupamiento-de-registros)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-5)
-    - [2.5.- Subconsultas.](#25--subconsultas)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-6)
-  - [3.- FUNCIONES EN MYSQL 8.0](#3--funciones-en-mysql-80)
-    - [3.1.- Funciones matemáticas o numéricas.](#31--funciones-matemáticas-o-numéricas)
-    - [3.2.- Funciones de cadena de caracteres](#32--funciones-de-cadena-de-caracteres)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-7)
-    - [3.3.- Funciones de fecha y hora](#33--funciones-de-fecha-y-hora)
-    - [3.4.- Funciones de control de flujo](#34--funciones-de-control-de-flujo)
-    - [3.5.- Otras funciones](#35--otras-funciones)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-8)
-  - [ACTIVIDAD GRUPAL](#actividad-grupal)
+- [UNIDAD 4. REALIZACIÓN DE CONSULTAS. 📚](#unidad-4-realización-de-consultas-)
+  - [1.- LA INSTRUCCIÓN SELECT 🔎](#1--la-instrucción-select-)
+    - [1.1.- Operadores en consultas SELECT ⚙️](#11--operadores-en-consultas-select-️)
+    - [1.2.- Consultar todas las filas de una tabla 📋](#12--consultar-todas-las-filas-de-una-tabla-)
+    - [1.3.- Ordenar resultados ↕️](#13--ordenar-resultados-️)
+    - [1.4.- No repetir filas y limitar resultados. 🚫🔁](#14--no-repetir-filas-y-limitar-resultados-)
+    - [1.5.- Consultar algunas filas de una tabla 🔍](#15--consultar-algunas-filas-de-una-tabla-)
+  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios-)
+    - [1.6.- Seleccionar con IN, LIKE, BETWEEN y campos NULL 🔎](#16--seleccionar-con-in-like-between-y-campos-null-)
+    - [1.7.- Operadores Lógicos 🧠](#17--operadores-lógicos-)
+  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--1)
+  - [2.- CONSULTAS SOBRE TABLAS COMBINADAS 🔗](#2--consultas-sobre-tablas-combinadas-)
+    - [2.1.- La reunión interna. INNER JOIN 🔗](#21--la-reunión-interna-inner-join-)
+  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--2)
+    - [2.2.- El producto cartesiano ✖️](#22--el-producto-cartesiano-️)
+  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--3)
+    - [2.3.- Las reuniones externas. LEFT JOIN. RIGHT JOIN. ↔️](#23--las-reuniones-externas-left-join-right-join-️)
+  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--4)
+    - [2.4.- Las consultas de resumen y el agrupamiento de registros. 📊](#24--las-consultas-de-resumen-y-el-agrupamiento-de-registros-)
+  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--5)
+    - [2.5.- Subconsultas. 🔁](#25--subconsultas-)
+  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--6)
+  - [3.- FUNCIONES EN MYSQL 8.0 🧮](#3--funciones-en-mysql-80-)
+    - [3.1.- Funciones matemáticas o numéricas. 🔢](#31--funciones-matemáticas-o-numéricas-)
+    - [3.2.- Funciones de cadena de caracteres ✂️](#32--funciones-de-cadena-de-caracteres-️)
+  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--7)
+    - [3.3.- Funciones de fecha y hora ⏰](#33--funciones-de-fecha-y-hora-)
+    - [3.4.- Funciones de control de flujo 🔀](#34--funciones-de-control-de-flujo-)
+    - [3.5.- Otras funciones 🧩](#35--otras-funciones-)
+  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--8)
+  - [ACTIVIDAD GRUPAL 👥](#actividad-grupal-)
 
-## 1.- LA INSTRUCCIÓN SELECT
+## 1.- LA INSTRUCCIÓN SELECT 🔎
 
 La instrucción SQL para consultar los datos almacenados en las tablas de una base de datos es **SELECT**. Normalmente es la instrucción más utilizada por los usuarios de una base de datos.
 
@@ -81,7 +80,7 @@ Obtener el usuario actual y la versión de MySQL Server.
 SELECT  current_user(),version();
 ```
 
-### 1.1.-Operadores en consultas SELECT
+### 1.1.- Operadores en consultas SELECT ⚙️
 
 Como hemos visto anteriormente, en las expresiones que se escriben en SELECT se pueden usar operadores. También se pueden usar en otras instrucciones.
 
@@ -108,7 +107,7 @@ Como hemos visto anteriormente, en las expresiones que se escriben en SELECT se 
 
 ![Base de datos Alquileres](img/Imagen4.png)
 
-### 1.2.- Consultar todas las filas de una tabla
+### 1.2.- Consultar todas las filas de una tabla 📋
 
 Cuando se ejecuta SELECT **sin la cláusula WHERE**, se consultan todas las filas de la tabla. 
 
@@ -144,7 +143,7 @@ FROM automoviles;
 
 ![Consulta](img/Imagen7.png)
 
-### 1.3.- Ordenar resultados
+### 1.3.- Ordenar resultados ↕️
 
 Para ordenar la hoja de resultados por una o varias expresiones, se usa la cláusula **ORDER BY expr1, … [ASC|DESC]**.
 
@@ -178,7 +177,7 @@ ORDER BY marca, precio DESC;
 
 ![Consulta](img/Imagen10.png)
 
-### 1.4.- No repetir filas y limitar resultados.
+### 1.4.- No repetir filas y limitar resultados. 🚫🔁
 
 Para que no se repitan en la hoja de resultados filas exactamente iguales se usa la cláusula **DISTINCT**.
 
@@ -261,7 +260,7 @@ ORDER BY fnac DESC LIMIT 1;
 
 ![Consulta](img/Imagen17.png)
 
-### 1.5.- Consultar algunas filas de una tabla
+### 1.5.- Consultar algunas filas de una tabla 🔍
 
 Cuando hablamos de seleccionar filas dentro de una consulta nos referimos a obtener las filas que cumplen con una condición determinada. Para seleccionar filas en una consulta SELECT, se usa la cláusula **WHERE**.
 
@@ -323,14 +322,13 @@ WHERE nombre='alicia';
 
 ![Consulta](img/Imagen22.png)
 
-## HOJAS DE EJERCICIOS
+## HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 1.
 
 💻 Hoja de ejercicios 2.
 
-
-### 1.6.-Seleccionar con IN, LIKE, BETWEEN y campos NULL
+### 1.6.- Seleccionar con IN, LIKE, BETWEEN y campos NULL 🔎
 
 La cláusula **BETWEEN** es un operador que permite comprobar si un valor está dentro de un intervalo. Se usa con la sintaxis:
 
@@ -467,7 +465,7 @@ WHERE ffin IS NOT NULL;
 
 ![Consulta](img/Imagen32.png)
 
-### 1.7.- Operadores Lógicos
+### 1.7.- Operadores Lógicos 🧠
 
 Podemos realizar expresiones compuestas de varias condiciones mediante los operadores lógicos.
 
@@ -539,7 +537,7 @@ WHERE NOT (marca='seat' OR marca='audi');
 
 ![Consulta](img/Imagen37.png)
 
-## HOJAS DE EJERCICIOS
+## HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 3.
 
@@ -549,7 +547,7 @@ WHERE NOT (marca='seat' OR marca='audi');
 
 💻 Hoja de ejercicios 6.(opcional)
 
-## 2.- CONSULTAS SOBRE TABLAS COMBINADAS
+## 2.- CONSULTAS SOBRE TABLAS COMBINADAS 🔗
 
 Hasta ahora únicamente hemos visto consultas realizadas sobre una única tabla. 
 
@@ -566,7 +564,7 @@ En MySQL podemos usar las siguientes operaciones de combinación de tablas:
 - Combinación LEFT JOIN
 - Combinación RIGHT JOIN
 
-### 2.1.- La reunión interna. INNER JOIN
+### 2.1.- La reunión interna. INNER JOIN 🔗
 
 La reunión interna o la operacion **INNER JOIN** permite emparejar filas de dos tablas a través de una relación entre una columna de una tabla y otra columna de otra tabla. 
 
@@ -688,11 +686,11 @@ WHERE marca='seat';
 
 ![ejemplo](img/Imagen43.png)
 
-## HOJAS DE EJERCICIOS
+## HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 7.
 
-### 2.2.- El producto cartesiano
+### 2.2.- El producto cartesiano ✖️
 
 El producto cartesiano de dos tablas permite obtener una tabla con las columnas de la primera tabla y las columnas de la segunda tabla (aunque tengan nombres iguales). 
 Las filas de la hoja de resultados resultante son todas las posibles combinaciones entre filas de la primera tabla y filas de la segunda tabla. Así, si una tabla tiene 6 filas y la otra tiene 8, el resultado del producto cartesiano es una tabla de 48 filas.  Pero si una tabla tiene 6000 filas y otras 8000, se crea en memoria una tabla de 48 millones de filas, cada una de las cuales contiene varios bytes. Eso supone crear mucho espacio en memoria y puede ser un GRAVE PROBLEMA.
@@ -720,7 +718,7 @@ Aunque ahora veamos en el resultado una fila por cada contrato, realmente se ha 
 
 Vamos a ver varios ejemplos en los que se realizan consultas en las que se puede usar el producto cartesiano. Se aplica la combinación producto cartesiano y se establecen condiciones de selección WHERE y se indican las columnas o expresiones que se quieren consultar.
 
-**Ejemplo 1:** Obtener la matricula, marca, modelo, fecha inicial y fecha final del contrato número 1 (habrá que establecer la condición WHERE para que el contrato sea el número 1 y para que la matrícula del automóvil coincida con la del contrato).
+**Ejemplo 1:** Obtener la matricula, marca, modelo, fecha inicial y fecha final del contrato número 1 (habrá que establecer la condición WHERE para que el contrato sea el número 1 y para que la matrícula del automóvil coincida con la del contrato). ...
 
 ```sql
 SELECT contratos.matricula,marca,modelo,fini,ffin 
@@ -807,7 +805,7 @@ Las consultas de los ejemplos 2 y 5 son casos de una buena utilización del prod
 
 Sin embargo, los otros ejemplos de este apartado se podrían realizar más óptimamente con otras operaciones de combinación. 
 
-## HOJAS DE EJERCICIOS
+## HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 8.
 
@@ -815,9 +813,9 @@ Sin embargo, los otros ejemplos de este apartado se podrían realizar más ópti
 
 💻 Hoja de ejercicios 10.
 
-### 2.3.- Las reuniones externas. LEFT JOIN. RIGHT JOIN.
+### 2.3.- Las reuniones externas. LEFT JOIN. RIGHT JOIN. ↔️
 
-#### La reunión externa por la izquierda. LEFT JOIN.
+#### La reunión externa por la izquierda. LEFT JOIN. ⬅️
 
 Permite emparejar filas de dos tablas a través de una relación entre una columna de una tabla y otra columna de otra tabla. Hasta aquí todo igual que INNER JOIN.
 
@@ -857,7 +855,7 @@ WHERE numcontrato IS NULL;
 
 ![Left Join](img/Imagen56.png)
 
-#### La reunión externa por la derecha. RIGHT JOIN.
+#### La reunión externa por la derecha. RIGHT JOIN. ➡️
 
 Esta operación es una imagen refleja de la anterior; el resultado de esta operación siempre contiene todos los registros de la tabla de la derecha (la segunda tabla que se menciona en la consulta), independientemente de si existe o no un registro correspondiente en la tabla de la izquierda. 
 
@@ -883,11 +881,11 @@ WHERE numcontrato IS NULL;
 ![Right Join](img/Imagen59.png)
 
 
-## HOJAS DE EJERCICIOS
+## HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 11.
 
-### 2.4.- Las consultas de resumen y el agrupamiento de registros.
+### 2.4.- Las consultas de resumen y el agrupamiento de registros. 📊
 
 Las **consultas de resumen o de agregado** permiten realizar cálculos de resumen o de grupo sobre las filas que tienen un valor igual en una o varias columnas.
 
@@ -1074,11 +1072,11 @@ HAVING media >=75 AND media<=100;
 
 ![Agrupamiento](img/Imagen72.png)
 
-## HOJAS DE EJERCICIOS
+## HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 12.
 
-### 2.5.- Subconsultas.
+### 2.5.- Subconsultas. 🔁
 
 Una subconsulta es una consulta SELECT que se hace dentro de otra consulta SELECT. Los datos que se obtienen de la subconsulta se usan en la consulta en la que se incluye.
 
@@ -1177,7 +1175,7 @@ WHERE numcontrato=10;
 
 ![Subconsultas](img/Imagen78.png)
 
-**UNION:**
+**UNION:** 🧩
 
 UNION se usa para combinar los resultados de varias sentencias en un único conjunto de resultados. Las columnas del resultado de ambas consultas deben ser del mismo tipo. El resultado final tendrá el nombre de columnas de la primera consulta. Por defecto solo muestra las filas que son distintas (como si pusiéramos la cláusula DISTINCT). Podemos evitar esto con la cláusula ALL.
 
@@ -1293,7 +1291,7 @@ WHERE precio < ANY (SELECT precio
 
 ![Subconsultas](img/Imagen85.png)
 
-## HOJAS DE EJERCICIOS
+## HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 13.
 
@@ -1301,7 +1299,7 @@ WHERE precio < ANY (SELECT precio
 
 💻 Hoja de ejercicios 15.
 
-## 3.- FUNCIONES EN MYSQL 8.0
+## 3.- FUNCIONES EN MYSQL 8.0 🧮
 
 Todos los SGBD incluyen un conjunto de funciones que pueden ser usadas para obtener fácilmente determinados resultados.
 
@@ -1330,7 +1328,7 @@ Las funciones MySQL pueden clasificarse en función de los tipos de datos con lo
 - Funciones de agregado o agrupación
 - Otras funciones
 
-### 3.1.- Funciones matemáticas o numéricas.
+### 3.1.- Funciones matemáticas o numéricas. 🔢
 
 - pow(X,Y) : Devuelve el resultado X elevado a Y
 - sqrt(X) : Devuelve la raiz cuadrada de X
@@ -1341,7 +1339,7 @@ Las funciones MySQL pueden clasificarse en función de los tipos de datos con lo
 - truncate(X,D): Obtiene el número X truncado a D decimales
 - rand() : Devuelve un número coma flotante aleatorio mayor o igual que cero y menor que 1.0.
 
-### 3.2.- Funciones de cadena de caracteres
+### 3.2.- Funciones de cadena de caracteres ✂️
 
 - char_length(cadena) : Devuelve el número de caracteres que tiene el contenido de la cadena.
 - concat(cad1, cad2,…) : Devuelve la cadena resultado de concatenar todas las cadenas pasadas. Se pueden pasar otros tipos de datos en cuyo caso los trata como cadenas de caracteres.
@@ -1389,11 +1387,11 @@ SELECT LEFT(direccion,LOCATE(',',direccion)-1) FROM clientes;
 SELECT matricula, LPAD(precio, 20, '+.') FROM automoviles;
 ```
 
-## HOJAS DE EJERCICIOS
+## HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 16.
 
-### 3.3.- Funciones de fecha y hora
+### 3.3.- Funciones de fecha y hora ⏰
 
 - adddate(fecha, INTERVAL  N tipo_intervalo):  Devuelve la fecha incrementada en N el tipo de intervalo indicado.
 El tipo de intervalo para fechas puede ser DAY, WEEK, MONTH, QUARTER, YEAR
@@ -1448,7 +1446,7 @@ SELECT curtime();
 SELECT 60-minute(curtime());
 ```
 
-### 3.4.- Funciones de control de flujo
+### 3.4.- Funciones de control de flujo 🔀
 
 - CASE valor WHEN [valor1] THEN resultado1 [WHEN [valor2] THEN resultado2 ...] [ELSE resultado] END: devuelve el resultado correspondiente al primer valorN que coincida con valor. Si ningún valorN coincide con valor se devuelve el resultado que hay tras la cláusula ELSE, y si no tuviera esta cláusula se devuelve NULL. 
 
@@ -1489,7 +1487,7 @@ SELECT matricula, marca, modelo, if(alquilado, 'alquilado', 'disponible')
 FROM automoviles;	
 ```
 
-### 3.5.- Otras funciones
+### 3.5.- Otras funciones 🧩
 
 - aes_encrypt(texto,clave):Permite encriptar información usando una clave de encriptación. Utiliza la técnica AES
 - aes_decrypt(texto,clave): Para desencriptar.
@@ -1500,7 +1498,7 @@ FROM automoviles;
 - row_count(): Devuelve el número de filas que se vieron afectadas por la operación precedente de borrado, inserción o modificación.
 - version(): Devuelve la versión del servidor MySQL
 
-## HOJAS DE EJERCICIOS
+## HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 17.
 
@@ -1508,6 +1506,6 @@ FROM automoviles;
 
 💻 Hoja de ejercicios 19. (Repaso)
 
-## ACTIVIDAD GRUPAL
+## ACTIVIDAD GRUPAL 👥
 
 💻 The SQL Murder Mystery. (https://mystery.knightlab.com/#experienced)
