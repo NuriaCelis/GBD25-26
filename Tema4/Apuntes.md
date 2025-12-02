@@ -4,6 +4,12 @@
   - [1.- LA INSTRUCCIÓN SELECT](#1--la-instrucción-select)
     - [1.1.-Operadores en consultas SELECT](#11-operadores-en-consultas-select)
     - [1.2.- Consultar todas las filas de una tabla](#12--consultar-todas-las-filas-de-una-tabla)
+  - [1.- LA INSTRUCCIÓN SELECT 📝](#1--la-instrucción-select-)
+    - [📌 Sintaxis completa de SELECT:](#-sintaxis-completa-de-select)
+    - [📌 Sintaxis principal de SELECT:](#-sintaxis-principal-de-select)
+    - [💡 Ejemplos de consultas SELECT sin FROM](#-ejemplos-de-consultas-select-sin-from)
+    - [1.1.- Operadores en consultas SELECT ⚙️](#11--operadores-en-consultas-select-️)
+    - [1.2.- Consultar todas las filas de una tabla 📊](#12--consultar-todas-las-filas-de-una-tabla-)
     - [1.3.- Ordenar resultados](#13--ordenar-resultados)
     - [1.4.- No repetir filas y limitar resultados.](#14--no-repetir-filas-y-limitar-resultados)
     - [1.5.- Consultar algunas filas de una tabla](#15--consultar-algunas-filas-de-una-tabla)
@@ -17,8 +23,6 @@
     - [2.2.- El producto cartesiano](#22--el-producto-cartesiano)
   - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-3)
     - [2.3.- Las reuniones externas. LEFT JOIN. RIGHT JOIN.](#23--las-reuniones-externas-left-join-right-join)
-      - [La reunión externa por la izquierda. LEFT JOIN.](#la-reunión-externa-por-la-izquierda-left-join)
-      - [La reunión externa por la derecha. RIGHT JOIN.](#la-reunión-externa-por-la-derecha-right-join)
   - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-4)
     - [2.4.- Las consultas de resumen y el agrupamiento de registros.](#24--las-consultas-de-resumen-y-el-agrupamiento-de-registros)
   - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-5)
@@ -143,6 +147,114 @@ FROM automoviles;
 ```
 
 ![Consulta](img/Imagen7.png)
+
+## 1.- LA INSTRUCCIÓN SELECT 📝
+
+La instrucción SQL para consultar los datos almacenados en las tablas de una base de datos es **SELECT**. Normalmente es la instrucción más utilizada por los usuarios de una base de datos.
+
+Cuando se ejecuta **SELECT**, si no tiene errores la instrucción, el SGBD devuelve una hoja de resultados que se muestra en forma de tabla en el cliente que estemos usando.
+
+![Instrucción Select](img/Imagen1.png)
+
+### 📌 Sintaxis completa de SELECT:
+
+![Sintáxis select](img/Imagen2.png)
+
+### 📌 Sintaxis principal de SELECT:
+
+![Sintáxis select](img/Imagen3.png)
+
+**Descripción de la sintaxis principal de SELECT:**
+
+* 🔹 Entre **SELECT** y **FROM** se escriben separadas por comas las columnas o expresiones que se quieren consultar. Pueden consultarse datos que no pertenecen a tablas, como lo devuelto por una función.
+* 🔹 **DISTINCT** permite que no se repitan filas de resultados iguales.
+* 🔹 **FROM** permite indicar la tabla o las tablas de las que se extraen los datos.
+* 🔹 **WHERE** permite seleccionar las filas de las que se extraen datos, poniendo condiciones sobre lo que se quiere consultar.
+* 🔹 **GROUP BY** permite agrupar filas que tengan valores iguales en una o varias columnas para que salgan en una sola fila.
+* 🔹 **HAVING** permite establecer condiciones sobre datos obtenidos de agrupamientos.
+* 🔹 **ORDER BY** permite ordenar la hoja de resultados por una columna, por varias columnas o por una expresión.
+* 🔹 **LIMIT** permite indicar que de las filas devueltas por una SELECT solo se muestre un número máximo de ellas.
+
+### 💡 Ejemplos de consultas SELECT sin FROM
+
+**Obtener la fecha y hora actuales:**
+
+```sql
+SELECT curdate(), curtime();
+```
+
+**Obtener el resultado de la división entre 7 y 2 y el resultado del cociente y resto de su división:**
+
+```sql
+SELECT 7/2, 7 div 2, 7 mod 2;
+```
+
+**Obtener el usuario actual y la versión de MySQL Server:**
+
+```sql
+SELECT current_user(), version();
+```
+
+### 1.1.- Operadores en consultas SELECT ⚙️
+
+Como hemos visto anteriormente, en las expresiones que se escriben en **SELECT** se pueden usar operadores. También se pueden usar en otras instrucciones.
+
+**Operadores aritméticos:**
+
+* ➕ operador `+`: suma dos números o indica signo positivo.
+* ➖ operador `-`: diferencia entre dos números o signo negativo.
+* ✖ operador `*`: multiplicación.
+* ➗ operador `/`: división que devuelve número con decimales.
+* 🟰 operador `div`: división entera (solo cociente).
+* 🟰 operadores `%` o `mod`: división que devuelve el resto entero.
+
+**Operadores de comparación o relacionales:**
+
+* `=` compara si es igual.
+* `>` compara si mayor.
+* `<` compara si menor.
+* `<=` compara si menor o igual.
+* `>=` compara si mayor o igual.
+* `<>` compara si distinto.
+
+**Modelo relacional de la Base de datos ALQUILERES, que vamos a usar en todos los ejemplos de esta unidad:**
+
+![Base de datos Alquileres](img/Imagen4.png)
+
+### 1.2.- Consultar todas las filas de una tabla 📊
+
+Cuando se ejecuta **SELECT** **sin la cláusula WHERE**, se consultan todas las filas de la tabla.
+
+Para obtener todos los datos de la tabla (todas las columnas) se puede usar el comodín `*`, salvo que queramos que las columnas se obtengan en orden diferente al de diseño de la tabla.
+
+**Ejemplo:** Obtener todos los datos de la tabla automóviles:
+
+```sql
+SELECT * FROM automoviles;
+```
+
+![Consulta](img/Imagen5.png)
+
+Cuando queramos obtener algunas columnas y/o expresiones habrá que escribirlas separadas por comas.
+
+**Ejemplo:** Obtener todos los datos de la tabla automóviles representando como primera columna la columna `alquilado`:
+
+```sql
+SELECT alquilado, matricula, marca, modelo, color, precio, kilometros, extras
+FROM automoviles;
+```
+
+![Consulta](img/Imagen6.png)
+
+**Ejemplo:** Obtener las matrículas, marcas y modelos de todos los coches junto con el precio y el precio incrementado en un 10%:
+
+```sql
+SELECT matricula, marca, modelo, precio, precio*1.1
+FROM automoviles;
+```
+
+![Consulta](img/Imagen7.png)
+
 
 ### 1.3.- Ordenar resultados
 
