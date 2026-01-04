@@ -289,7 +289,7 @@ WHERE nombre='alicia';
 
 #### HOJAS DE EJERCICIOS 📝
 
-💻 Hoja de ejercicios 1.
+💻 Hoja de ejercicios 1. <!--(modificada enero 2026) -->
 
 💻 Hoja de ejercicios 2.
 
