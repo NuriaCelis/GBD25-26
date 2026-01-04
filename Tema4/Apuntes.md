@@ -1,51 +1,21 @@
-// ...existing code...
+
 # UNIDAD 4. REALIZACIÓN DE CONSULTAS. 📚
 
-- [UNIDAD 4. REALIZACIÓN DE CONSULTAS. 📚](#unidad-4-realización-de-consultas-)
-  - [1.- LA INSTRUCCIÓN SELECT 🔎](#1--la-instrucción-select-)
-    - [1.1.- Operadores en consultas SELECT ⚙️](#11--operadores-en-consultas-select-️)
-    - [1.2.- Consultar todas las filas de una tabla 📋](#12--consultar-todas-las-filas-de-una-tabla-)
-    - [1.3.- Ordenar resultados ↕️](#13--ordenar-resultados-️)
-    - [1.4.- No repetir filas y limitar resultados. 🚫🔁](#14--no-repetir-filas-y-limitar-resultados-)
-    - [1.5.- Consultar algunas filas de una tabla 🔍](#15--consultar-algunas-filas-de-una-tabla-)
-  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios-)
-    - [1.6.- Seleccionar con IN, LIKE, BETWEEN y campos NULL 🔎](#16--seleccionar-con-in-like-between-y-campos-null-)
-    - [1.7.- Operadores Lógicos 🧠](#17--operadores-lógicos-)
-  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--1)
-  - [2.- CONSULTAS SOBRE TABLAS COMBINADAS 🔗](#2--consultas-sobre-tablas-combinadas-)
-    - [2.1.- La reunión interna. INNER JOIN 🔗](#21--la-reunión-interna-inner-join-)
-  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--2)
-    - [2.2.- El producto cartesiano ✖️](#22--el-producto-cartesiano-️)
-  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--3)
-    - [2.3.- Las reuniones externas. LEFT JOIN. RIGHT JOIN. ↔️](#23--las-reuniones-externas-left-join-right-join-️)
-  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--4)
-    - [2.4.- Las consultas de resumen y el agrupamiento de registros. 📊](#24--las-consultas-de-resumen-y-el-agrupamiento-de-registros-)
-  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--5)
-    - [2.5.- Subconsultas. 🔁](#25--subconsultas-)
-  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--6)
-  - [3.- FUNCIONES EN MYSQL 8.0 🧮](#3--funciones-en-mysql-80-)
-    - [3.1.- Funciones matemáticas o numéricas. 🔢](#31--funciones-matemáticas-o-numéricas-)
-    - [3.2.- Funciones de cadena de caracteres ✂️](#32--funciones-de-cadena-de-caracteres-️)
-  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--7)
-    - [3.3.- Funciones de fecha y hora ⏰](#33--funciones-de-fecha-y-hora-)
-    - [3.4.- Funciones de control de flujo 🔀](#34--funciones-de-control-de-flujo-)
-    - [3.5.- Otras funciones 🧩](#35--otras-funciones-)
-  - [HOJAS DE EJERCICIOS 📝](#hojas-de-ejercicios--8)
-  - [ACTIVIDAD GRUPAL 👥](#actividad-grupal-)
+
 
 ## 1.- LA INSTRUCCIÓN SELECT 🔎
 
 La instrucción SQL para consultar los datos almacenados en las tablas de una base de datos es **SELECT**. Normalmente es la instrucción más utilizada por los usuarios de una base de datos.
 
-Cuando se ejecuta SELECT, si no tiene errores la instrucción, el SGBD devuelve una hoja de resultados que se muestra en forma de tabla en el cliente que estemos usando.
+Cuando se ejecuta SELECT, si no tiene errores la instrucción, el SGBD devuelve el contenido de la tabla o resultado de una operación, que se muestra en forma de tabla.
 
 ![Instrucción Select](img/Imagen1.png)
 
-Sintaxis completa de SELECT:
+Sintaxis completa de SELECT (la que aparece en la documentación oficial):
 
 ![Sintáxis select](img/Imagen2.png)
 
-Sintaxis principal de SELECT:
+Sintaxis principal de SELECT (la que tendremos como referencia):
 
 ![Sintáxis select](img/Imagen3.png)
 
@@ -62,22 +32,17 @@ Descripción de la sintaxis principal de SELECT:
 
 **Ejemplos de consultas SELECT sin FROM.**
 
-Obtener la fecha y hora actuales.
+Hacemos SELECT con funciones de MySQL, como para obtener la fecha y hora actuales, o el usuario actual y la versión de MySQL Server que estamos utilizando.
 
 ```sql
 SELECT curdate(), curtime();
+SELECT  current_user(),version();
 ```
 
-Obtener el resultado de la división entre 7 y 2 y el resultado del cociente y resto de su división.
+Se pueden hacer SELECT con operaciones matemáticas, como para obtener el resultado de la división entre 7 y 2 y el resultado del cociente y resto de su división.
 
 ```sql
 SELECT 7/2, 7 div 2, 7 mod 2;
-```
-
-Obtener el usuario actual y la versión de MySQL Server.
-
-```sql
-SELECT  current_user(),version();
 ```
 
 ### 1.1.- Operadores en consultas SELECT ⚙️
@@ -86,21 +51,21 @@ Como hemos visto anteriormente, en las expresiones que se escriben en SELECT se 
 
 **Operadores aritméticos**:
 
-- operador +, se utiliza para sumar dos números y, como operador unario, para simbolizar signo positivo de un número. 
-- operador -, se utiliza para hallar la diferencia entre dos números y, como operador unario, para simbolizar signo negativo de un número. 
-- operador *, se utiliza para multiplicar dos números.
-- operador / , se utiliza para dividir dos números y obtener un resultado de tipo coma  flotante.
-- operador div, se utiliza para dividir dos números y el resultado cociente en forma de entero (división entera) entero. 
-- operadores % o mod, dividen dos números y devuelven el resto entero de la división.
+- **operador +**, se utiliza para sumar dos números y, como operador unario, para simbolizar signo positivo de un número. 
+- **operador -**, se utiliza para hallar la diferencia entre dos números y, como operador unario, para simbolizar signo negativo de un número. 
+- **operador ***, se utiliza para multiplicar dos números.
+- **operador /**, se utiliza para dividir dos números y obtener un resultado de tipo coma  flotante.
+- **operador div**, se utiliza para dividir dos números y el resultado cociente en forma de entero (división entera) entero. 
+- **operadores % o mod**, dividen dos números y devuelven el resto entero de la división.
 
 **Operadores de comparación o relacionales**:
 
-- operador  = , compara	si igual
-- operador  > , compara	si mayor
-- operador  < , compara	si menor
-- operador  <= , compara si menor o igual
-- operador  >= , compara si mayor o igual
-- operador  <>  , compara si distinto
+- **operador  =** , compara	si igual
+- **operador  >** , compara	si mayor
+- **operador  <** , compara	si menor
+- **operador  <=** , compara si menor o igual
+- **operador  >=** , compara si mayor o igual
+- **operador  <>**  , compara si distinto
  
 
 **Modelo relacional de la Base de datos ALQUILERES, que vamos a usar en todos los ejemplos de esta unidad.**
@@ -322,7 +287,7 @@ WHERE nombre='alicia';
 
 ![Consulta](img/Imagen22.png)
 
-## HOJAS DE EJERCICIOS 📝
+#### HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 1.
 
@@ -537,7 +502,7 @@ WHERE NOT (marca='seat' OR marca='audi');
 
 ![Consulta](img/Imagen37.png)
 
-## HOJAS DE EJERCICIOS 📝
+#### HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 3.
 
@@ -686,7 +651,7 @@ WHERE marca='seat';
 
 ![ejemplo](img/Imagen43.png)
 
-## HOJAS DE EJERCICIOS 📝
+#### HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 7.
 
@@ -805,7 +770,7 @@ Las consultas de los ejemplos 2 y 5 son casos de una buena utilización del prod
 
 Sin embargo, los otros ejemplos de este apartado se podrían realizar más óptimamente con otras operaciones de combinación. 
 
-## HOJAS DE EJERCICIOS 📝
+#### HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 8.
 
@@ -881,7 +846,7 @@ WHERE numcontrato IS NULL;
 ![Right Join](img/Imagen59.png)
 
 
-## HOJAS DE EJERCICIOS 📝
+#### HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 11.
 
@@ -1072,7 +1037,7 @@ HAVING media >=75 AND media<=100;
 
 ![Agrupamiento](img/Imagen72.png)
 
-## HOJAS DE EJERCICIOS 📝
+#### HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 12.
 
@@ -1291,7 +1256,7 @@ WHERE precio < ANY (SELECT precio
 
 ![Subconsultas](img/Imagen85.png)
 
-## HOJAS DE EJERCICIOS 📝
+#### HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 13.
 
@@ -1387,7 +1352,7 @@ SELECT LEFT(direccion,LOCATE(',',direccion)-1) FROM clientes;
 SELECT matricula, LPAD(precio, 20, '+.') FROM automoviles;
 ```
 
-## HOJAS DE EJERCICIOS 📝
+#### HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 16.
 
@@ -1498,7 +1463,7 @@ FROM automoviles;
 - row_count(): Devuelve el número de filas que se vieron afectadas por la operación precedente de borrado, inserción o modificación.
 - version(): Devuelve la versión del servidor MySQL
 
-## HOJAS DE EJERCICIOS 📝
+#### HOJAS DE EJERCICIOS 📝
 
 💻 Hoja de ejercicios 17.
 
