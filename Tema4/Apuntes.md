@@ -1,6 +1,28 @@
 
 # UNIDAD 4. REALIZACIÓN DE CONSULTAS. 📚
 
+- [UNIDAD 4. REALIZACIÓN DE CONSULTAS. 📚](#unidad-4-realización-de-consultas-)
+  - [1.- LA INSTRUCCIÓN SELECT 🔎](#1--la-instrucción-select-)
+    - [1.1.- Operadores en consultas SELECT ⚙️](#11--operadores-en-consultas-select-️)
+    - [1.2.- Consultar todas las filas de una tabla 📋](#12--consultar-todas-las-filas-de-una-tabla-)
+    - [1.3.- Ordenar resultados ↕️](#13--ordenar-resultados-️)
+    - [1.4.- No repetir filas y limitar resultados. 🚫🔁](#14--no-repetir-filas-y-limitar-resultados-)
+    - [1.5.- Consultar algunas filas de una tabla 🔍](#15--consultar-algunas-filas-de-una-tabla-)
+    - [1.6.- Seleccionar con IN, LIKE, BETWEEN y campos NULL 🔎](#16--seleccionar-con-in-like-between-y-campos-null-)
+    - [1.7.- Operadores Lógicos 🧠](#17--operadores-lógicos-)
+  - [2.- CONSULTAS SOBRE TABLAS COMBINADAS 🔗](#2--consultas-sobre-tablas-combinadas-)
+    - [2.1.- La reunión interna. INNER JOIN 🔗](#21--la-reunión-interna-inner-join-)
+    - [2.2.- El producto cartesiano ✖️](#22--el-producto-cartesiano-️)
+    - [2.3.- Las reuniones externas. LEFT JOIN. RIGHT JOIN. ↔️](#23--las-reuniones-externas-left-join-right-join-️)
+    - [2.4.- Las consultas de resumen y el agrupamiento de registros. 📊](#24--las-consultas-de-resumen-y-el-agrupamiento-de-registros-)
+    - [2.5.- Subconsultas. 🔁](#25--subconsultas-)
+  - [3.- FUNCIONES EN MYSQL 8.0 🧮](#3--funciones-en-mysql-80-)
+    - [3.1.- Funciones matemáticas o numéricas. 🔢](#31--funciones-matemáticas-o-numéricas-)
+    - [3.2.- Funciones de cadena de caracteres ✂️](#32--funciones-de-cadena-de-caracteres-️)
+    - [3.3.- Funciones de fecha y hora ⏰](#33--funciones-de-fecha-y-hora-)
+    - [3.4.- Funciones de control de flujo 🔀](#34--funciones-de-control-de-flujo-)
+    - [3.5.- Otras funciones 🧩](#35--otras-funciones-)
+  - [ACTIVIDAD GRUPAL 👥](#actividad-grupal-)
 
 
 ## 1.- LA INSTRUCCIÓN SELECT 🔎
@@ -36,7 +58,7 @@ Hacemos SELECT con funciones de MySQL, como para obtener la fecha y hora actuale
 
 ```sql
 SELECT curdate(), curtime();
-SELECT  current_user(),version();
+SELECT  current_user(), version();
 ```
 
 Se pueden hacer SELECT con operaciones matemáticas, como para obtener el resultado de la división entre 7 y 2 y el resultado del cociente y resto de su división.
@@ -291,7 +313,7 @@ WHERE nombre='alicia';
 
 💻 Hoja de ejercicios 1. <!--(modificada enero 2026) -->
 
-💻 Hoja de ejercicios 2.
+💻 Hoja de ejercicios 2. <!--(modificada enero 2026) -->
 
 ### 1.6.- Seleccionar con IN, LIKE, BETWEEN y campos NULL 🔎
 
@@ -504,13 +526,13 @@ WHERE NOT (marca='seat' OR marca='audi');
 
 #### HOJAS DE EJERCICIOS 📝
 
-💻 Hoja de ejercicios 3.
+💻 Hoja de ejercicios 3. (Base de datos world)
 
-💻 Hoja de ejercicios 4.
+💻 Hoja de ejercicios 4. (Base de datos concurso música)
 
-💻 Hoja de ejercicios 5.
+💻 Hoja de ejercicios 5. (Base de datos concurso música)
 
-💻 Hoja de ejercicios 6.(opcional)
+💻 Hoja de ejercicios 6.(opcional) (Base de datos empresa)
 
 ## 2.- CONSULTAS SOBRE TABLAS COMBINADAS 🔗
 
