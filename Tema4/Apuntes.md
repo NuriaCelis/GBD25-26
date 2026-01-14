@@ -526,9 +526,9 @@ WHERE NOT (marca='seat' OR marca='audi');
 
 #### HOJAS DE EJERCICIOS 📝
 
-💻 Hoja de ejercicios 3. (Base de datos world)
+💻 Hoja de ejercicios 3. (Base de datos concurso música)
 
-💻 Hoja de ejercicios 4. (Base de datos concurso música)
+💻 Hoja de ejercicios 4. (Base de datos world)
 
 💻 Hoja de ejercicios 5. (Base de datos concurso música)
 
@@ -675,7 +675,7 @@ WHERE marca='seat';
 
 #### HOJAS DE EJERCICIOS 📝
 
-💻 Hoja de ejercicios 7.
+💻 Hoja de ejercicios 7. (Base de datos tienda)
 
 ### 2.2.- El producto cartesiano ✖️
 
@@ -794,11 +794,11 @@ Sin embargo, los otros ejemplos de este apartado se podrían realizar más ópti
 
 #### HOJAS DE EJERCICIOS 📝
 
-💻 Hoja de ejercicios 8.
+💻 Hoja de ejercicios 8. (Base de datos empleados)
 
-💻 Hoja de ejercicios 9.
+💻 Hoja de ejercicios 9. (Base de datos ventas)
 
-💻 Hoja de ejercicios 10.
+💻 Hoja de ejercicios 10. (Base de datos jardineria)
 
 ### 2.3.- Las reuniones externas. LEFT JOIN. RIGHT JOIN. ↔️
 
@@ -870,7 +870,7 @@ WHERE numcontrato IS NULL;
 
 #### HOJAS DE EJERCICIOS 📝
 
-💻 Hoja de ejercicios 11.
+💻 Hoja de ejercicios 11. (Base de datos tienda, empleados, ventas y jardineria)
 
 ### 2.4.- Las consultas de resumen y el agrupamiento de registros. 📊
 
@@ -1061,7 +1061,7 @@ HAVING media >=75 AND media<=100;
 
 #### HOJAS DE EJERCICIOS 📝
 
-💻 Hoja de ejercicios 12.
+💻 Hoja de ejercicios 12. (Base de datos jardineria)
 
 ### 2.5.- Subconsultas. 🔁
 
@@ -1280,11 +1280,11 @@ WHERE precio < ANY (SELECT precio
 
 #### HOJAS DE EJERCICIOS 📝
 
-💻 Hoja de ejercicios 13.
+💻 Hoja de ejercicios 13. (Base de datos tienda)
 
-💻 Hoja de ejercicios 14.
+💻 Hoja de ejercicios 14. (Base de datos empleados)
 
-💻 Hoja de ejercicios 15.
+💻 Hoja de ejercicios 15. (Base de datos ventas)
 
 ## 3.- FUNCIONES EN MYSQL 8.0 🧮
 
@@ -1376,7 +1376,7 @@ SELECT matricula, LPAD(precio, 20, '+.') FROM automoviles;
 
 #### HOJAS DE EJERCICIOS 📝
 
-💻 Hoja de ejercicios 16.
+💻 Hoja de ejercicios 16. (Base de datos alquileres)
 
 ### 3.3.- Funciones de fecha y hora ⏰
 
@@ -1487,11 +1487,9 @@ FROM automoviles;
 
 #### HOJAS DE EJERCICIOS 📝
 
-💻 Hoja de ejercicios 17.
+💻 Hoja de ejercicios 17. (Base de datos concurso música)
 
-💻 Hoja de ejercicios 18. (Repaso)
-
-💻 Hoja de ejercicios 19. (Repaso)
+💻 Hoja de ejercicios 18. (Repaso. Base de datos vuelta)
 
 ## ACTIVIDAD GRUPAL 👥
 
