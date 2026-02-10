@@ -546,8 +546,8 @@ Por ejemplo, en la base de datos de alquileres, para obtener el nombre y apellid
 
 En MySQL podemos usar las siguientes operaciones de combinación de tablas:
 
-- Producto cartesiano o CROSS JOIN
 - Combinación INNER JOIN
+- Producto cartesiano o CROSS JOIN
 - Combinación LEFT JOIN
 - Combinación RIGHT JOIN
 
@@ -560,6 +560,8 @@ Lo normal es que sean la clave principal de una tabla y la correspondiente clave
 En una consulta de este tipo, para cada fila de una de las tablas se busca en la otra tabla la fila o filas que cumplen la condición de relación que se quiera entre las dos columnas (normalmente se busca igualdad entre clave principal y clave ajena). 
 
 En nuestra base de datos alquileres, nos fijamos que en la tabla contrato tiene un campo llamado dnicliente. Al hacer un inner join entre la tabla contratos y clientes, sacará un listado de todos los clientes con cada uno de sus contratos de forma aparejada, buscando para cada contrato el dni del cliente que coincide con el valor que tenemos en dnicliente.
+
+Vemos un ejemplo gráfico:
 
 ![inner Join](img/Imagen38b.png)
 
@@ -655,7 +657,8 @@ WHERE ffin IS NULL;
 
 ```sql
 SELECT numcontrato,automoviles.matricula,marca,modelo,nombre,apellidos, kfin-kini 
-FROM (contratos INNER JOIN automoviles ON contratos.matricula = automoviles.matricula) 
+FROM contratos 
+INNER JOIN automoviles ON contratos.matricula = automoviles.matricula
 INNER JOIN clientes ON dnicliente=dni 
 WHERE ffin IS NOT NULL;
 ```
@@ -666,7 +669,8 @@ WHERE ffin IS NOT NULL;
 
 ```sql
 SELECT DISTINCT nombre,apellidos
-FROM (contratos INNER JOIN automoviles ON contratos.matricula = automoviles.matricula)
+FROM contratos 
+INNER JOIN automoviles ON contratos.matricula = automoviles.matricula
 INNER JOIN clientes ON dnicliente=dni
 WHERE marca='seat';
 ```
