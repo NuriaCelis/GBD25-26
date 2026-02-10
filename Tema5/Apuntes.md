@@ -1,22 +1,167 @@
 # UNIDAD 5. EDICIÓN DE LOS DATOS
 
-- [UNIDAD 5. EDICIÓN DE LOS DATOS](#unidad-5-edición-de-los-datos)
-  - [1.- INSERCIÓN DE FILAS. INSTRUCCIÓN INSERT.](#1--inserción-de-filas-instrucción-insert)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
-  - [2.- ACTUALIZACIÓN DE DATOS. LA INSTRUCCION UPDATE.](#2--actualización-de-datos-la-instruccion-update)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-1)
-  - [3.- ELIMINACIÓN DE FILAS. LA INSTRUCCIÓN DELETE](#3--eliminación-de-filas-la-instrucción-delete)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-2)
-  - [4.- EDICIÓN AVANZADA DE LOS DATOS. INSTRUCCIÓN INSERT.](#4--edición-avanzada-de-los-datos-instrucción-insert)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-3)
-  - [5.- ACTUALIZACIÓN AVANZADA DE DATOS. INSTRUCCIÓN UPDATE.](#5--actualización-avanzada-de-datos-instrucción-update)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-4)
-  - [6.- ELIMINACIÓN AVANZADA DE DATOS.](#6--eliminación-avanzada-de-datos)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-5)
-  - [7.- TRANSACCIONES](#7--transacciones)
-  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-6)
-  - [8.- CONCURRENCIA](#8--concurrencia)
-  - [HOJAS DE EJERCICIOS (DE REPASO)](#hojas-de-ejercicios-de-repaso)
+## 1.- ➕ Inserción de filas. Instrucción INSERT
+
+Para insertar filas en una tabla se utiliza la instrucción **INSERT**. Con esta instrucción es posible insertar una o varias filas indicando los valores de las columnas o insertar filas a partir del resultado de una consulta SELECT sobre una o varias tablas.
+
+### 🧩 Formas básicas de INSERT
+
+INSERT ... VALUES
+INSERT ... SET
+
+También es posible insertar filas obtenidas de una consulta:
+
+INSERT ... SELECT
+
+### 📌 Sintaxis completa de INSERT ... VALUES
+
+INSERT INTO tabla (col1, col2, ...)
+VALUES ({expr1 | DEFAULT}, {expr2 | DEFAULT}, ...),
+       ({expr1 | DEFAULT}, {expr2 | DEFAULT}, ...),
+       ...
+[ ON DUPLICATE KEY UPDATE col_name1 = expr [, col_name2 = expr] ... ]
+
+🔹 Aspectos importantes:
+- Entre paréntesis se indican las columnas a las que se asignan valores.  
+- Tras VALUES se especifican los valores de cada fila.  
+- En una sola instrucción INSERT se pueden insertar varias filas.  
+- DEFAULT asigna a la columna su valor por defecto, si existe.  
+- Las columnas no indicadas reciben su valor por defecto o NULL (si lo permiten).  
+- Si una columna no admite nulos y no tiene valor por defecto, la inserción produce error.  
+- La cláusula ON DUPLICATE KEY UPDATE permite actualizar una fila existente cuando se produce un conflicto por clave primaria o única.
+
+#### 📘 Ejemplo 1
+Insertar un automóvil Seat León 2.0 TDI, negro, matrícula 4751JVW, con extras GPS y SN, 20 km recorridos y no alquilado. No se indica el precio (se asigna el valor por defecto).
+
+INSERT INTO automoviles (matricula, marca, modelo, color, kilometros, extras, alquilado) 
+VALUES ('4751JVW', 'Seat', 'Leon 2.0 TDI', 'Negro', 20, 'GPS,SN', false);
+
+Alternativa sin indicar columnas (hay que respetar el orden de la tabla):
+
+INSERT INTO automoviles 
+VALUES ('4751JVW', 'Seat', 'Leon 2.0 TDI', 'Negro', null, 20, 'GPS,SN', false);
+
+#### 📘 Ejemplo 2
+Insertar un nuevo contrato iniciado el 19 de febrero de 2018 para el cliente 00371569B con automóvil 5678JRZ y kilómetros iniciales 7659:
+
+INSERT INTO contratos (matricula, dnicliente, fini, kini) 
+VALUES ('5678JRZ', '00371569B', '2018-02-19', 7659);
+
+#### 📘 Ejemplo 3
+Insertar un nuevo cliente:
+
+INSERT INTO clientes (nombre, apellidos, localidad, direccion, carnet) 
+VALUES ('Javier', 'Quesada Gómez', 'Madrid', 'C/ Marques de Otaiza 3, 4º B', 'B');
+
+#### 📘 Ejemplo 4
+Insertar un contrato que puede existir ya:
+
+INSERT INTO contratos (numcontrato, dnicliente, matricula, fini, ffin, kini, kfin)
+VALUES (20, '03549358G', '2123JTB', '2018-01-09', '2018-01-21', 34323, 36545);
+
+Error: el contrato número 20 ya existe.
+
+Solución usando ON DUPLICATE KEY UPDATE:
+
+INSERT INTO contratos (numcontrato, dnicliente, matricula, fini, ffin, kini, kfin) 
+VALUES (20, '03549358G', '2123JTB', '2018-01-09', '2018-01-21', 34323, 36545) 
+ON DUPLICATE KEY UPDATE ffin='2018-01-21', kfin=36545;
+
+#### 📘 Ejemplo 5
+Insertar un contrato para el cliente 13987654C en la fecha actual:
+
+INSERT INTO contratos (dnicliente, matricula, fini, kini) 
+VALUES ('13987654C', '4387JDD', CURDATE(), 23057);
+
+Error: DNI no existe en la tabla clientes → violación de clave ajena (FOREIGN KEY).
+
+#### 📘 Ejemplo 6 — Inserción de múltiples filas
+
+INSERT INTO clientes (dni, nombre, apellidos, direccion, localidad, fnac, fcarnet, carnet)
+VALUES
+('96401636R', 'Manuel', 'Gutierrez Motos', 'Calle Barrio Camino', 'Almansa', '1992-02-19', '2010-08-25', 'B'),
+('1057451R', 'Pedro', 'Salas Nieto', 'Calle Camarreal', 'Zaragoza', '1970-12-07', '1990-06-13', 'B'),
+('66082349R', 'Alba', 'Casaus Rodriguez', 'Bajada de San Juan', 'Móstoles', '1997-02-08', '2015-02-21', 'B');
+
+### 🧩 Sintaxis de INSERT ... SET
+
+INSERT INTO tabla
+SET col1 = {expr1 | DEFAULT},
+    col2 = {expr2 | DEFAULT},
+    ...
+[ ON DUPLICATE KEY UPDATE col_name1 = expr1, col_name2 = expr2, ... ]
+
+#### 📘 Ejemplo 7
+
+INSERT INTO automoviles SET 
+matricula = '4751JVW', 
+marca = 'Seat', 
+modelo = 'Leon 2.0 TDI', 
+color = 'Negro', 
+kilometros = 20, 
+extras = 'GPS,SN', 
+alquilado = false;
+
+### 🔄 INSERT combinado con SELECT
+
+INSERT INTO tabla (col1, col2, ...)
+SELECT ...
+[ ON DUPLICATE KEY UPDATE col_name1 = expr1, col_name2 = expr2, ... ]
+
+#### 📘 Ejemplo 8
+
+INSERT INTO contratos 
+SELECT * FROM contratos2;
+
+Error: existen contratos con el mismo número.
+
+Solución ajustando el número de contrato:
+
+INSERT INTO contratos (numcontrato, matricula, dnicliente, fini, ffin, kini, kfin) 
+SELECT numcontrato + 24, matricula, dnicliente, fini, ffin, kini, kfin 
+FROM contratos2;
+
+O de forma dinámica:
+
+INSERT INTO contratos (numcontrato, matricula, dnicliente, fini, ffin, kini, kfin)
+SELECT numcontrato + (SELECT MAX(numcontrato) FROM contratos),
+       matricula, dnicliente, fini, ffin, kini, kfin
+FROM contratos2;
+
+#### 📘 Ejemplo 9
+
+Cliente 08785691K alquila todos los Seat disponibles hoy mismo:
+
+INSERT INTO contratos (matricula, dnicliente, fini, kini) 
+SELECT matricula, '08785691K', CURDATE(), kilometros 
+FROM automoviles 
+WHERE alquilado = false AND marca = 'seat';
+
+#### 📘 Ejemplo 10
+
+Mariano Dorado alquila coches con precio inferior a 70€ disponibles hoy:
+
+INSERT INTO contratos (matricula, dnicliente, fini, kini) 
+SELECT matricula, dni, CURDATE(), kilometros 
+FROM automoviles, clientes 
+WHERE alquilado = false 
+AND precio < 70 
+AND nombre = 'mariano' 
+AND apellidos = 'dorado';
+
+Nota: Producto cartesiano → combina todos los coches con el cliente encontrado.
+
+#### 📘 Ejemplo 11
+
+En LIGATERCERA, insertar todos los enfrentamientos posibles entre equipos:
+
+INSERT INTO calendario (eqLocal, eqVisitante) 
+SELECT a.codeq, b.codeq 
+FROM equipos AS a, equipos AS b 
+WHERE a.codeq != b.codeq;
+
+
+a partir de aqui lo mio
 
 
 ## 1.- INSERCIÓN DE FILAS. INSTRUCCIÓN INSERT.
