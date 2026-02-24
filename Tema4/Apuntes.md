@@ -1070,7 +1070,7 @@ HAVING media >=75 AND media<=100;
 
 ## 🔍 Diferencia entre WHERE y HAVING en consultas con agrupamiento
 
-Cuando trabajamos con **agrupamientos** en SQL, es muy común que surjan dudas sobre cuándo usar `WHERE` y cuándo usar `HAVING`. Vamos a aclararlo con un ejemplo y un poquito de color ✨:
+Cuando trabajamos con **agrupamientos** en SQL, es muy común que surjan dudas sobre cuándo usar `WHERE` y cuándo usar `HAVING`. Vamos a aclararlo con un ejemplo ✨:
 
 ### 📝 Conceptos clave
 
@@ -1084,11 +1084,13 @@ Cuando trabajamos con **agrupamientos** en SQL, es muy común que surjan dudas s
 
 ### 🔧 Ejemplo práctico
 
+```sql
 SELECT marca  
 FROM automoviles  
 WHERE color <> 'Blanco'  
 GROUP BY marca  
 HAVING AVG(precio) < 105;
+```
 
 🛑 Primero, **WHERE color <> 'Blanco'**  
    Antes de agrupar, eliminamos todos los autos blancos. Solo los autos de otros colores entran al siguiente paso.
