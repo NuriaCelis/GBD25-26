@@ -15,6 +15,9 @@
     - [2.2.- El producto cartesiano ✖️](#22--el-producto-cartesiano-️)
     - [2.3.- Las reuniones externas. LEFT JOIN. RIGHT JOIN. ↔️](#23--las-reuniones-externas-left-join-right-join-️)
     - [2.4.- Las consultas de resumen y el agrupamiento de registros. 📊](#24--las-consultas-de-resumen-y-el-agrupamiento-de-registros-)
+  - [🔍 Diferencia entre WHERE y HAVING en consultas con agrupamiento](#-diferencia-entre-where-y-having-en-consultas-con-agrupamiento)
+    - [📝 Conceptos clave](#-conceptos-clave)
+    - [🔧 Ejemplo práctico](#-ejemplo-práctico)
     - [2.5.- Subconsultas. 🔁](#25--subconsultas-)
   - [3.- FUNCIONES EN MYSQL 8.0 🧮](#3--funciones-en-mysql-80-)
     - [3.1.- Funciones matemáticas o numéricas. 🔢](#31--funciones-matemáticas-o-numéricas-)
@@ -1062,6 +1065,48 @@ HAVING media >=75 AND media<=100;
 ```
 
 ![Agrupamiento](img/Imagen72.png)
+
+#### ACLARACIÓN
+
+## 🔍 Diferencia entre WHERE y HAVING en consultas con agrupamiento
+
+Cuando trabajamos con **agrupamientos** en SQL, es muy común que surjan dudas sobre cuándo usar `WHERE` y cuándo usar `HAVING`. Vamos a aclararlo con un ejemplo y un poquito de color ✨:
+
+### 📝 Conceptos clave
+
+- **WHERE** 🛑  
+  Se utiliza para **filtrar filas individuales** **antes** de que se realice cualquier agrupamiento (`GROUP BY`).  
+  > Piensa en ello como un filtro inicial que decide qué datos entran en la agrupación.
+
+- **HAVING** 🎯  
+  Se utiliza para **filtrar grupos** **después** de que se haya aplicado `GROUP BY`.  
+  > Solo puedes usar `HAVING` con **funciones de agregación** como `AVG()`, `SUM()`, `COUNT()`, etc.
+
+### 🔧 Ejemplo práctico
+
+SELECT marca  
+FROM automoviles  
+WHERE color <> 'Blanco'  
+GROUP BY marca  
+HAVING AVG(precio) < 105;
+
+🛑 Primero, **WHERE color <> 'Blanco'**  
+   Antes de agrupar, eliminamos todos los autos blancos. Solo los autos de otros colores entran al siguiente paso.
+
+📦 Segundo, **GROUP BY marca**  
+   Agrupamos los autos restantes según su `marca`.
+
+🎯 Tercero, **HAVING AVG(precio) < 105**  
+   Después de agrupar, calculamos el precio promedio por marca. Solo mantenemos los grupos cuyo precio medio sea menor a 105.
+
+💡 Tip extra:  
+- No puedes usar `AVG(precio) < 105` en `WHERE`, SQL dará error ❌  
+- Recuerda: **WHERE filtra filas**, **HAVING filtra grupos**.
+
+✅ Resumen del flujo:  
+**Filtrar filas → Agrupar → Filtrar grupos**
+
+![Agrupamiento](img/Imagen86.png)
 
 #### HOJAS DE EJERCICIOS 📝
 
