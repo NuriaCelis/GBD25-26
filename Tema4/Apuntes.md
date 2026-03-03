@@ -1250,21 +1250,6 @@ GROUP BY dni HAVING count(*)=2;
 
 ![Subconsultas](img/Imagen79.png)
 
-**Ejemplo:** En la base de datos ligatercera, obtener cuantos equipos han metido goles en la jornada 1.
-
-Lo que vamos a hacer es una subconsulta con la unión de contar cuantos equipos locales han metido goles y cuantos equipos visitantes han metido goles. Esa unión la renombramos para tratarla como si fuera una tabla. De ese tabla, sumamos los valores que contiene, es decir, los equipos locales que han marcado goles y los visitantes que han marcado goles.
-
-```sql
-SELECT sum(marcaron) 
-FROM (SELECT count(*) AS marcaron 
-      FROM partidos WHERE golesloc>0 AND numjornada=1 
-      UNION ALL  
-      SELECT count(*) AS marcaron 
-      FROM partidos 
-      WHERE golesvis>0 AND numjornada=1) AS t;
-```
-
-![Subconsultas](img/Imagen80.png)
 
 Para comprobar si un dato está incluido en varios valores devueltos por una subconsulta no se pueden usar el operador de igualdad (=) ni otros operadores relacionales para comparar con subconsultas que devuelven más de un valor. Si queremos comprobar que un valor está incluido dentro del conjunto de valores devueltos por la subconsulta, usaremos el **operador IN**.
 
