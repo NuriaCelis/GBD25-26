@@ -7,9 +7,8 @@ Para insertar filas en una tabla se utiliza la instrucción **INSERT**. Con esta
 ### 🧩 Formas básicas de INSERT
 
 INSERT ... VALUES
-INSERT ... SET
 
-También es posible insertar filas obtenidas de una consulta:
+INSERT ... SET
 
 INSERT ... SELECT
 
@@ -176,15 +175,6 @@ AND apellidos = 'dorado';
 ```
 Nota: Producto cartesiano → combina todos los coches con el cliente encontrado.
 
-#### 📘 Ejemplo 11
-
-En LIGATERCERA, insertar todos los enfrentamientos posibles entre equipos:
-```sql
-INSERT INTO calendario (eqLocal, eqVisitante) 
-SELECT a.codeq, b.codeq 
-FROM equipos AS a, equipos AS b 
-WHERE a.codeq != b.codeq;
-```
 
 #### HOJAS DE EJERCICIOS
 
