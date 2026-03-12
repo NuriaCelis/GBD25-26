@@ -178,7 +178,7 @@ Nota: Producto cartesiano → combina todos los coches con el cliente encontrado
 
 #### HOJAS DE EJERCICIOS
 
-💻 Hoja de ejercicios 1.
+💻 Hoja de ejercicios 1. (Concurso música)
 
 
 ## 2.- 🔄 Actualización de datos. La instrucción UPDATE
@@ -296,9 +296,7 @@ Al usar IGNORE, si una de las filas a actualizar da error, no se actualiza, pero
 
 ## HOJAS DE EJERCICIOS
 
-💻 Hoja de ejercicios 2.
-
-💻 Hoja de ejercicios 3.
+💻 Hoja de ejercicios 2. (Concurso música)
 
 ## 3.- 🗑️ ELIMINACIÓN DE FILAS. LA INSTRUCCIÓN DELETE
 
@@ -451,11 +449,10 @@ AND apellidos = 'dorado';
 
 ## HOJAS DE EJERCICIOS
 
-💻 Hoja de ejercicios 4.
+💻 Hoja de ejercicios 3. (Concurso música)
 
-💻 Hoja de ejercicios 5. NO LO HACEMOS
+💻 Hoja de ejercicios 4 Repaso. (Repaso Insert, update, delete con Empresa)
 
-💻 Hoja de ejercicios 6. NO LO HACEMOS
 
 <!-- ## ACTIVIDAD GRUPAL
 
