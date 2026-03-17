@@ -1,5 +1,30 @@
 # UNIDAD 5. EDICIÓN DE LOS DATOS
 
+- [UNIDAD 5. EDICIÓN DE LOS DATOS](#unidad-5-edición-de-los-datos)
+  - [1.- ➕ Inserción de filas. Instrucción INSERT](#1---inserción-de-filas-instrucción-insert)
+    - [🧩 Formas básicas de INSERT](#-formas-básicas-de-insert)
+    - [📌 Sintaxis completa de INSERT ... VALUES](#-sintaxis-completa-de-insert--values)
+    - [🧩 Sintaxis de INSERT ... SET](#-sintaxis-de-insert--set)
+    - [🔄 INSERT combinado con SELECT](#-insert-combinado-con-select)
+  - [2.- 🔄 Actualización de datos. La instrucción UPDATE](#2---actualización-de-datos-la-instrucción-update)
+    - [Condiciones de la sintaxis y ejecución de UPDATE](#condiciones-de-la-sintaxis-y-ejecución-de-update)
+  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-1)
+  - [3.- 🗑️ ELIMINACIÓN DE FILAS. LA INSTRUCCIÓN DELETE](#3--️-eliminación-de-filas-la-instrucción-delete)
+    - [🧩 Sintaxis de DELETE](#-sintaxis-de-delete)
+    - [📌 Condiciones de la sintaxis y ejecución de DELETE](#-condiciones-de-la-sintaxis-y-ejecución-de-delete)
+  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-2)
+  - [4.- ✏️ EDICIÓN AVANZADA DE LOS DATOS. INSTRUCCIÓN INSERT](#4--️-edición-avanzada-de-los-datos-instrucción-insert)
+  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-3)
+  - [5.- ACTUALIZACIÓN AVANZADA DE DATOS. INSTRUCCIÓN UPDATE.](#5--actualización-avanzada-de-datos-instrucción-update)
+  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-4)
+  - [6.- ELIMINACIÓN AVANZADA DE DATOS.](#6--eliminación-avanzada-de-datos)
+  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-5)
+  - [7.- TRANSACCIONES](#7--transacciones)
+  - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios-6)
+  - [8.- CONCURRENCIA](#8--concurrencia)
+  - [HOJAS DE EJERCICIOS (DE REPASO)](#hojas-de-ejercicios-de-repaso)
+
+
 ## 1.- ➕ Inserción de filas. Instrucción INSERT
 
 Para insertar filas en una tabla se utiliza la instrucción **INSERT**. Con esta instrucción es posible insertar una o varias filas indicando los valores de las columnas o insertar filas a partir del resultado de una consulta SELECT sobre una o varias tablas.
@@ -632,7 +657,7 @@ curdate(),0
 
 ## HOJAS DE EJERCICIOS
 
-💻 Hoja de ejercicios 7.
+💻 Hoja de ejercicios 7. (Municipios Cantabria)
 
 ## 5.- ACTUALIZACIÓN AVANZADA DE DATOS. INSTRUCCIÓN UPDATE.
 
@@ -806,9 +831,7 @@ Así a cada cliente se le asigna el número de contratos obtenidos en la subcons
 
 ## HOJAS DE EJERCICIOS
 
-💻 Hoja de ejercicios 8.
-
-💻 Hoja de ejercicios 9.
+💻 Hoja de ejercicios 8. (Concurso Música)
 
 ## 6.- ELIMINACIÓN AVANZADA DE DATOS.
 
@@ -937,7 +960,7 @@ ORDER BY numcontrato LIMIT 1);
 
 ## HOJAS DE EJERCICIOS
 
-💻 Hoja de ejercicios 10 (se puede hacer la versión ligera).
+💻 Hoja de ejercicios 10 (Concurso Música).
 
 ## 7.- TRANSACCIONES
 
@@ -1105,7 +1128,7 @@ Aquellas que modifican la base de datos mysql:
 
 ## HOJAS DE EJERCICIOS
 
-💻 Hoja de ejercicios 11. 
+💻 Hoja de ejercicios 11. (Concurso Música)
 
 ## 8.- CONCURRENCIA
 
@@ -1139,7 +1162,7 @@ Internamente el SGBD proporciona dicho nivel de aislamiento mediante **bloqueos*
 
 ## HOJAS DE EJERCICIOS (DE REPASO)
 
-💻 Hoja de ejercicios 12(es la segunda parte de la 10  ligera).
+💻 Hoja de ejercicios 12 (Instituto).
 
-💻 Hoja de ejercicios 13.
+
 
