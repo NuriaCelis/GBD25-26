@@ -218,6 +218,8 @@ WHERE condición;
 - Modifica los valores de las columnas indicadas en SET con el resultado de las expresiones. Si se usa WHERE, sólo se modifican las filas que cumplen la condición.  
 - Dentro de la sintaxis, incluso se permite usar ORDER BY para establecer el orden en que se van modificando datos de filas.
 
+![Sintaxis](Imagen5.png)
+
 ### Condiciones de la sintaxis y ejecución de UPDATE
 
 1. Detrás de UPDATE se puede especificar:
