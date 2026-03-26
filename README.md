@@ -40,7 +40,6 @@ IES Miguel Herrero.
 
   <!--
   
-
 📻 **7. UNIDAD 7. GESTION DE LA SEGURIDAD DE LOS DATOS.**
 
   [Apuntes de la Unidad 7.](Tema7/Apuntes.md)

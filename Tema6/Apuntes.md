@@ -1,6 +1,6 @@
-# UNIDAD 8. PROGRAMACIÓN DE BASES DE DATOS
+# UNIDAD 6. PROGRAMACIÓN DE BASES DE DATOS
 
-- [UNIDAD 8. PROGRAMACIÓN DE BASES DE DATOS](#unidad-8-programación-de-bases-de-datos)
+- [UNIDAD 6. PROGRAMACIÓN DE BASES DE DATOS](#unidad-8-programación-de-bases-de-datos)
 - [Programación en Bases de Datos (Nivel Básico)](#programación-en-bases-de-datos-nivel-básico)
   - [✅ 1. Introducción a la programación en bases de datos](#-1-introducción-a-la-programación-en-bases-de-datos)
     - [🔧 ¿Qué se puede programar en una base de datos?](#-qué-se-puede-programar-en-una-base-de-datos)
