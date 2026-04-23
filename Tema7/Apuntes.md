@@ -31,8 +31,7 @@
   - [📤 Exportar base de datos](#-exportar-base-de-datos)
   - [📥 Importar base de datos](#-importar-base-de-datos)
 - [📝 HOJAS DE EJERCICIOS](#-hojas-de-ejercicios)
-
-
+ 
 
 ## 🛡️ 1.- SEGURIDAD EN LAS BASES DE DATOS
 
