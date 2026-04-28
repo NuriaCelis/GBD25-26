@@ -1,19 +1,18 @@
 # UNIDAD 6. PROGRAMACIÓN DE BASES DE DATOS
 
-- [UNIDAD 6. PROGRAMACIÓN DE BASES DE DATOS](#unidad-8-programación-de-bases-de-datos)
-- [Programación en Bases de Datos (Nivel Básico)](#programación-en-bases-de-datos-nivel-básico)
+- [UNIDAD 6. PROGRAMACIÓN DE BASES DE DATOS](#unidad-6-programación-de-bases-de-datos)
+  - [Programación en Bases de Datos (Nivel Básico)](#programación-en-bases-de-datos-nivel-básico)
   - [✅ 1. Introducción a la programación en bases de datos](#-1-introducción-a-la-programación-en-bases-de-datos)
     - [🔧 ¿Qué se puede programar en una base de datos?](#-qué-se-puede-programar-en-una-base-de-datos)
   - [✅ 2. Crear un Procedimiento Almacenado en MySQL Workbench](#-2-crear-un-procedimiento-almacenado-en-mysql-workbench)
     - [¿Qué es un procedimiento almacenado?](#qué-es-un-procedimiento-almacenado)
-  - [🧪 Crear el procedimiento desde MySQL Workbench](#-crear-el-procedimiento-desde-mysql-workbench)
-  - [📝 Notas importantes](#-notas-importantes)
+    - [🧪 Crear el procedimiento desde MySQL Workbench](#-crear-el-procedimiento-desde-mysql-workbench)
+    - [📝 Notas importantes](#-notas-importantes)
   - [✅ 3. Variables](#-3-variables)
     - [📌 ¿Para qué sirven?](#-para-qué-sirven)
     - [📐 Declaración de variables en MySQL](#-declaración-de-variables-en-mysql)
-      - [📌 Ejemplos:](#-ejemplos)
     - [🔄 Asignación de valores](#-asignación-de-valores)
-  - [🧪 Ejemplo completo](#-ejemplo-completo)
+    - [🧪 Ejemplo completo](#-ejemplo-completo)
   - [✅ 4. Procedimientos almacenados (Stored Procedures)](#-4-procedimientos-almacenados-stored-procedures)
     - [🎯 ¿Por qué usar procedimientos?](#-por-qué-usar-procedimientos)
     - [🧱 Sintaxis básica de un procedimiento en MySQL](#-sintaxis-básica-de-un-procedimiento-en-mysql)
@@ -41,25 +40,16 @@
     - [✅ Soluciones (ocultas)](#-soluciones-ocultas)
   - [✅ Estructuras de programación en MySQL](#-estructuras-de-programación-en-mysql)
     - [🔹 IF – Condicional simple](#-if--condicional-simple)
-      - [🧱 Sintaxis](#-sintaxis)
-      - [🧪 Ejemplo](#-ejemplo)
     - [🧠 Ejercicios propuestos – IF](#-ejercicios-propuestos--if)
     - [🔹 CASE – Condicional múltiple](#-case--condicional-múltiple)
-      - [🧱 Sintaxis](#-sintaxis-1)
-      - [🧪 Ejemplo](#-ejemplo-1)
     - [🧠 Ejercicios propuestos – CASE](#-ejercicios-propuestos--case)
     - [🔁 WHILE – Bucle mientras se cumpla una condición](#-while--bucle-mientras-se-cumpla-una-condición)
-      - [🧱 Sintaxis](#-sintaxis-2)
-      - [🧪 Ejemplo](#-ejemplo-2)
     - [🧠 Ejercicios propuestos – WHILE](#-ejercicios-propuestos--while)
     - [🔁 REPEAT – Ejecuta al menos una vez y repite mientras se cumpla una condición](#-repeat--ejecuta-al-menos-una-vez-y-repite-mientras-se-cumpla-una-condición)
-      - [🧱 Sintaxis](#-sintaxis-3)
-      - [🧪 Ejemplo](#-ejemplo-3)
     - [🧠 Ejercicios propuestos – REPEAT](#-ejercicios-propuestos--repeat)
   - [📌 Nota](#-nota)
 
-
-# Programación en Bases de Datos (Nivel Básico)
+## Programación en Bases de Datos (Nivel Básico)
 
 ## ✅ 1. Introducción a la programación en bases de datos
 
@@ -86,10 +76,10 @@ Un **procedimiento almacenado** es un bloque de código SQL que se guarda en la 
 
 Un procedimiento almacenado siempre está incluido como un objeto más dentro de una base de datos, como si fuera una tabla o una vista.
 
-Para realizar los ejemplos del tema que no están asociados a ninguna base de datos concreta, vamos a crear una base de datos denominada Tema8Ejemplos. Aquí crearemos los ejercicios del tema que NO están asociados a ninguna tabla de ninguna base de datos.
+Para realizar los ejemplos del tema que no están asociados a ninguna base de datos concreta, vamos a crear una base de datos denominada **Tema6Ejemplos**. Aquí crearemos los ejercicios del tema que NO están asociados a ninguna tabla de ninguna base de datos.
 
 
-## 🧪 Crear el procedimiento desde MySQL Workbench
+### 🧪 Crear el procedimiento desde MySQL Workbench
 
 1. Abre MySQL Workbench y conéctate a tu base de datos.
 2. En el panel izquierdo, busca tu base de datos y expande el nodo **Stored Procedures**.
@@ -107,7 +97,7 @@ END
 
 ---
 
-## 📝 Notas importantes
+### 📝 Notas importantes
 
 - **Siempre cambia el delimitador** si usas `BEGIN...END` para evitar errores de ejecución.
 - Si el procedimiento ya existe y quieres cambiarlo, primero debes borrarlo con:
@@ -174,7 +164,7 @@ CALL ejemplo1();
 
 ---
 
-## 🧪 Ejemplo completo
+### 🧪 Ejemplo completo
 
 Realizamos ahora un ejemplo completo repitiendo los pasos anteriores con el siguiente procedimiento.
 
