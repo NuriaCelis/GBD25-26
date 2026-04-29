@@ -1,5 +1,18 @@
 # 🧩UNIDAD 8. BASES DE DATOS NO RELACIONALES
+- [🧩UNIDAD 8. BASES DE DATOS NO RELACIONALES](#unidad-8-bases-de-datos-no-relacionales)
+  - [📌 1. Introducción a las Bases de Datos No Relacionales](#-1-introducción-a-las-bases-de-datos-no-relacionales)
+  - [⚙️ 2. Preparación del entorno de trabajo con MongoDB](#️-2-preparación-del-entorno-de-trabajo-con-mongodb)
+  - [🖥️ 3. Comandos básicos desde la consola (MongoDB Shell)](#️-3-comandos-básicos-desde-la-consola-mongodb-shell)
+  - [🧰 4. Operaciones básicas en MongoDB Compass](#-4-operaciones-básicas-en-mongodb-compass)
+  - [🧩 5. Conociendo MongoDB y sus colecciones](#-5-conociendo-mongodb-y-sus-colecciones)
+  - [✍️ 6. Insertar documentos](#️-6-insertar-documentos)
+  - [🔎 7. Consultar documentos en MongoDB](#-7-consultar-documentos-en-mongodb)
+  - [🧠 Consultas avanzadas](#-consultas-avanzadas)
+  - [🧪 Ejercicios (con solución)](#-ejercicios-con-solución)
+  - [✏️ 8. Actualizar documentos en MongoDB](#️-8-actualizar-documentos-en-mongodb)
+  - [🗑️ 9. Eliminar documentos en MongoDB](#️-9-eliminar-documentos-en-mongodb)
 
+  
 ## 📌 1. Introducción a las Bases de Datos No Relacionales
 
 ### 💡 ¿Qué es una base de datos NoSQL?
