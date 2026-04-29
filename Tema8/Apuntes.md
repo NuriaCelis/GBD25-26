@@ -364,3 +364,396 @@ Desde cada documento puedes:
 
 Esto facilita mucho el trabajo sin necesidad de comandos.
 
+#### HOJAS DE EJERCICIOS
+
+💻 Hoja de ejercicios 1.
+
+## 🧩 5. Conociendo MongoDB y sus colecciones
+
+MongoDB organiza la información de una forma diferente a las bases de datos relacionales. En lugar de tablas y filas, trabaja con una estructura más flexible basada en **bases de datos, colecciones y documentos**.
+
+Una **base de datos en MongoDB** es simplemente un contenedor donde se guarda la información. Dentro de ella no hay tablas, sino colecciones. Puedes tener tantas bases de datos como necesites, cada una destinada a un propósito distinto, como por ejemplo una para una tienda, otra para una biblioteca o una aplicación web.
+
+Dentro de cada base de datos encontramos las **colecciones**, que son el equivalente a las tablas en los sistemas relacionales. Sin embargo, aquí no existe una estructura rígida: una colección puede almacenar documentos diferentes entre sí, lo que permite una mayor flexibilidad. Por ejemplo, en una colección de productos, algunos documentos pueden tener más campos que otros.
+
+Los **documentos** son la unidad básica de información en MongoDB. Se almacenan en formato similar a JSON, lo que hace que sean fáciles de entender y de usar desde lenguajes de programación. Cada documento representa un registro y está formado por pares **clave-valor**.
+
+👉 Por ejemplo, un documento podría ser:
+
+{
+"nombre": "Portátil",
+"precio": 800,
+"stock": 10
+}
+
+En cuanto a la **navegación básica**, trabajar con MongoDB implica moverse entre bases de datos y colecciones. Primero se selecciona una base de datos, después una colección, y finalmente se consultan o modifican los documentos que contiene. Este flujo es sencillo y muy directo, tanto desde consola como desde herramientas gráficas.
+
+
+### 🧪 Ejemplo completo
+
+Imagina una base de datos llamada **tienda**:
+
+* 📦 Colección: productos
+* 📄 Documento:
+
+{
+"nombre": "Ratón",
+"precio": 25,
+"categoria": "informatica"
+}
+
+👉 En este caso:
+
+* **tienda** es la base de datos
+* **productos** es la colección
+* El JSON es el documento
+
+## ✍️ 6. Insertar documentos
+
+Una de las operaciones más importantes en MongoDB es la inserción de datos. Como ya sabes, la información se guarda en **documentos**, y estos se almacenan dentro de colecciones. Para añadir nuevos datos utilizamos comandos sencillos desde la consola (`mongosh`) o herramientas gráficas como MongoDB Compass.
+
+El método más básico es **`insertOne()`**, que permite añadir un único documento a una colección. Es útil cuando queremos introducir datos de forma puntual o probar ejemplos pequeños.
+
+👉 Por ejemplo:
+
+db.productos.insertOne({
+nombre: "Portátil",
+precio: 800,
+stock: 10
+})
+
+Si necesitamos insertar varios documentos a la vez, utilizamos **`insertMany()`**. Este método recibe un conjunto de documentos y los guarda todos en una sola operación, lo que resulta más eficiente cuando trabajamos con varios registros.
+
+👉 Ejemplo:
+
+db.productos.insertMany([
+{ nombre: "Ratón", precio: 25, stock: 50 },
+{ nombre: "Teclado", precio: 60, stock: 30 }
+])
+
+En cuanto a los **tipos de datos**, MongoDB trabaja con valores similares a JSON. Los más habituales son **cadenas de texto**, **números**, **booleanos** y también estructuras más complejas como listas o documentos anidados. Esto permite representar información de forma muy natural.
+
+👉 Ejemplo con distintos tipos:
+
+{
+nombre: "Monitor",
+precio: 200,
+disponible: true,
+etiquetas: ["pantalla", "oficina"]
+}
+
+
+### 🧪 Ejercicios guiados
+
+A continuación, practica paso a paso en la **consola**:
+
+🟢 Crea una base de datos llamada **empresa** y una colección llamada **empleados**
+
+🟢 Inserta un empleado con nombre, edad y puesto
+
+🟢 Inserta varios empleados con diferentes datos
+
+🟢 Añade un campo nuevo en alguno de los documentos (por ejemplo, departamento)
+
+
+### 📝 RECUERDA
+
+* `insertOne()` → inserta un documento
+* `insertMany()` → inserta varios documentos
+* Los datos se guardan en formato tipo JSON
+* MongoDB permite estructuras flexibles y dinámicas
+
+#### HOJAS DE EJERCICIOS
+
+💻 Hoja de ejercicios 2.
+
+## 🔎 7. Consultar documentos en MongoDB
+
+Consultar información en MongoDB es una de las operaciones más importantes, ya que permite recuperar y filtrar datos almacenados en las colecciones de forma muy flexible. El método principal es **find()**, pero a partir de él se pueden construir consultas cada vez más potentes utilizando operadores.
+
+### 🔍 find() — base de todas las consultas
+
+El método **find()** permite buscar documentos dentro de una colección. Si no se indica ninguna condición, devuelve todos los registros.
+
+👉 Ejemplo:
+
+db.productos.find()
+
+Este comando muestra todos los documentos almacenados en la colección.
+
+### 🎯 Búsquedas simples
+
+Las búsquedas simples permiten filtrar documentos indicando valores concretos de los campos.
+
+👉 Ejemplo:
+
+db.productos.find({ categoria: "informatica" })
+
+También podemos filtrar por valores numéricos:
+
+db.productos.find({ precio: 80 })
+
+### 🎭 Proyecciones
+
+Las proyecciones permiten decidir qué campos se muestran en el resultado de la consulta.
+
+👉 Ejemplo:
+
+db.productos.find({}, { nombre: 1, precio: 1, _id: 0 })
+
+Esto muestra únicamente el nombre y el precio de los productos.
+
+## 🧠 Consultas avanzadas
+
+MongoDB permite realizar consultas más potentes mediante operadores que amplían mucho las posibilidades de filtrado.
+
+### ⚖️ Operadores de comparación
+
+Los operadores permiten comparar valores:
+
+* $gt → mayor que
+* $lt → menor que
+* $gte → mayor o igual que
+* $lte → menor o igual que
+* $ne → distinto de
+
+👉 Ejemplo:
+
+db.productos.find({ precio: { $gt: 100 } })
+
+### 🔗 Condiciones múltiples (AND implícito)
+
+Cuando se incluyen varios campos en la misma consulta, MongoDB interpreta una condición AND.
+
+👉 Ejemplo:
+
+db.productos.find({ categoria: "informatica", precio: { $lt: 100 } })
+
+### 🔀 Operador OR
+
+El operador **$or** permite cumplir una condición u otra.
+
+👉 Ejemplo:
+
+db.productos.find({
+$or: [
+{ categoria: "informatica" },
+{ precio: { $lt: 50 } }
+]
+})
+
+Esto devuelve productos de informática o productos con precio menor de 50.
+
+### 🚫 Operador NOT
+
+El operador **$not** se utiliza para negar una condición.
+
+👉 Ejemplo:
+
+db.productos.find({
+precio: { $not: { $gt: 100 } }
+})
+
+Esto devuelve productos cuyo precio **no sea mayor de 100**.
+
+### 📦 Operador IN
+
+El operador **$in** permite buscar valores dentro de una lista.
+
+👉 Ejemplo:
+
+db.productos.find({
+categoria: { $in: ["informatica", "muebles"] }
+})
+
+Esto devuelve productos cuya categoría sea informática o muebles.
+
+## 🧪 Ejercicios (con solución)
+
+🟢 Muestra todos los productos de la colección
+✔️ Solución: db.productos.find()
+
+🟢 Muestra los productos de la categoría “informatica”
+✔️ Solución: db.productos.find({ categoria: "informatica" })
+
+🟢 Muestra los productos con precio mayor de 50
+✔️ Solución: db.productos.find({ precio: { $gt: 50 } })
+
+🟢 Muestra los productos con precio entre 50 y 150
+✔️ Solución: db.productos.find({ precio: { $gte: 50, $lte: 150 } })
+
+🟢 Muestra los productos de informática o muebles
+✔️ Solución: db.productos.find({ categoria: { $in: ["informatica", "muebles"] } })
+
+🟢 Muestra productos que NO sean de la categoría informática
+✔️ Solución: db.productos.find({ categoria: { $ne: "informatica" } })
+
+🟢 Muestra productos de informática o con precio menor de 50
+✔️ Solución:
+db.productos.find({
+$or: [
+{ categoria: "informatica" },
+{ precio: { $lt: 50 } }
+]
+})
+
+#### HOJAS DE EJERCICIOS
+
+💻 Hoja de ejercicios 3.
+
+
+## ✏️ 8. Actualizar documentos en MongoDB
+
+Actualizar documentos en MongoDB permite **modificar datos ya existentes** sin necesidad de eliminarlos. Para ello se utilizan principalmente los métodos **updateOne()** y **updateMany()**, junto con operadores específicos como **$set**, **$unset** y **$inc**.
+
+### 🔄 updateOne()
+
+El método **updateOne()** modifica **un único documento** que cumpla una condición.
+
+👉 Ejemplo:
+
+db.productos.updateOne(
+{ nombre: "Portátil HP" },
+{ $set: { precio: 700 } }
+)
+
+✔️ Solo actualiza el primer documento que coincide con la condición.
+
+### 🔁 updateMany()
+
+El método **updateMany()** permite modificar **varios documentos a la vez**.
+
+👉 Ejemplo:
+
+db.productos.updateMany(
+{ categoria: "informatica" },
+{ $set: { stock: 20 } }
+)
+
+✔️ Afecta a todos los documentos que cumplen la condición.
+
+### 🧩 Operadores de actualización
+
+#### 🟢 $set → modificar o añadir campos
+
+db.productos.updateOne(
+{ nombre: "Silla gaming" },
+{ $set: { stock: 10 } }
+)
+
+✔️ Cambia el valor del campo o lo crea si no existe.
+
+#### 🔴 $unset → eliminar campos
+
+db.productos.updateOne(
+{ nombre: "Auriculares" },
+{ $unset: { stock: "" } }
+)
+
+✔️ Elimina un campo del documento.
+
+#### ➕ $inc → incrementar valores
+
+db.productos.updateOne(
+{ nombre: "Teclado mecánico" },
+{ $inc: { stock: 5 } }
+)
+
+✔️ Suma o resta valores numéricos.
+
+### 🧪 Ejercicios prácticos (con solución)
+
+🟢 Aumenta el precio de todos los productos en 10 euros
+✔️ Solución:
+db.productos.updateMany({}, { $inc: { precio: 10 } })
+
+🟢 Cambia la categoría del producto “Silla gaming” a “tecnologia”
+✔️ Solución:
+db.productos.updateOne(
+{ nombre: "Silla gaming" },
+{ $set: { categoria: "tecnologia" } }
+)
+
+
+🟢 Añade un campo “oferta: true” a todos los productos con precio menor de 100
+✔️ Solución:
+db.productos.updateMany(
+{ precio: { $lt: 100 } },
+{ $set: { oferta: true } }
+)
+
+
+🟢 Elimina el campo “stock” del producto “Auriculares”
+✔️ Solución:
+db.productos.updateOne(
+{ nombre: "Auriculares" },
+{ $unset: { stock: "" } }
+)
+
+
+## 🗑️ 9. Eliminar documentos en MongoDB
+
+Eliminar documentos permite **borrar registros de una colección**. Es una operación potente y debe usarse con cuidado.
+
+### 🧹 deleteOne()
+
+El método **deleteOne()** elimina **un único documento** que cumpla una condición.
+
+👉 Ejemplo:
+
+db.productos.deleteOne({ nombre: "Ratón inalámbrico" })
+
+✔️ Solo elimina el primer documento que coincide.
+
+### 🧨 deleteMany()
+
+El método **deleteMany()** elimina **todos los documentos que cumplan una condición**.
+
+👉 Ejemplo:
+
+db.productos.deleteMany({ categoria: "muebles" })
+
+✔️ Elimina todos los documentos de esa categoría.
+
+### ⚠️ Buenas prácticas
+
+* 🔍 Comprobar siempre con `find()` antes de borrar
+* 🎯 Usar condiciones precisas para evitar borrados masivos
+* 🧪 Probar primero con pocos datos
+* 💾 Evitar eliminaciones sin copia de seguridad
+
+### 🧪 Ejercicios (con solución)
+
+🟢 Elimina el producto “Teclado mecánico”
+✔️ Solución:
+db.productos.deleteOne({ nombre: "Teclado mecánico" })
+
+🟢 Elimina todos los productos con stock igual a 0
+✔️ Solución:
+db.productos.deleteMany({ stock: 0 })
+
+🟢 Elimina todos los productos de la categoría “muebles”
+✔️ Solución:
+db.productos.deleteMany({ categoria: "muebles" })
+
+🟢 Comprueba primero con find() y luego elimina los productos con precio mayor de 500
+✔️ Solución (consulta previa):
+db.productos.find({ precio: { $gt: 500 } })
+
+✔️ Solución (borrado):
+db.productos.deleteMany({ precio: { $gt: 500 } })
+
+### 🧠 RECUERDA
+
+* **updateOne()** → modifica un documento
+* **updateMany()** → modifica varios documentos
+* **$set, $unset, $inc** → operadores de actualización
+* **deleteOne()** → elimina un documento
+* **deleteMany()** → elimina varios documentos
+* Siempre comprobar antes de borrar datos
+
+#### HOJAS DE EJERCICIOS
+
+💻 Hoja de ejercicios 4.
+
+💻 Hoja de ejercicios 5.
