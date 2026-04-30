@@ -3,52 +3,12 @@
 - [UNIDAD 6. PROGRAMACIÓN DE BASES DE DATOS](#unidad-6-programación-de-bases-de-datos)
   - [Programación en Bases de Datos (Nivel Básico)](#programación-en-bases-de-datos-nivel-básico)
   - [✅ 1. Introducción a la programación en bases de datos](#-1-introducción-a-la-programación-en-bases-de-datos)
-    - [🔧 ¿Qué se puede programar en una base de datos?](#-qué-se-puede-programar-en-una-base-de-datos)
   - [✅ 2. Crear un Procedimiento Almacenado en MySQL Workbench](#-2-crear-un-procedimiento-almacenado-en-mysql-workbench)
-    - [¿Qué es un procedimiento almacenado?](#qué-es-un-procedimiento-almacenado)
-    - [🧪 Crear el procedimiento desde MySQL Workbench](#-crear-el-procedimiento-desde-mysql-workbench)
-    - [📝 Notas importantes](#-notas-importantes)
   - [✅ 3. Variables](#-3-variables)
-    - [📌 ¿Para qué sirven?](#-para-qué-sirven)
-    - [📐 Declaración de variables en MySQL](#-declaración-de-variables-en-mysql)
-    - [🔄 Asignación de valores](#-asignación-de-valores)
-    - [🧪 Ejemplo completo](#-ejemplo-completo)
   - [✅ 4. Procedimientos almacenados (Stored Procedures)](#-4-procedimientos-almacenados-stored-procedures)
-    - [🎯 ¿Por qué usar procedimientos?](#-por-qué-usar-procedimientos)
-    - [🧱 Sintaxis básica de un procedimiento en MySQL](#-sintaxis-básica-de-un-procedimiento-en-mysql)
-    - [▶️ Ejecutar un procedimiento](#️-ejecutar-un-procedimiento)
-    - [🧪 Ejemplo 1: Procedimiento sin parámetros](#-ejemplo-1-procedimiento-sin-parámetros)
-    - [🧪 Ejemplo 2: Procedimiento con parámetro de entrada](#-ejemplo-2-procedimiento-con-parámetro-de-entrada)
-    - [🔄 Parámetros en procedimientos](#-parámetros-en-procedimientos)
-    - [✅ 1. Procedimiento con **parámetro de entrada**](#-1-procedimiento-con-parámetro-de-entrada)
-    - [✅ 2. Procedimiento con **parámetro de salida**](#-2-procedimiento-con-parámetro-de-salida)
-    - [✅ 3. Procedimiento con **parámetro de entrada/salida**](#-3-procedimiento-con-parámetro-de-entradasalida)
-    - [🧠 Ejercicios propuestos](#-ejercicios-propuestos)
   - [✅ 5. Funciones](#-5-funciones)
-    - [🔍 Diferencias entre procedimiento y función](#-diferencias-entre-procedimiento-y-función)
-    - [🧱 Sintaxis básica de una función en MySQL](#-sintaxis-básica-de-una-función-en-mysql)
-    - [🧪 Ejemplo 1: Función que devuelve el doble de un número](#-ejemplo-1-función-que-devuelve-el-doble-de-un-número)
-    - [🧪 Ejemplo 2: Función que indica si alguien es mayor de edad](#-ejemplo-2-función-que-indica-si-alguien-es-mayor-de-edad)
-    - [🧠 Ejercicios propuestos](#-ejercicios-propuestos-1)
-    - [🧭 Sección final: Resumen visual / Mapa de conceptos](#-sección-final-resumen-visual--mapa-de-conceptos)
-  - [📌 Resumen visual: Programación en bases de datos](#-resumen-visual-programación-en-bases-de-datos)
-    - [🧠 Conceptos clave](#-conceptos-clave)
-    - [🧩 Diferencias rápidas](#-diferencias-rápidas)
-    - [🧪 Buenas prácticas](#-buenas-prácticas)
   - [✅ Autoevaluación: Programación en Bases de Datos – Nivel básico](#-autoevaluación-programación-en-bases-de-datos--nivel-básico)
-    - [🧠 Preguntas](#-preguntas)
-    - [✅ Soluciones (ocultas)](#-soluciones-ocultas)
-  - [✅ Estructuras de programación en MySQL](#-estructuras-de-programación-en-mysql)
-    - [🔹 IF – Condicional simple](#-if--condicional-simple)
-    - [🧠 Ejercicios propuestos – IF](#-ejercicios-propuestos--if)
-    - [🔹 CASE – Condicional múltiple](#-case--condicional-múltiple)
-    - [🧠 Ejercicios propuestos – CASE](#-ejercicios-propuestos--case)
-    - [🔁 WHILE – Bucle mientras se cumpla una condición](#-while--bucle-mientras-se-cumpla-una-condición)
-    - [🧠 Ejercicios propuestos – WHILE](#-ejercicios-propuestos--while)
-    - [🔁 REPEAT – Ejecuta al menos una vez y repite mientras se cumpla una condición](#-repeat--ejecuta-al-menos-una-vez-y-repite-mientras-se-cumpla-una-condición)
-    - [🧠 Ejercicios propuestos – REPEAT](#-ejercicios-propuestos--repeat)
-  - [📌 Nota](#-nota)
-
+  - [✅ 6. Estructuras de programación en MySQL](#-6-estructuras-de-programación-en-mysql)
 ## Programación en Bases de Datos (Nivel Básico)
 
 ## ✅ 1. Introducción a la programación en bases de datos
@@ -616,7 +576,7 @@ d) `RETURN`
 </details>
 
 
-## ✅ Estructuras de programación en MySQL
+## ✅ 6. Estructuras de programación en MySQL
 
 Al igual que en otros lenguajes de programación, MySQL permite controlar el flujo del código mediante **estructuras de control**: condiciones (`IF`, `CASE`) y bucles (`WHILE`, `LOOP`, `REPEAT`).
 
