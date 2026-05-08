@@ -339,14 +339,16 @@ SELECT total_votos FROM canciones WHERE numCancion=1;
 ### 🧠 Ejercicios propuestos
 
 1. Crea un procedimiento llamado `mostrar_fecha` que muestre la fecha actual.
-2. Crea un procedimiento llamado `cuadrado_numero` que reciba un número y muestre su cuadrado.
-3. Crea un procedimiento llamado `info_usuario` que reciba un nombre y un apellido y muestre un mensaje de bienvenida personalizado. El nombre y el apellido debe escribirlo en mayúsculas y el mensaje debe ser como este ejemplo: Bienvenido NURIA CELIS a nuestra clase.
-4. Crea un procedimiento llamado `mostrar_canciones` que muestre todas las canciones de un grupo a partir de su nombre. (Base de datos concursomusica).
-5. Crea un procedimiento llamado `insertar_voto` que recibe como parámetro el título de la canción y el nombre y apellido de la persona que vota. Se entiende que el voto se hace en el día de hoy. El procedimiento devuelve el número de votos que ha hecho esa persona. Hay que ignorar si hay error al insertar el voto.
-6. Crea un procedimiento llamado `Aumentar_segundos` que aumenta en X segundos la duración de una canción y devuelve su nueva duración. Le pasamos como parámetro el título de la canción.
-7. Crea un procedimiento llamado `Borrar_canciones` que elimina todas las canciones de un grupo dado por su nombre.
-8. Crea un procedimiento llamado `Contar` que devuelva cuántos componentes tiene un grupo. El parámetro que pasamos al procedimiento es el nombre del grupo. El número de componentes lo devuelve como parámetro.
-9. Crea un procedimiento llamado `grupos` que crea una tabla llamada resumen con dos campos, nombre, que guardará el nombre de los grupos, y canciones, que será un campo que guarda cuantas canciones tiene cada grupo. Una vez creada la tabla, hay que rellenarla con los datos correspondientes. Por último, muestra el contenido de la tabla.
+2. Crea un procedimiento llamado  `mostrar_fecha2` que devuelva la fecha actual.
+3. Crea un procedimiento llamado `cuadrado_numero` que reciba un número y muestre su cuadrado.
+4. 3. Crea un procedimiento llamado `cuadrado_numero2` que reciba un número y devuelva su cuadrado.
+5. Crea un procedimiento llamado `info_usuario` que reciba un nombre y un apellido y muestre un mensaje de bienvenida personalizado. El nombre y el apellido debe escribirlo en mayúsculas y el mensaje debe ser como este ejemplo: Bienvenido NURIA CELIS a nuestra clase.
+6. Crea un procedimiento llamado `mostrar_canciones` que muestre todas las canciones de un grupo a partir de su nombre. (Base de datos concursomusica).
+7. Crea un procedimiento llamado `insertar_voto` que recibe como parámetro el título de la canción y el nombre y apellido de la persona que vota. Se entiende que el voto se hace en el día de hoy. El procedimiento devuelve el número de votos que ha hecho esa persona. Hay que ignorar si hay error al insertar el voto.
+8. Crea un procedimiento llamado `Aumentar_segundos` que aumenta en X segundos la duración de una canción y devuelve su nueva duración. Le pasamos como parámetro el título de la canción.
+9. Crea un procedimiento llamado `Borrar_canciones` que elimina todas las canciones de un grupo dado por su nombre.
+10. Crea un procedimiento llamado `Contar` que devuelva cuántos componentes tiene un grupo. El parámetro que pasamos al procedimiento es el nombre del grupo. El número de componentes lo devuelve como parámetro.
+11. Crea un procedimiento llamado `grupos` que crea una tabla llamada resumen con dos campos, nombre, que guardará el nombre de los grupos, y canciones, que será un campo que guarda cuantas canciones tiene cada grupo. Una vez creada la tabla, hay que rellenarla con los datos correspondientes. Por último, muestra el contenido de la tabla.
 
 > 💡 Consejo: prueba cada procedimiento y modifica valores para ver cómo se comporta.
 
