@@ -346,9 +346,9 @@ SELECT total_votos FROM canciones WHERE numCancion=1;
 6. Crea un procedimiento llamado `mostrar_canciones` que muestre todas las canciones de un grupo a partir de su nombre. (Base de datos concursomusica).
 7. Crea un procedimiento llamado `insertar_voto` que recibe como parámetro el título de la canción y el nombre y apellido de la persona que vota. Se entiende que el voto se hace en el día de hoy. El procedimiento devuelve el número de votos que ha hecho esa persona. Hay que ignorar si hay error al insertar el voto.
 8. Crea un procedimiento llamado `Aumentar_segundos` que aumenta en X segundos la duración de una canción y devuelve su nueva duración. Le pasamos como parámetro el título de la canción.
-9. Crea un procedimiento llamado `Borrar_canciones` que elimina todas las canciones de un grupo dado por su nombre.
-10. Crea un procedimiento llamado `Contar` que devuelva cuántos componentes tiene un grupo. El parámetro que pasamos al procedimiento es el nombre del grupo. El número de componentes lo devuelve como parámetro.
-11. Crea un procedimiento llamado `grupos` que crea una tabla llamada resumen con dos campos, nombre, que guardará el nombre de los grupos, y canciones, que será un campo que guarda cuantas canciones tiene cada grupo. Una vez creada la tabla, hay que rellenarla con los datos correspondientes. Por último, muestra el contenido de la tabla.
+9. Crea un procedimiento llamado `Borrar_canciones` que elimina todas las canciones de un grupo dado su nombre. Devuelve las canciones que va a borrar.
+10. Crea un procedimiento llamado `Contar_componentes` que devuelva cuántos componentes tiene un grupo. El parámetro que pasamos al procedimiento es el nombre del grupo. El número de componentes lo devuelve como parámetro.
+11. Crea un procedimiento llamado `grupos` que crea una tabla llamada resumen con dos campos, nombre, que guardará el nombre de los grupos, y canciones, que será un campo que guarda cuantas canciones tiene cada grupo. Una vez creada la tabla, hay que rellenarla con los datos correspondientes. Por último, muestra el contenido de la tabla, visualizando en primer lugar los grupos que tienen más canciones.
 
 > 💡 Consejo: prueba cada procedimiento y modifica valores para ver cómo se comporta.
 
@@ -408,25 +408,20 @@ SELECT doble(5); -- Resultado: 10
 
 ---
 
-### 🧪 Ejemplo 2: Función que indica si alguien es mayor de edad
-
+### 🧪 Ejemplo 2: Función que le das dos números enteros y devuelve la suma de ambos números
 ```sql
 DELIMITER //
 
-CREATE FUNCTION es_mayor_edad(edad INT) RETURNS VARCHAR(20) DETERMINISTIC
+CREATE FUNCTION suma_dos_numeros(a INT, b INT) RETURNS int DETERMINISTIC
 BEGIN
-   declare resul varchar(30);
-   if edad>=18 then
-     set resul='Mayor de edad';
-   else
-      set resul='Menor de edad';
-   end if;
+   declare resul int;
+   set resul=a+b;
    RETURN resul;
 END //
 
 DELIMITER ;
 
-SELECT es_mayor_edad(20); -- Resultado: 'Mayor de edad'
+SELECT suma_dos_numeros(5,8); -- Resultado: 13
 ```
 
 ---
