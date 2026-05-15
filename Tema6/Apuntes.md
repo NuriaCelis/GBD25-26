@@ -602,6 +602,8 @@ CREATE PROCEDURE evaluar_nota(nota INT)
 BEGIN
    IF nota >= 5 THEN
       SELECT 'Aprobado' AS resultado;
+   ELSE
+      SELECT 'Suspenso' AS resultado;
    END IF;
 END //
 
