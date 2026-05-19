@@ -596,6 +596,7 @@ END IF;
 #### 🧪 Ejemplo. El IF se puede utilizar solo con el THEN, con THEN-ELSE, y si hay varias alternativas, IF-THEN-ELSEIF. Se proponen tres ejemplos de cada caso.
 
 ```sql
+-- ejemplo 1
 DELIMITER //
 
 CREATE PROCEDURE evaluar_nota(nota INT)
@@ -608,6 +609,8 @@ END //
 DELIMITER ;
 
 CALL evaluar_nota(6);
+
+-- ejemplo 2
 
 DELIMITER //
 
@@ -623,6 +626,8 @@ END //
 DELIMITER ;
 
 CALL evaluar_nota2(6);
+
+-- ejemplo 3
 
 DELIMITER //
 
