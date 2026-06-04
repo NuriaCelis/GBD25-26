@@ -36,6 +36,22 @@ Las bases de datos relacionales (como MySQL) organizan la información en tablas
 
 💭 En resumen: las bases NoSQL sacrifican algo de control estructural a cambio de **flexibilidad y rendimiento**.
 
+NOTA: Formato de ficheros **JSON**
+**JSON (JavaScript Object Notation)** es un formato de texto para almacenar e intercambiar datos mediante pares **clave-valor**.
+
+**Ejemplo:**
+
+```json
+{
+  "nombre": "Ana",
+  "edad": 25,
+  "estudiante": true
+}
+```
+
+En este ejemplo, `nombre`, `edad` y `estudiante` son claves que almacenan distintos tipos de datos.
+
+
 ### 🌍 Casos de uso
 
 Las bases de datos NoSQL no sustituyen a las relacionales, sino que se utilizan cuando encajan mejor.
