@@ -193,14 +193,14 @@ show dbs
 - Puedes trabajar con interfaz gráfica (Compass) o consola (mongosh)
 - La conexión local usa: mongodb://localhost:27017
 
-🧠 Nuestro escenario: instalamos MongoDB en una máquina virtual en Windows 10 o Windows 11 y usamos el cliente desde la máquina real.
+🧠 **Nuestro escenario**: instalamos MongoDB en una máquina virtual en Windows 10 o Windows 11.
 
 Para la instalación, ponemos la máquina virtual en Adaptador-puente, descargar el fichero correspondiente y lo instalas.
-Después de la descarga, vuelves a modo solo-anfitrión e intentas conectarte desde la máquina real, pero antes hay que hacer lo siguiente:
+Después de la descarga, vuelves a modo solo-anfitrión e intentas conectarte, pero antes hay que hacer lo siguiente:
 
 1. 🧾 Modificar el archivo de configuración de MongoDB
 
-En la máquina virtual (Windows 10), busca el archivo:
+En la máquina virtual (Windows 11), busca el archivo:
 
 C:\Program Files\MongoDB\Server\<versión>\bin\mongod.cfg
 
@@ -224,16 +224,16 @@ Abre services.msc
 Busca MongoDB Server
 Pulsa en Reiniciar
 
-3. 🌐 Comprobar conectividad desde la máquina real
-
-Desde tu máquina física prueba:
+1. 🌐 Comprobar conectividad
+2. 
+Desde la máquina virtual:
 
 ping 192.168.56.106
 
 
 4. 🔌 Conexión correcta en MongoDB
 
-Te conectas desde Mongo Compass desde tu máquina real.
+Te conectas desde Mongo Compass desde tu máquina virtual.
 
 ## 🖥️ 3. Comandos básicos desde la consola (MongoDB Shell)
 
