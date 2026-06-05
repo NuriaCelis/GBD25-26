@@ -147,6 +147,9 @@ Para comprobar que está funcionando:
 sudo systemctl status mongod
 ```
 
+
+🧠 **Nuestro escenario**: instalamos MongoDB en una máquina virtual en Windows 10 o Windows 11.
+
 🔌 Primera conexión
 
 Una vez el servidor está en marcha, podemos conectarnos.
@@ -193,7 +196,6 @@ show dbs
 - Puedes trabajar con interfaz gráfica (Compass) o consola (mongosh)
 - La conexión local usa: mongodb://localhost:27017
 
-🧠 **Nuestro escenario**: instalamos MongoDB en una máquina virtual en Windows 10 o Windows 11.
 
 Para la instalación, ponemos la máquina virtual en Adaptador-puente, descargar el fichero correspondiente y lo instalas.
 Después de la descarga, vuelves a modo solo-anfitrión e intentas conectarte, pero antes hay que hacer lo siguiente:
