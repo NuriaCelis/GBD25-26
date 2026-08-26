@@ -12,7 +12,7 @@ IES Miguel Herrero.
 💾 **1. UNIDAD 1. SISTEMAS DE INFORMACIÓN.**
 
   [Apuntes de la Unidad 1.](Tema1/Apuntes.md)
-  
+<!--  
 
 🎥 **2. UNIDAD 2. DISEÑO LÓGICO DE LA BASE DE DATOS.**
   
@@ -44,3 +44,5 @@ IES Miguel Herrero.
 💥 **8. UNIDAD 8. BASES DE DATOS NO RELACIONALES.**
 
   [Apuntes de la Unidad 8.](Tema8/Apuntes.md)
+
+  -->
